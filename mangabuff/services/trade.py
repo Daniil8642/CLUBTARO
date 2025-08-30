@@ -183,21 +183,15 @@ def load_trade_cards(session: requests.Session, partner_state: PartnerState, par
 
 def find_partner_card_instance(session: requests.Session, partner_id: int, side: str, card_id: int, rank: str, name: str, debug: bool=False) -> Optional[int]:
     """
-    Оптимизированный поиск instance_id карточки у партнёра:
-    1) сначала пытаемся распарсить страницу /trades/offers/{partner_id} (один быстрый GET),
-       часто там уже есть все карточки;
-    2) затем делаем один быстрый поиск по имени (если name длиннее 2 символов);
-    3) если всё ещё не найдено — делаем постраничный скан с ограничениями;
-    В любых местах — аккуратно ловим таймауты/исключения и помечаем партнёра в state,
-    чтобы не застревать на одном пользователе.
+    Оптимизированный поиск instance_id карточки у партнёра.
+    Минимальная версия без debug выводов.
     """
     target_id = int(card_id)
     state = PartnerState()
 
-    # --- 1) Парсим offers page (как быстрый путь) ---
+    # 1) Парсим offers page (быстрый путь)
     try:
         url = f"{BASE_URL}/trades/offers/{partner_id}"
-        # Используем короткий read timeout для этого запроса — чтобы не застревать
         r = session.get(url, timeout=(CONNECT_TIMEOUT, min(READ_TIMEOUT, 5)))
         if r.status_code == 200:
             parsed = parse_trade_cards_html(r.text)
@@ -207,69 +201,48 @@ def find_partner_card_instance(session: requests.Session, partner_id: int, side:
                         if entry_card_id(c) == target_id:
                             inst = entry_instance_id(c)
                             if inst:
-                                if debug:
-                                    print(f"[FIND] found on offers page for {partner_id}: inst={inst}")
                                 return inst
                     except Exception:
-                        # не фатально — продолжаем
                         continue
     except requests.exceptions.ReadTimeout:
-        # помечаем как таймаут и возвращаем None
         state.mark_timeout(partner_id)
-        if debug:
-            print(f"[FIND] offers page read timeout for {partner_id}")
         return None
     except requests.RequestException:
-        # сетевые проблемы — быстрый выход
-        if debug:
-            print(f"[FIND] offers page request error for {partner_id}")
         return None
     except Exception:
-        # любой неожиданный error — не ломаем процесс
-        if debug:
-            print(f"[FIND] offers page parse error for {partner_id}")
-        # продолжаем к следующему этапу
+        pass
 
-    # --- 2) Быстрый поиск по имени (одна попытка) ---
+    # 2) Быстрый поиск по имени (одна попытка)
     if len(norm_text(name)) > 2:
         try:
-            cards = load_trade_cards(session, state, partner_id, side, rank=rank, search=name, offset=0, debug=debug)
+            cards = load_trade_cards(session, state, partner_id, side, rank=rank, search=name, offset=0, debug=False)
             if cards:
                 for c in cards:
                     try:
                         if entry_card_id(c) == target_id:
                             inst = entry_instance_id(c)
                             if inst:
-                                if debug:
-                                    print(f"[FIND] found by quick search for {partner_id}: inst={inst}")
                                 return inst
                     except Exception:
                         continue
         except Exception:
-            # load_trade_cards внутренне обрабатывает большинство ошибок, но перестрахуемся
-            if debug:
-                print(f"[FIND] quick search exception for {partner_id}")
-            # помечаем таймаут/ошибку и не блокируем всю рассылку
             state.mark_timeout(partner_id)
             return None
 
-    # --- 3) Постраничный обход инвентаря партнёра (fallback) ---
+    # 3) Постраничный обход инвентаря партнёра (fallback)
     offset = 0
     page_size = 60
     scanned = 0
-    max_scanned_limit = 30000  # бензин: если много — выход
+    max_scanned_limit = 30000
+    
     for _page in range(0, 1000):
         try:
-            cards = load_trade_cards(session, state, partner_id, side, rank=rank, search=None, offset=offset, debug=debug)
+            cards = load_trade_cards(session, state, partner_id, side, rank=rank, search=None, offset=offset, debug=False)
         except Exception:
-            # защищаемся от непредвиденных ошибок
-            if debug:
-                print(f"[FIND] exception while loading trade cards for {partner_id} offset={offset}")
             state.mark_timeout(partner_id)
             return None
 
         if not cards:
-            # либо последняя страница, либо партнёр заблокирован/нет карточек
             break
 
         for c in cards:
@@ -277,26 +250,19 @@ def find_partner_card_instance(session: requests.Session, partner_id: int, side:
                 if entry_card_id(c) == target_id:
                     inst = entry_instance_id(c)
                     if inst:
-                        if debug:
-                            print(f"[FIND] found while paging for {partner_id}: inst={inst}")
                         return inst
             except Exception:
                 continue
 
         scanned += len(cards)
         if len(cards) < page_size:
-            # дошли до конца
             break
         offset += len(cards)
-        # защита от бесконечного сканирования
         if scanned > max_scanned_limit:
-            if debug:
-                print(f"[FIND] scanned more than {max_scanned_limit} items for {partner_id}, aborting")
             break
-        # чуть пауза, чтобы не троллить сайт
         time.sleep(0.12)
 
-    # --- 4) в конце пытаемся ещё раз offers page с более длительным таймаутом (best-effort) ---
+    # 4) Финальная попытка offers page
     try:
         r2 = session.get(f"{BASE_URL}/trades/offers/{partner_id}", timeout=(CONNECT_TIMEOUT, min(READ_TIMEOUT, 8)))
         if r2.status_code == 200:
@@ -306,15 +272,12 @@ def find_partner_card_instance(session: requests.Session, partner_id: int, side:
                     if entry_card_id(c) == target_id:
                         inst = entry_instance_id(c)
                         if inst:
-                            if debug:
-                                print(f"[FIND] found on final offers page for {partner_id}: inst={inst}")
                             return inst
                 except Exception:
                     continue
     except Exception:
         pass
 
-    # не найдено
     return None
 
 
@@ -511,8 +474,7 @@ def send_trades_to_online_owners(
 ) -> Dict[str, int]:
     """
     Отправляет обмены онлайн владельцам карты.
-    Обрабатывает страницы последовательно: сначала все обмены с первой страницы,
-    затем со второй и т.д. Минимальная задержка между обменами - 11 секунд.
+    Минимальный вывод - только результаты отправки.
     """
     session = build_session_from_profile(profile_data)
     stats = {
@@ -550,8 +512,6 @@ def send_trades_to_online_owners(
 
     if not my_instances:
         stats["skipped_no_my_cards"] = 1
-        if debug:
-            print("[TRADE] No my cards available for trade")
         return stats
 
     card_id = int(target_card.get("card_id") or target_card.get("cardId") or 0)
@@ -567,12 +527,7 @@ def send_trades_to_online_owners(
         stats["checked_pages"] += 1
         
         if not owners:
-            if debug:
-                print(f"[TRADE] Page {page_num}: no owners found")
             continue
-        
-        if debug:
-            print(f"[TRADE] Processing page {page_num} with {len(owners)} online unlocked owners")
         
         # Обрабатываем всех владельцев с текущей страницы
         for idx, owner_id in enumerate(owners, 1):
@@ -581,23 +536,16 @@ def send_trades_to_online_owners(
             # Пропускаем себя
             if str(owner_id) == my_user_id:
                 stats["skipped_self"] += 1
-                if debug:
-                    print(f"[TRADE] Page {page_num}, owner {idx}/{len(owners)}: skipping self (id={owner_id})")
                 continue
             
-            if debug:
-                print(f"[TRADE] Page {page_num}, owner {idx}/{len(owners)}: checking partner {owner_id}")
-            
-            # Ищем карточку у партнера
+            # Ищем карточку у партнера (без debug вывода)
             his_inst = find_partner_card_instance(
                 session, int(owner_id), "receiver", 
-                card_id, rank, name, debug=debug
+                card_id, rank, name, debug=False  # Всегда False для минимального вывода
             )
             
             if not his_inst:
                 stats["skipped_no_instance"] += 1
-                if debug:
-                    print(f"[TRADE] Page {page_num}, owner {idx}/{len(owners)}: partner {owner_id} - card not found")
                 continue
             
             # Выбираем случайную свою карточку для обмена
@@ -605,15 +553,12 @@ def send_trades_to_online_owners(
             stats["trades_attempted"] += 1
             
             if dry_run:
-                print(f"[DRY-RUN] Page {page_num}, owner {idx}/{len(owners)}: "
-                      f"would trade my instance {my_inst} -> partner {owner_id} instance {his_inst}")
-                # В dry-run режиме тоже соблюдаем задержку для корректной симуляции
+                print(f"[DRY-RUN] 📤 {owner_id}: {my_inst} ↔ {his_inst}")
+                # В dry-run режиме тоже соблюдаем задержку
                 current_time = time.time()
                 time_since_last = current_time - last_trade_time
                 if time_since_last < MIN_TRADE_DELAY:
                     sleep_time = MIN_TRADE_DELAY - time_since_last
-                    if debug:
-                        print(f"[TRADE] Waiting {sleep_time:.1f}s before next trade...")
                     time.sleep(sleep_time)
                 last_trade_time = time.time()
                 continue
@@ -623,55 +568,41 @@ def send_trades_to_online_owners(
             time_since_last = current_time - last_trade_time
             if time_since_last < MIN_TRADE_DELAY:
                 sleep_time = MIN_TRADE_DELAY - time_since_last
-                if debug:
-                    print(f"[TRADE] Waiting {sleep_time:.1f}s before sending trade...")
                 time.sleep(sleep_time)
             
             # Отправляем обмен
-            print(f"[TRADE] Page {page_num}, owner {idx}/{len(owners)}: "
-                  f"sending trade my:{my_inst} -> partner:{owner_id} instance:{his_inst}")
-            
             success = False
             
             # Сначала пробуем через API
             if use_api:
                 success = create_trade_via_api(
                     session, int(owner_id), int(my_inst), 
-                    int(his_inst), debug=debug
+                    int(his_inst), debug=False  # Всегда False
                 )
-                if debug and success:
-                    print(f"[TRADE] Trade sent successfully via API")
             
             # Если API не сработал, пробуем через форму
             if not success:
-                form = trade_form_info(session, int(owner_id), debug=debug)
+                form = trade_form_info(session, int(owner_id), debug=False)
                 if form:
                     success = submit_trade_form(
                         session, form["action"], form.get("token", ""), 
                         form.get("hidden", {}), int(my_inst), int(his_inst), 
-                        debug=debug
+                        debug=False  # Всегда False
                     )
-                    if debug and success:
-                        print(f"[TRADE] Trade sent successfully via form")
             
             if success:
                 stats["trades_succeeded"] += 1
-                print(f"[TRADE] ✅ Trade sent successfully to {owner_id}")
+                print(f"✅ Обмен отправлен → {owner_id}")
             else:
-                print(f"[TRADE] ❌ Failed to send trade to {owner_id}")
+                print(f"❌ Ошибка отправки → {owner_id}")
             
             # Запоминаем время последнего обмена
             last_trade_time = time.time()
             
-            # Добавляем небольшую случайную задержку сверху для естественности
+            # Добавляем небольшую случайную задержку
             additional_delay = random.uniform(0.5, 2.0)
-            if debug:
-                print(f"[TRADE] Adding random delay {additional_delay:.1f}s")
             time.sleep(additional_delay)
-        
-        # После обработки всех владельцев на странице
-        if debug:
-            print(f"[TRADE] Finished processing page {page_num}")
-            print(f"[TRADE] Stats so far: {stats}")
     
+    # Финальная статистика
+    print(f"\n📊 Итого: проверено {stats['owners_seen']} владельцев, отправлено {stats['trades_succeeded']}/{stats['trades_attempted']} обменов")
     return stats

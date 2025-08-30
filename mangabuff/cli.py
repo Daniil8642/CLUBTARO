@@ -113,63 +113,60 @@ def main():
     profile = store.read_by_path(profile_path) or store.default_profile(user_id=str(args.id or "" ), club_name=args.club_name or "")
     store.write_by_path(profile_path, profile)
 
-    # Авторизация/обновление cookies
-    ok, info = update_profile_cookies(profile, args.email, args.password, debug=args.debug, skip_check=args.skip_check)
+    # Авторизация/обновление cookies (убираем debug вывод)
+    ok, info = update_profile_cookies(profile, args.email, args.password, debug=False, skip_check=args.skip_check)
     if not ok:
         msg = info.get("message", "auth error")
         print(f"❌ Ошибка авторизации: {msg}")
-        if info.get("html_preview"):
-            print(info["html_preview"])
         return
     store.write_by_path(profile_path, profile)
-    print(f"{args.name}: ✅ Авторизация ок")
+    print(f"✅ Авторизация успешна")
 
-    # Boost-карта (опционально)
+    # Boost-карта (опционально) - минимальный вывод
     if args.boost_url:
-        res = find_boost_card_info(profile, profile_path.parent, args.boost_url, debug=args.debug)
+        res = find_boost_card_info(profile, profile_path.parent, args.boost_url, debug=False)
         if res:
             card_id, out_path = res
-            owners_cnt, wanters_cnt = owners_and_wanters_counts(profile, card_id, debug=args.debug)
-            print(f"✅ Клубная карта {card_id} сохранена в {out_path}")
-            print(f"Владельцев: {owners_cnt}, желающих: {wanters_cnt}")
-        else:
-            print("❌ Не удалось получить информацию о клубной карте")
+            owners_cnt, wanters_cnt = owners_and_wanters_counts(profile, card_id, debug=False)
+            print(f"✅ Клубная карта {card_id}: владельцев {owners_cnt}, желающих {wanters_cnt}")
 
-    # HAR-аналитика (опционально)
+    # HAR-аналитика (опционально) - убираем если не нужно
     if args.analyze_har:
-        top = analyze_har(args.analyze_har, debug=args.debug)
-        print("Топ путей из HAR:")
-        for k, v in top.items():
-            print(f"{k} -> {v}")
+        top = analyze_har(args.analyze_har, debug=False)
+        # Не выводим ничего для HAR
 
     # Определение целевой карты для рассылки обменов
     target_card: Optional[Dict[str, Any]] = None
     if args.trade_card_id and args.trade_rank:
         target_card = {"card_id": int(args.trade_card_id), "name": args.trade_card_name or "", "rank": args.trade_rank}
     else:
-        target_card = load_target_card_from_file(profile_path.parent, args.trade_card_file or None, debug=args.debug)
+        target_card = load_target_card_from_file(profile_path.parent, args.trade_card_file or None, debug=False)
 
     if not target_card:
-        print("ℹ️ Целевая карта не задана. Рассылка обменов пропущена.")
         return
 
     if args.trade_send_online:
         # инвентарь текущего пользователя
         try:
-            inv_path = ensure_own_inventory(profile_path, profile, debug=args.debug)
+            inv_path = ensure_own_inventory(profile_path, profile, debug=False)
         except Exception as e:
-            print(f"❌ Нет инвентаря: {e}")
+            print(f"❌ Ошибка получения инвентаря")
             return
         try:
             with inv_path.open("r", encoding="utf-8") as f:
                 my_cards: List[Dict[str, Any]] = json.load(f)
-        except Exception as e:
-            print(f"❌ Ошибка чтения инвентаря {inv_path}: {e}")
+        except Exception:
+            print(f"❌ Ошибка чтения инвентаря")
             return
 
+        # Запускаем рассылку с минимальным выводом
+        print(f"\n🎯 Целевая карта: ID={target_card['card_id']}, Ранг={target_card['rank']}, Имя={target_card.get('name', '')}")
+        print(f"🔍 Поиск владельцев онлайн...\n")
+        
         from mangabuff.services.owners import iter_online_owners_by_pages
         card_id = int(target_card["card_id"])
-        owners_iter = iter_online_owners_by_pages(profile, card_id, max_pages=args.trade_pages or 0, debug=args.debug)
+        owners_iter = iter_online_owners_by_pages(profile, card_id, max_pages=args.trade_pages or 0, debug=False)
+        
         stats = send_trades_to_online_owners(
             profile_data=profile,
             target_card=target_card,
@@ -177,11 +174,8 @@ def main():
             my_cards=my_cards,
             dry_run=bool(args.trade_dry_run),
             use_api=bool(args.use_api),
-            debug=args.debug,
+            debug=False,  # Всегда False для минимального вывода
         )
-        print("Результат рассылки:", stats)
-    else:
-        print("ℹ️ --trade_send_online не указан — рассылка не выполнена.")
 
 if __name__ == "__main__":
     main()
