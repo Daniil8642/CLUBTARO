@@ -10,6 +10,7 @@ from mangabuff.http.http_utils import build_session_from_profile, get, post, rea
 from mangabuff.parsing.cards import parse_trade_cards_html, normalize_card_entry, entry_card_id, entry_instance_id
 from mangabuff.utils.text import norm_text
 
+
 class PartnerState:
     def __init__(self) -> None:
         self.blocked = set()
@@ -27,9 +28,11 @@ class PartnerState:
     def clear_timeout(self, pid: int) -> None:
         self.timeouts.pop(pid, None)
 
+
 def _build_search_url(partner_id: int, offset: int, q: str) -> str:
     from urllib.parse import quote_plus
     return f"{BASE_URL}/search/cards?user_id={partner_id}&offset={offset}&q={quote_plus(q)}"
+
 
 def _parse_cards_from_text_or_json(text: str, j: Any) -> List[Dict[str, Any]]:
     if isinstance(j, dict):
@@ -42,6 +45,7 @@ def _parse_cards_from_text_or_json(text: str, j: Any) -> List[Dict[str, Any]]:
     if text:
         return parse_trade_cards_html(text)
     return []
+
 
 def _attempt_search(session: requests.Session, partner_state: PartnerState, partner_id: int, offset: int, q: str, debug: bool=False) -> List[Dict[str, Any]]:
     if len(norm_text(q)) <= 2:
@@ -75,6 +79,7 @@ def _attempt_search(session: requests.Session, partner_state: PartnerState, part
             partner_state.blocked.add(partner_id)
             return []
     return cards
+
 
 def _attempt_ajax(session: requests.Session, partner_state: PartnerState, partner_id: int, side: str, rank: Optional[str], search: Optional[str], offset: int, debug: bool=False) -> List[Dict[str, Any]]:
     if partner_state.is_blocked(partner_id):
@@ -167,6 +172,7 @@ def _attempt_ajax(session: requests.Session, partner_state: PartnerState, partne
 
     return []
 
+
 def load_trade_cards(session: requests.Session, partner_state: PartnerState, partner_id: int, side: str, rank: Optional[str], search: Optional[str], offset: int, debug: bool=False) -> List[Dict[str, Any]]:
     if search:
         found = _attempt_search(session, partner_state, partner_id, offset, search, debug=debug)
@@ -174,7 +180,6 @@ def load_trade_cards(session: requests.Session, partner_state: PartnerState, par
             return found
     return _attempt_ajax(session, partner_state, partner_id, side, rank, search, offset, debug=debug)
 
-# paste this into mangabuff/services/trade.py replacing the old find_partner_card_instance
 
 def find_partner_card_instance(session: requests.Session, partner_id: int, side: str, card_id: int, rank: str, name: str, debug: bool=False) -> Optional[int]:
     """
@@ -312,6 +317,7 @@ def find_partner_card_instance(session: requests.Session, partner_id: int, side:
     # не найдено
     return None
 
+
 def create_trade_via_api(session: requests.Session, receiver_id: int, my_instance_id: int, his_instance_id: int, debug: bool=False) -> bool:
     url = f"{BASE_URL}/trades/create"
     headers = {
@@ -375,6 +381,7 @@ def create_trade_via_api(session: requests.Session, receiver_id: int, my_instanc
         pass
     return False
 
+
 def trade_form_info(session: requests.Session, partner_id: int, debug: bool=False) -> Optional[Dict[str, Any]]:
     from bs4 import BeautifulSoup
     url = f"{BASE_URL}/trades/offers/{partner_id}"
@@ -427,6 +434,7 @@ def trade_form_info(session: requests.Session, partner_id: int, debug: bool=Fals
             hidden[name] = val
 
     return {"action": action, "token": token, "hidden": hidden}
+
 
 def submit_trade_form(session: requests.Session, action_url: str, csrf: str, base_form: Dict[str, Any], my_instance_id: int, partner_instance_id: int, debug: bool=False) -> bool:
     headers = {
@@ -491,11 +499,34 @@ def submit_trade_form(session: requests.Session, action_url: str, csrf: str, bas
         return True
     return False
 
-def send_trades_to_online_owners(profile_data: Dict, target_card: Dict[str, Any], owners_iter, my_cards: List[Dict[str, Any]], dry_run: bool=True, use_api: bool=True, debug: bool=False) -> Dict[str, int]:
+
+def send_trades_to_online_owners(
+    profile_data: Dict, 
+    target_card: Dict[str, Any], 
+    owners_iter, 
+    my_cards: List[Dict[str, Any]], 
+    dry_run: bool = True, 
+    use_api: bool = True, 
+    debug: bool = False
+) -> Dict[str, int]:
+    """
+    Отправляет обмены онлайн владельцам карты.
+    Обрабатывает страницы последовательно: сначала все обмены с первой страницы,
+    затем со второй и т.д. Минимальная задержка между обменами - 11 секунд.
+    """
     session = build_session_from_profile(profile_data)
-    stats = {"checked_pages": 0, "owners_seen": 0, "trades_attempted": 0, "trades_succeeded": 0, "skipped_no_my_cards": 0}
+    stats = {
+        "checked_pages": 0, 
+        "owners_seen": 0, 
+        "trades_attempted": 0, 
+        "trades_succeeded": 0, 
+        "skipped_no_my_cards": 0,
+        "skipped_self": 0,
+        "skipped_no_instance": 0
+    }
 
     rank = (target_card.get("rank") or "").strip()
+    
     def instances_any(cards: List[Dict[str, Any]]) -> List[int]:
         out = []
         for c in cards:
@@ -504,6 +535,7 @@ def send_trades_to_online_owners(profile_data: Dict, target_card: Dict[str, Any]
                 out.append(inst)
         return out
 
+    # Собираем мои карточки для обмена
     my_instances: List[int] = []
     if rank:
         for c in my_cards:
@@ -512,41 +544,134 @@ def send_trades_to_online_owners(profile_data: Dict, target_card: Dict[str, Any]
                 inst = entry_instance_id(c)
                 if inst:
                     my_instances.append(inst)
+    
     if not my_instances:
         my_instances = instances_any(my_cards)
 
     if not my_instances:
         stats["skipped_no_my_cards"] = 1
+        if debug:
+            print("[TRADE] No my cards available for trade")
         return stats
 
     card_id = int(target_card.get("card_id") or target_card.get("cardId") or 0)
     name = target_card.get("name") or ""
+    my_user_id = str(profile_data.get("id") or profile_data.get("ID") or profile_data.get("user_id") or "")
+    
+    # Минимальная задержка между обменами - 11 секунд
+    MIN_TRADE_DELAY = 11.0
+    last_trade_time = 0.0
 
+    # Обрабатываем страницы последовательно
     for page_num, owners in owners_iter:
         stats["checked_pages"] += 1
+        
         if not owners:
+            if debug:
+                print(f"[TRADE] Page {page_num}: no owners found")
             continue
-        for owner_id in owners:
+        
+        if debug:
+            print(f"[TRADE] Processing page {page_num} with {len(owners)} online unlocked owners")
+        
+        # Обрабатываем всех владельцев с текущей страницы
+        for idx, owner_id in enumerate(owners, 1):
             stats["owners_seen"] += 1
-            if str(owner_id) == str(profile_data.get("id")):
+            
+            # Пропускаем себя
+            if str(owner_id) == my_user_id:
+                stats["skipped_self"] += 1
+                if debug:
+                    print(f"[TRADE] Page {page_num}, owner {idx}/{len(owners)}: skipping self (id={owner_id})")
                 continue
-            his_inst = find_partner_card_instance(session, int(owner_id), "receiver", card_id, rank, name, debug=debug)
+            
+            if debug:
+                print(f"[TRADE] Page {page_num}, owner {idx}/{len(owners)}: checking partner {owner_id}")
+            
+            # Ищем карточку у партнера
+            his_inst = find_partner_card_instance(
+                session, int(owner_id), "receiver", 
+                card_id, rank, name, debug=debug
+            )
+            
             if not his_inst:
+                stats["skipped_no_instance"] += 1
+                if debug:
+                    print(f"[TRADE] Page {page_num}, owner {idx}/{len(owners)}: partner {owner_id} - card not found")
                 continue
+            
+            # Выбираем случайную свою карточку для обмена
             my_inst = random.choice(my_instances)
             stats["trades_attempted"] += 1
+            
             if dry_run:
-                print(f"[DRY] {my_inst} -> {his_inst} для {owner_id}")
+                print(f"[DRY-RUN] Page {page_num}, owner {idx}/{len(owners)}: "
+                      f"would trade my instance {my_inst} -> partner {owner_id} instance {his_inst}")
+                # В dry-run режиме тоже соблюдаем задержку для корректной симуляции
+                current_time = time.time()
+                time_since_last = current_time - last_trade_time
+                if time_since_last < MIN_TRADE_DELAY:
+                    sleep_time = MIN_TRADE_DELAY - time_since_last
+                    if debug:
+                        print(f"[TRADE] Waiting {sleep_time:.1f}s before next trade...")
+                    time.sleep(sleep_time)
+                last_trade_time = time.time()
                 continue
-
+            
+            # Ждем минимум 11 секунд с предыдущего обмена
+            current_time = time.time()
+            time_since_last = current_time - last_trade_time
+            if time_since_last < MIN_TRADE_DELAY:
+                sleep_time = MIN_TRADE_DELAY - time_since_last
+                if debug:
+                    print(f"[TRADE] Waiting {sleep_time:.1f}s before sending trade...")
+                time.sleep(sleep_time)
+            
+            # Отправляем обмен
+            print(f"[TRADE] Page {page_num}, owner {idx}/{len(owners)}: "
+                  f"sending trade my:{my_inst} -> partner:{owner_id} instance:{his_inst}")
+            
             success = False
+            
+            # Сначала пробуем через API
             if use_api:
-                success = create_trade_via_api(session, int(owner_id), int(my_inst), int(his_inst), debug=debug)
+                success = create_trade_via_api(
+                    session, int(owner_id), int(my_inst), 
+                    int(his_inst), debug=debug
+                )
+                if debug and success:
+                    print(f"[TRADE] Trade sent successfully via API")
+            
+            # Если API не сработал, пробуем через форму
             if not success:
                 form = trade_form_info(session, int(owner_id), debug=debug)
                 if form:
-                    success = submit_trade_form(session, form["action"], form.get("token", ""), form.get("hidden", {}), int(my_inst), int(his_inst), debug=debug)
+                    success = submit_trade_form(
+                        session, form["action"], form.get("token", ""), 
+                        form.get("hidden", {}), int(my_inst), int(his_inst), 
+                        debug=debug
+                    )
+                    if debug and success:
+                        print(f"[TRADE] Trade sent successfully via form")
+            
             if success:
                 stats["trades_succeeded"] += 1
-            time.sleep(0.4 + random.random() * 0.6)
+                print(f"[TRADE] ✅ Trade sent successfully to {owner_id}")
+            else:
+                print(f"[TRADE] ❌ Failed to send trade to {owner_id}")
+            
+            # Запоминаем время последнего обмена
+            last_trade_time = time.time()
+            
+            # Добавляем небольшую случайную задержку сверху для естественности
+            additional_delay = random.uniform(0.5, 2.0)
+            if debug:
+                print(f"[TRADE] Adding random delay {additional_delay:.1f}s")
+            time.sleep(additional_delay)
+        
+        # После обработки всех владельцев на странице
+        if debug:
+            print(f"[TRADE] Finished processing page {page_num}")
+            print(f"[TRADE] Stats so far: {stats}")
+    
     return stats

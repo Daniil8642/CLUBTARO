@@ -1,17 +1,3 @@
-# mangabuff/services/owners.py
-import re
-import time
-from typing import List, Generator, Tuple, Dict
-
-import requests
-from bs4 import BeautifulSoup
-
-from mangabuff.config import BASE_URL
-from mangabuff.http.http_utils import build_session_from_profile, get
-from mangabuff.utils.text import safe_int
-from mangabuff.utils.html import with_page, extract_last_page_number
-
-# paste/replace into mangabuff/services/owners.py (only the parse_online_unlocked_owners + small change in iterator)
 import re
 import time
 from typing import List, Generator, Tuple, Dict
@@ -182,6 +168,10 @@ def iter_online_owners_by_pages(
     max_pages: int = 0,
     debug: bool = False
 ) -> Generator[Tuple[int, List[int]], None, None]:
+    """
+    Итератор по страницам владельцев: на каждой странице отдаёт список user_id,
+    которые онлайн и без замка.
+    """
     session = build_session_from_profile(profile_data)
     owners_url = f"{BASE_URL}/cards/{card_id}/users"
 
@@ -210,49 +200,6 @@ def iter_online_owners_by_pages(
         if rp.status_code != 200:
             break
         owners_p = parse_online_unlocked_owners(rp.text, debug=debug)
-        if debug:
-            print(f"[OWNERS] page {p}: {len(owners_p)} online unlocked")
-        yield p, owners_p
-        time.sleep(0.2)
-
-def iter_online_owners_by_pages(
-    profile_data: Dict,
-    card_id: int,
-    max_pages: int = 0,
-    debug: bool = False
-) -> Generator[Tuple[int, List[int]], None, None]:
-    """
-    Итератор по страницам владельцев: на каждой странице отдаёт список user_id,
-    которые онлайн и без замка.
-    """
-    session = build_session_from_profile(profile_data)
-    owners_url = f"{BASE_URL}/cards/{card_id}/users"
-
-    try:
-        r1 = get(session, with_page(owners_url, 1))
-    except requests.RequestException:
-        return
-    if r1.status_code != 200:
-        return
-
-    soup1 = BeautifulSoup(r1.text or "", "html.parser")
-    last_page = extract_last_page_number(soup1)
-    if max_pages and max_pages > 0:
-        last_page = min(last_page, max_pages)
-
-    owners1 = parse_online_unlocked_owners(r1.text)
-    if debug:
-        print(f"[OWNERS] page 1: {len(owners1)} online unlocked, last_page={last_page}")
-    yield 1, owners1
-
-    for p in range(2, last_page + 1):
-        try:
-            rp = get(session, with_page(owners_url, p))
-        except requests.RequestException:
-            break
-        if rp.status_code != 200:
-            break
-        owners_p = parse_online_unlocked_owners(rp.text)
         if debug:
             print(f"[OWNERS] page {p}: {len(owners_p)} online unlocked")
         yield p, owners_p
