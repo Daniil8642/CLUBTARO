@@ -21,6 +21,7 @@ def fetch_all_cards_by_id(
     max_pages: int = 500,
     debug: bool = False,
     allow_huge: bool = True,
+    is_own_inventory: bool = False,  # Новый параметр для определения собственного инвентаря
 ) -> Tuple[pathlib.Path, bool]:
 
     session = build_session_from_profile(profile_data)
@@ -110,8 +111,13 @@ def fetch_all_cards_by_id(
 
         time.sleep(0.25)
 
+    # Определяем имя файла: my_cards.json для собственного инвентаря, иначе {user_id}.json
+    if is_own_inventory:
+        cards_path = profiles_dir / "my_cards.json"
+    else:
+        cards_path = profiles_dir / f"{user_id}.json"
+    
     # write atomically: write to .tmp then rename
-    cards_path = profiles_dir / f"{user_id}.json"
     tmp_path = cards_path.with_suffix(cards_path.suffix + ".tmp")
     try:
         with tmp_path.open("w", encoding="utf-8") as f:
@@ -130,8 +136,15 @@ def ensure_own_inventory(profile_path: pathlib.Path, profile_data: Dict, debug: 
     my_id = profile_data.get("id") or profile_data.get("ID") or profile_data.get("user_id")
     if not my_id:
         raise RuntimeError("no user id in profile")
-    # keep default allow_huge=True so we attempt to fetch full inventory
-    cards_path, got = fetch_all_cards_by_id(profile_data, profile_path.parent, str(my_id), debug=debug, allow_huge=True)
+    # Передаем is_own_inventory=True для использования my_cards.json
+    cards_path, got = fetch_all_cards_by_id(
+        profile_data, 
+        profile_path.parent, 
+        str(my_id), 
+        debug=debug, 
+        allow_huge=True,
+        is_own_inventory=True  # Указываем что это собственный инвентарь
+    )
     if not got:
         raise RuntimeError("inventory empty")
     return cards_path

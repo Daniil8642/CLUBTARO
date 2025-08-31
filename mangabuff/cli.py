@@ -16,19 +16,28 @@ def load_target_card_from_file(profiles_dir: pathlib.Path, card_file: Optional[s
     import random
     from mangabuff.utils.text import extract_card_id_from_href
     path: Optional[pathlib.Path] = None
+    
     if card_file:
         p = pathlib.Path(card_file)
         if p.exists():
             path = p
+    
     if not path:
-        files = sorted(
-            profiles_dir.glob("card_*_from_*.json"),
-            key=lambda p: p.stat().st_mtime,
-            reverse=True,
-        )
-        if not files:
-            return None
-        path = files[0]
+        # Изменено: ищем файл card_for_boost.json вместо card_*_from_*.json
+        card_for_boost = profiles_dir / "card_for_boost.json"
+        if card_for_boost.exists():
+            path = card_for_boost
+        else:
+            # Fallback на старый паттерн если новый файл не найден
+            files = sorted(
+                profiles_dir.glob("card_*_from_*.json"),
+                key=lambda p: p.stat().st_mtime,
+                reverse=True,
+            )
+            if files:
+                path = files[0]
+            else:
+                return None
 
     try:
         with path.open("r", encoding="utf-8") as f:
@@ -100,7 +109,7 @@ def main():
     parser.add_argument("--trade_pages", type=int, default=0, help="Сколько страниц онлайн пользователей обрабатывать (0 = все)")
     parser.add_argument("--trade_send_online", action="store_true", help="Рассылка обменов онлайн владельцам карты")
     parser.add_argument("--trade_dry_run", type=int, default=1, help="1 = dry-run, 0 = реально отправлять")
-    parser.add_argument("--trade_card_file", type=str, default="", help="Путь к card_*_from_*.json")
+    parser.add_argument("--trade_card_file", type=str, default="", help="Путь к файлу с карточкой (card_for_boost.json)")
     parser.add_argument("--use_api", type=int, default=1, help="1 = использовать API /trades/create, 0 = форму")
     parser.add_argument("--analyze_har", type=str, default="", help="Путь к HAR-файлу для анализа")
 
@@ -124,15 +133,16 @@ def main():
 
     # Boost-карта (опционально) - минимальный вывод
     if args.boost_url:
-        res = find_boost_card_info(profile, profile_path.parent, args.boost_url, debug=False)
+        res = find_boost_card_info(profile, profile_path.parent, args.boost_url, debug=args.debug)
         if res:
             card_id, out_path = res
-            owners_cnt, wanters_cnt = owners_and_wanters_counts(profile, card_id, debug=False)
+            owners_cnt, wanters_cnt = owners_and_wanters_counts(profile, card_id, debug=args.debug)
             print(f"✅ Клубная карта {card_id}: владельцев {owners_cnt}, желающих {wanters_cnt}")
+            print(f"   Сохранена в: {out_path}")
 
     # HAR-аналитика (опционально) - убираем если не нужно
     if args.analyze_har:
-        top = analyze_har(args.analyze_har, debug=False)
+        top = analyze_har(args.analyze_har, debug=args.debug)
         # Не выводим ничего для HAR
 
     # Определение целевой карты для рассылки обменов
@@ -140,17 +150,17 @@ def main():
     if args.trade_card_id and args.trade_rank:
         target_card = {"card_id": int(args.trade_card_id), "name": args.trade_card_name or "", "rank": args.trade_rank}
     else:
-        target_card = load_target_card_from_file(profile_path.parent, args.trade_card_file or None, debug=False)
+        target_card = load_target_card_from_file(profile_path.parent, args.trade_card_file or None, debug=args.debug)
 
     if not target_card:
         return
 
     if args.trade_send_online:
-        # инвентарь текущего пользователя
+        # инвентарь текущего пользователя (теперь сохраняется в my_cards.json)
         try:
-            inv_path = ensure_own_inventory(profile_path, profile, debug=False)
+            inv_path = ensure_own_inventory(profile_path, profile, debug=args.debug)
         except Exception as e:
-            print(f"❌ Ошибка получения инвентаря")
+            print(f"❌ Ошибка получения инвентаря: {e}")
             return
         try:
             with inv_path.open("r", encoding="utf-8") as f:
@@ -165,7 +175,7 @@ def main():
         
         from mangabuff.services.owners import iter_online_owners_by_pages
         card_id = int(target_card["card_id"])
-        owners_iter = iter_online_owners_by_pages(profile, card_id, max_pages=args.trade_pages or 0, debug=False)
+        owners_iter = iter_online_owners_by_pages(profile, card_id, max_pages=args.trade_pages or 0, debug=args.debug)
         
         stats = send_trades_to_online_owners(
             profile_data=profile,
@@ -174,7 +184,7 @@ def main():
             my_cards=my_cards,
             dry_run=bool(args.trade_dry_run),
             use_api=bool(args.use_api),
-            debug=False,  # Всегда False для минимального вывода
+            debug=args.debug,
         )
 
 if __name__ == "__main__":

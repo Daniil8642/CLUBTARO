@@ -59,9 +59,20 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
 
     for card in all_cards:
         if int(card.get("card_id") or 0) == card_id:
-            out_path = profiles_dir / f"card_{card_id}_from_{user_id}.json"
+            # Изменено: используем фиксированное имя card_for_boost.json
+            out_path = profiles_dir / "card_for_boost.json"
             with out_path.open("w", encoding="utf-8") as f:
                 json.dump(card, f, ensure_ascii=False, indent=4)
+            
+            # Удаляем файл с карточками профиля после извлечения карты
+            try:
+                cards_path.unlink()
+                if debug:
+                    print(f"[CLUB] Deleted cards file: {cards_path}")
+            except Exception as e:
+                if debug:
+                    print(f"[CLUB] Failed to delete cards file {cards_path}: {e}")
+            
             return card_id, out_path
     return None
 

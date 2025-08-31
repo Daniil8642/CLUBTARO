@@ -1,0 +1,20 @@
+{
+    "id": 265180125,
+    "card_id": 20484,
+    "is_lock": 0,
+    "is_not_tradable": 0,
+    "sort_index": 0,
+    "available_for_trade": true,
+    "card": {
+        "id": 20484,
+        "name": "Джейд",
+        "image": "rZprcXze1QgG15tFv8TZrPO6EfiigG.png",
+        "rank": "C",
+        "sort_index": 2,
+        "manga_id": 35196,
+        "manga": {
+            "id": 35196,
+            "name": "Мой первый поцелуй с дворецким-злодеем"
+        }
+    }
+}
