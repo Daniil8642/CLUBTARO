@@ -281,7 +281,11 @@ def find_partner_card_instance(session: requests.Session, partner_id: int, side:
     return None
 
 
-def create_trade_via_api(session: requests.Session, receiver_id: int, my_instance_id: int, his_instance_id: int, debug: bool=False) -> bool:
+def create_trade(session: requests.Session, receiver_id: int, my_instance_id: int, his_instance_id: int, debug: bool=False) -> bool:
+    """
+    Упрощенная функция отправки обмена - только через API с токенами карт.
+    Убрана двойная стратегия с fallback на форму.
+    """
     url = f"{BASE_URL}/trades/create"
     headers = {
         "Referer": f"{BASE_URL}/trades/offers/{receiver_id}",
@@ -292,19 +296,24 @@ def create_trade_via_api(session: requests.Session, receiver_id: int, my_instanc
     }
     if "X-CSRF-TOKEN" in session.headers:
         headers["X-CSRF-TOKEN"] = session.headers["X-CSRF-TOKEN"]
+
+    # Основной запрос с form-data
     data_pairs = [
         ("receiver_id", int(receiver_id)),
         ("creator_card_ids[]", int(my_instance_id)),
         ("receiver_card_ids[]", int(his_instance_id)),
     ]
+    
     try:
         r = post(session, url, data=data_pairs, headers=headers, allow_redirects=False)
     except requests.RequestException:
         return False
 
+    # Проверка успешности по редиректу
     if r.status_code in (301, 302) and "/trades/" in (r.headers.get("Location") or ""):
         return True
 
+    # Проверка успешности по JSON ответу
     try:
         j = r.json()
         if isinstance(j, dict):
@@ -315,19 +324,25 @@ def create_trade_via_api(session: requests.Session, receiver_id: int, my_instanc
                 return True
     except ValueError:
         pass
+    
+    # Проверка успешности по тексту ответа
     body = (r.text or "").lower()
     if "успеш" in body or "отправ" in body or "создан" in body:
         return True
 
+    # Дополнительная попытка с JSON payload (если form-data не сработал)
     json_payload = {
         "receiver_id": receiver_id,
         "creator_card_ids": [my_instance_id],
         "receiver_card_ids": [his_instance_id],
     }
+    
     try:
         r2 = post(session, url, json=json_payload, headers={**headers, "Content-Type": "application/json"}, allow_redirects=False)
+        
         if r2.status_code in (301, 302) and "/trades/" in (r2.headers.get("Location") or ""):
             return True
+            
         try:
             j2 = r2.json()
             if isinstance(j2, dict):
@@ -338,128 +353,13 @@ def create_trade_via_api(session: requests.Session, receiver_id: int, my_instanc
                     return True
         except ValueError:
             pass
+            
         if "успеш" in (r2.text or "").lower():
             return True
+            
     except requests.RequestException:
         pass
-    return False
-
-
-def trade_form_info(session: requests.Session, partner_id: int, debug: bool=False) -> Optional[Dict[str, Any]]:
-    from bs4 import BeautifulSoup
-    url = f"{BASE_URL}/trades/offers/{partner_id}"
-    try:
-        r = get(session, url)
-    except requests.RequestException:
-        return None
-    if r.status_code != 200:
-        return None
-    soup = BeautifulSoup(r.text, "html.parser")
-    token = ""
-    meta = soup.select_one('meta[name="csrf-token"]')
-    if meta and meta.get("content"):
-        token = meta["content"].strip()
-    inp_token = soup.select_one('input[name="_token"]')
-    if not token and inp_token and inp_token.get("value"):
-        token = inp_token["value"].strip()
-
-    form = None
-    for sel in [
-        'form[action*="/trades/offers"][method="post"]',
-        'form[action*="/trades"][method="post"]',
-        'form[id*="offer"]',
-        'form[name*="offer"]',
-        "form",
-    ]:
-        form = soup.select_one(sel)
-        if form:
-            break
-    if not form:
-        return None
-
-    action = form.get("action") or "/trades/offers"
-    if not action.startswith("http"):
-        action = BASE_URL + action
-
-    hidden: Dict[str, Any] = {}
-    for inp in form.select('input[name]'):
-        name = inp.get("name")
-        typ = (inp.get("type") or "").lower()
-        if typ in ("checkbox", "radio") and not inp.has_attr("checked"):
-            continue
-        val = inp.get("value", "")
-        if name in hidden:
-            if isinstance(hidden[name], list):
-                hidden[name].append(val)
-            else:
-                hidden[name] = [hidden[name], val]
-        else:
-            hidden[name] = val
-
-    return {"action": action, "token": token, "hidden": hidden}
-
-
-def submit_trade_form(session: requests.Session, action_url: str, csrf: str, base_form: Dict[str, Any], my_instance_id: int, partner_instance_id: int, debug: bool=False) -> bool:
-    headers = {
-        "Referer": action_url,
-        "Origin": BASE_URL,
-        "Content-Type": "application/x-www-form-urlencoded",
-    }
-    if csrf:
-        headers["X-CSRF-TOKEN"] = csrf
-
-    data: Dict[str, Any] = dict(base_form or {})
-    if "_token" not in data and csrf:
-        data["_token"] = csrf
-
-    def ensure_list(d: Dict[str, Any], key: str):
-        if key not in d:
-            d[key] = []
-        val = d[key]
-        if isinstance(val, list):
-            d[key] = [str(x) for x in val if x is not None]
-        elif val is None or val == "":
-            d[key] = []
-        else:
-            d[key] = [str(val)]
-
-    ensure_list(data, "creator[]")
-    ensure_list(data, "receiver[]")
-
-    data["creator[]"].append(str(my_instance_id))
-    data["receiver[]"].append(str(partner_instance_id))
-
-    form_payload = []
-    for k, v in data.items():
-        if isinstance(v, list):
-            for x in v:
-                form_payload.append((k, str(x)))
-        else:
-            form_payload.append((k, str(v)))
-
-    try:
-        r = post(session, action_url, data=form_payload, headers=headers, allow_redirects=False)
-    except requests.RequestException:
-        return False
-
-    if r.status_code in (301, 302):
-        loc = r.headers.get("Location", "")
-        if any(x in (loc or "") for x in ("/trades", "/messages", "/notifications", "/offers")):
-            return True
-
-    try:
-        j = r.json()
-        if isinstance(j, dict):
-            if j.get("success") or j.get("ok") or j.get("status") in ("ok", "success"):
-                return True
-            body = json.dumps(j).lower()
-            if "успеш" in body or "отправ" in body or "создан" in body:
-                return True
-    except ValueError:
-        pass
-    body = (r.text or "").lower()
-    if "успеш" in body or "отправ" in body or "создан" in body:
-        return True
+    
     return False
 
 
@@ -469,12 +369,11 @@ def send_trades_to_online_owners(
     owners_iter, 
     my_cards: List[Dict[str, Any]], 
     dry_run: bool = True, 
-    use_api: bool = True, 
     debug: bool = False
 ) -> Dict[str, int]:
     """
     Отправляет обмены онлайн владельцам карты.
-    Минимальный вывод - только результаты отправки.
+    Упрощенная версия - только один способ отправки через API.
     """
     session = build_session_from_profile(profile_data)
     stats = {
@@ -541,7 +440,7 @@ def send_trades_to_online_owners(
             # Ищем карточку у партнера (без debug вывода)
             his_inst = find_partner_card_instance(
                 session, int(owner_id), "receiver", 
-                card_id, rank, name, debug=False  # Всегда False для минимального вывода
+                card_id, rank, name, debug=False
             )
             
             if not his_inst:
@@ -570,25 +469,11 @@ def send_trades_to_online_owners(
                 sleep_time = MIN_TRADE_DELAY - time_since_last
                 time.sleep(sleep_time)
             
-            # Отправляем обмен
-            success = False
-            
-            # Сначала пробуем через API
-            if use_api:
-                success = create_trade_via_api(
-                    session, int(owner_id), int(my_inst), 
-                    int(his_inst), debug=False  # Всегда False
-                )
-            
-            # Если API не сработал, пробуем через форму
-            if not success:
-                form = trade_form_info(session, int(owner_id), debug=False)
-                if form:
-                    success = submit_trade_form(
-                        session, form["action"], form.get("token", ""), 
-                        form.get("hidden", {}), int(my_inst), int(his_inst), 
-                        debug=False  # Всегда False
-                    )
+            # Отправляем обмен - ТОЛЬКО через API
+            success = create_trade(
+                session, int(owner_id), int(my_inst), 
+                int(his_inst), debug=debug
+            )
             
             if success:
                 stats["trades_succeeded"] += 1

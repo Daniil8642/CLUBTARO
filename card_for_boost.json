@@ -1,20 +1,20 @@
 {
-    "id": 265180125,
-    "card_id": 20484,
+    "id": 263321873,
+    "card_id": 58136,
     "is_lock": 0,
     "is_not_tradable": 0,
     "sort_index": 0,
     "available_for_trade": true,
     "card": {
-        "id": 20484,
-        "name": "Джейд",
-        "image": "rZprcXze1QgG15tFv8TZrPO6EfiigG.png",
-        "rank": "C",
-        "sort_index": 2,
-        "manga_id": 35196,
+        "id": 58136,
+        "name": "Булочки Дэйзи",
+        "image": "GvqIfEBstbs4OwAe9I074bzUPvhCZr.png",
+        "rank": "E",
+        "sort_index": 0,
+        "manga_id": 26206,
         "manga": {
-            "id": 35196,
-            "name": "Мой первый поцелуй с дворецким-злодеем"
+            "id": 26206,
+            "name": "Будьте осторожны, выбирая мужа"
         }
     }
 }

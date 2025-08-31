@@ -110,7 +110,6 @@ def main():
     parser.add_argument("--trade_send_online", action="store_true", help="Рассылка обменов онлайн владельцам карты")
     parser.add_argument("--trade_dry_run", type=int, default=1, help="1 = dry-run, 0 = реально отправлять")
     parser.add_argument("--trade_card_file", type=str, default="", help="Путь к файлу с карточкой (card_for_boost.json)")
-    parser.add_argument("--use_api", type=int, default=1, help="1 = использовать API /trades/create, 0 = форму")
     parser.add_argument("--analyze_har", type=str, default="", help="Путь к HAR-файлу для анализа")
 
     args = parser.parse_args()
@@ -177,13 +176,13 @@ def main():
         card_id = int(target_card["card_id"])
         owners_iter = iter_online_owners_by_pages(profile, card_id, max_pages=args.trade_pages or 0, debug=args.debug)
         
+        # Убран параметр use_api - теперь всегда используется только API
         stats = send_trades_to_online_owners(
             profile_data=profile,
             target_card=target_card,
             owners_iter=owners_iter,
             my_cards=my_cards,
             dry_run=bool(args.trade_dry_run),
-            use_api=bool(args.use_api),
             debug=args.debug,
         )
 
