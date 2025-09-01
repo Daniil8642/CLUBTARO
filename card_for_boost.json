@@ -1,20 +1,9 @@
 {
-    "id": 263321873,
-    "card_id": 58136,
-    "is_lock": 0,
-    "is_not_tradable": 0,
-    "sort_index": 0,
-    "available_for_trade": true,
-    "card": {
-        "id": 58136,
-        "name": "Булочки Дэйзи",
-        "image": "GvqIfEBstbs4OwAe9I074bzUPvhCZr.png",
-        "rank": "E",
-        "sort_index": 0,
-        "manga_id": 26206,
-        "manga": {
-            "id": 26206,
-            "name": "Будьте осторожны, выбирая мужа"
-        }
-    }
+    "name": "Ифрит",
+    "id": 266795368,
+    "card_id": 123836,
+    "rank": "E",
+    "wanters_count": 47,
+    "owners_count": 943,
+    "card_url": "https://mangabuff.ru/cards/123836/users"
 }

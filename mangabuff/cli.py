@@ -6,7 +6,7 @@ from typing import Optional, Dict, Any, List
 from mangabuff.config import BASE_URL
 from mangabuff.profiles.store import ProfileStore
 from mangabuff.auth.login import update_profile_cookies
-from mangabuff.services.club import find_boost_card_info, owners_and_wanters_counts
+from mangabuff.services.club import find_boost_card_info
 from mangabuff.services.inventory import ensure_own_inventory
 from mangabuff.services.owners import iter_online_owners_by_pages
 from mangabuff.services.trade import send_trades_to_online_owners
@@ -77,7 +77,7 @@ def load_target_card_from_file(profiles_dir: pathlib.Path, card_file: Optional[s
     if card_id is None and card_block:
         card_id = card_block.get("id")
     if not card_id:
-        for k in ("href", "link", "url", "permalink"):
+        for k in ("href", "link", "url", "permalink", "card_url"):
             href = chosen.get(k)
             if isinstance(href, str):
                 found = extract_card_id_from_href(href)
@@ -110,6 +110,7 @@ def main():
     parser.add_argument("--trade_send_online", action="store_true", help="Рассылка обменов онлайн владельцам карты")
     parser.add_argument("--trade_dry_run", type=int, default=1, help="1 = dry-run, 0 = реально отправлять")
     parser.add_argument("--trade_card_file", type=str, default="", help="Путь к файлу с карточкой (card_for_boost.json)")
+    parser.add_argument("--use_api", type=int, default=1, help="1 = использовать API /trades/create, 0 = форму (не используется в текущей версии)")
     parser.add_argument("--analyze_har", type=str, default="", help="Путь к HAR-файлу для анализа")
 
     args = parser.parse_args()
@@ -130,14 +131,22 @@ def main():
     store.write_by_path(profile_path, profile)
     print(f"✅ Авторизация успешна")
 
-    # Boost-карта (опционально) - минимальный вывод
+    # Boost-карта (опционально) - расширенный вывод
     if args.boost_url:
         res = find_boost_card_info(profile, profile_path.parent, args.boost_url, debug=args.debug)
         if res:
             card_id, out_path = res
-            owners_cnt, wanters_cnt = owners_and_wanters_counts(profile, card_id, debug=args.debug)
-            print(f"✅ Клубная карта {card_id}: владельцев {owners_cnt}, желающих {wanters_cnt}")
-            print(f"   Сохранена в: {out_path}")
+            # Читаем сохраненные данные для вывода
+            try:
+                with out_path.open("r", encoding="utf-8") as f:
+                    card_data = json.load(f)
+                print(f"✅ Клубная карта сохранена:")
+                print(f"   Название: {card_data.get('name', '')}")
+                print(f"   ID карты: {card_data.get('card_id')} | Instance ID: {card_data.get('id')}")
+                print(f"   Ранг: {card_data.get('rank')} | Владельцев: {card_data.get('owners_count')} | Желающих: {card_data.get('wanters_count')}")
+                print(f"   Файл: {out_path}")
+            except Exception:
+                print(f"✅ Клубная карта {card_id} сохранена в: {out_path}")
 
     # HAR-аналитика (опционально) - убираем если не нужно
     if args.analyze_har:
@@ -176,7 +185,7 @@ def main():
         card_id = int(target_card["card_id"])
         owners_iter = iter_online_owners_by_pages(profile, card_id, max_pages=args.trade_pages or 0, debug=args.debug)
         
-        # Убран параметр use_api - теперь всегда используется только API
+        # ИСПРАВЛЕНО: Убрали параметр use_api из вызова функции
         stats = send_trades_to_online_owners(
             profile_data=profile,
             target_card=target_card,
