@@ -193,6 +193,7 @@ def main():
             my_cards=my_cards,
             dry_run=bool(args.trade_dry_run),
             debug=args.debug,
+            profiles_dir=profile_path.parent  # Добавляем директорию профилей для кэша
         )
 
 if __name__ == "__main__":

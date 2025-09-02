@@ -1,6 +1,7 @@
 import json
 import random
 import time
+import pathlib
 from typing import Dict, List, Optional, Any
 
 import requests
@@ -8,6 +9,7 @@ import requests
 from mangabuff.config import BASE_URL, CONNECT_TIMEOUT, READ_TIMEOUT, HUGE_LIST_THRESHOLD, MAX_CONTENT_BYTES, PARTNER_TIMEOUT_LIMIT
 from mangabuff.http.http_utils import build_session_from_profile, get, post, read_capped, decode_body_and_maybe_json
 from mangabuff.parsing.cards import parse_trade_cards_html, normalize_card_entry, entry_card_id, entry_instance_id
+from mangabuff.services.card_selector import select_suitable_card_for_trade
 from mangabuff.utils.text import norm_text
 
 
@@ -369,11 +371,12 @@ def send_trades_to_online_owners(
     owners_iter, 
     my_cards: List[Dict[str, Any]], 
     dry_run: bool = True, 
-    debug: bool = False
+    debug: bool = False,
+    profiles_dir: pathlib.Path = None  # Новый параметр для директории профилей
 ) -> Dict[str, int]:
     """
     Отправляет обмены онлайн владельцам карты.
-    Упрощенная версия - только один способ отправки через API.
+    Использует умный селектор карт с учетом количества желающих.
     """
     session = build_session_from_profile(profile_data)
     stats = {
@@ -383,39 +386,78 @@ def send_trades_to_online_owners(
         "trades_succeeded": 0, 
         "skipped_no_my_cards": 0,
         "skipped_self": 0,
-        "skipped_no_instance": 0
+        "skipped_no_instance": 0,
+        "skipped_no_suitable_card": 0  # Новый счетчик
     }
 
     rank = (target_card.get("rank") or "").strip()
     
-    def instances_any(cards: List[Dict[str, Any]]) -> List[int]:
-        out = []
-        for c in cards:
-            inst = entry_instance_id(c)
-            if inst:
-                out.append(inst)
-        return out
-
-    # Собираем мои карточки для обмена
-    my_instances: List[int] = []
-    if rank:
-        for c in my_cards:
-            r = (c.get("rank") or c.get("grade") or "").strip()
-            if r == rank:
-                inst = entry_instance_id(c)
-                if inst:
-                    my_instances.append(inst)
+    # Отладочный вывод
+    if debug:
+        print(f"[DEBUG] Target rank: '{rank}'")
+        print(f"[DEBUG] Total cards in inventory: {len(my_cards)}")
+        
+        # Проверяем первые несколько карт
+        for i, card in enumerate(my_cards[:3]):
+            card_rank = (card.get("rank") or card.get("grade") or "").strip()
+            print(f"[DEBUG] Card {i}: rank='{card_rank}', card_id={card.get('card_id')}, name={card.get('name') or card.get('title')}")
     
-    if not my_instances:
-        my_instances = instances_any(my_cards)
-
-    if not my_instances:
+    # Проверяем все возможные варианты полей для ранга
+    cards_with_rank = []
+    for c in my_cards:
+        # Проверяем различные варианты полей
+        card_rank = None
+        
+        # Прямые поля
+        if c.get("rank"):
+            card_rank = str(c.get("rank")).strip()
+        elif c.get("grade"):
+            card_rank = str(c.get("grade")).strip()
+        # Вложенный объект card
+        elif isinstance(c.get("card"), dict):
+            if c["card"].get("rank"):
+                card_rank = str(c["card"].get("rank")).strip()
+            elif c["card"].get("grade"):
+                card_rank = str(c["card"].get("grade")).strip()
+        
+        if card_rank == rank:
+            cards_with_rank.append(c)
+    
+    # Дополнительная отладка
+    if debug:
+        print(f"[DEBUG] Cards with rank '{rank}': {len(cards_with_rank)}")
+        if not cards_with_rank and my_cards:
+            # Показываем все уникальные ранги в инвентаре
+            all_ranks = set()
+            for c in my_cards:
+                r = (c.get("rank") or c.get("grade") or "")
+                if not r and isinstance(c.get("card"), dict):
+                    r = c["card"].get("rank") or c["card"].get("grade") or ""
+                if r:
+                    all_ranks.add(str(r).strip())
+            print(f"[DEBUG] All unique ranks in inventory: {sorted(all_ranks)}")
+    
+    if not cards_with_rank:
         stats["skipped_no_my_cards"] = 1
+        print(f"❌ Нет карт ранга '{rank}' в инвентаре (всего карт: {len(my_cards)})")
+        
+        # Показываем пример структуры первой карты для диагностики
+        if my_cards and debug:
+            print("[DEBUG] Example card structure:")
+            import json
+            print(json.dumps(my_cards[0], ensure_ascii=False, indent=2)[:500])
+        
         return stats
 
     card_id = int(target_card.get("card_id") or target_card.get("cardId") or 0)
     name = target_card.get("name") or ""
     my_user_id = str(profile_data.get("id") or profile_data.get("ID") or profile_data.get("user_id") or "")
+    
+    # Определяем директорию для кэша
+    if profiles_dir is None:
+        profiles_dir = pathlib.Path(".")
+    
+    print(f"✅ Найдено {len(cards_with_rank)} карт ранга '{rank}' в инвентаре")
     
     # Минимальная задержка между обменами - 11 секунд
     MIN_TRADE_DELAY = 11.0
@@ -447,12 +489,27 @@ def send_trades_to_online_owners(
                 stats["skipped_no_instance"] += 1
                 continue
             
-            # Выбираем случайную свою карточку для обмена
-            my_inst = random.choice(my_instances)
+            # Используем умный селектор для выбора карты
+            selected = select_suitable_card_for_trade(
+                profile_data=profile_data,
+                my_cards=my_cards,
+                target_card=target_card,
+                cache_dir=profiles_dir,
+                debug=debug
+            )
+            
+            if not selected:
+                stats["skipped_no_suitable_card"] += 1
+                if debug:
+                    print(f"[TRADE] No suitable card found for trade with {owner_id}")
+                continue
+            
+            my_inst, card_info = selected
             stats["trades_attempted"] += 1
             
             if dry_run:
-                print(f"[DRY-RUN] 📤 {owner_id}: {my_inst} ↔ {his_inst}")
+                card_name = card_info.get("title") or card_info.get("name") or ""
+                print(f"[DRY-RUN] 📤 {owner_id}: {my_inst} ({card_name}) ↔ {his_inst}")
                 # В dry-run режиме тоже соблюдаем задержку
                 current_time = time.time()
                 time_since_last = current_time - last_trade_time
@@ -477,7 +534,8 @@ def send_trades_to_online_owners(
             
             if success:
                 stats["trades_succeeded"] += 1
-                print(f"✅ Обмен отправлен → {owner_id}")
+                card_name = card_info.get("title") or card_info.get("name") or ""
+                print(f"✅ Обмен отправлен → {owner_id} | Моя: {card_name}")
             else:
                 print(f"❌ Ошибка отправки → {owner_id}")
             
@@ -489,5 +547,11 @@ def send_trades_to_online_owners(
             time.sleep(additional_delay)
     
     # Финальная статистика
-    print(f"\n📊 Итого: проверено {stats['owners_seen']} владельцев, отправлено {stats['trades_succeeded']}/{stats['trades_attempted']} обменов")
+    print(f"\n📊 Итого:")
+    print(f"   Проверено страниц: {stats['checked_pages']}")
+    print(f"   Проверено владельцев: {stats['owners_seen']}")
+    print(f"   Отправлено обменов: {stats['trades_succeeded']}/{stats['trades_attempted']}")
+    if stats['skipped_no_suitable_card'] > 0:
+        print(f"   Пропущено (нет подходящих карт): {stats['skipped_no_suitable_card']}")
+    
     return stats

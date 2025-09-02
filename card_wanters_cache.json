@@ -1,0 +1,254 @@
+{
+  "86347": {
+    "card_id": 86347,
+    "name": "Дор",
+    "rank": "E",
+    "wanters_count": 31,
+    "timestamp": 1756824072.7815073,
+    "cached_at": "2025-09-02T17:41:12.781510",
+    "instance_id": 86346265
+  },
+  "78752": {
+    "card_id": 78752,
+    "name": "Империя Фрэйспен",
+    "rank": "E",
+    "wanters_count": 70,
+    "timestamp": 1756824073.4070888,
+    "cached_at": "2025-09-02T17:41:13.407090",
+    "instance_id": 26044234
+  },
+  "92402": {
+    "card_id": 92402,
+    "name": "Библиотека",
+    "rank": "E",
+    "wanters_count": 48,
+    "timestamp": 1756824082.6331973,
+    "cached_at": "2025-09-02T17:41:22.633198",
+    "instance_id": 63569915
+  },
+  "78213": {
+    "card_id": 78213,
+    "name": "Яйцо на пару",
+    "rank": "E",
+    "wanters_count": 10,
+    "timestamp": 1756824083.0173156,
+    "cached_at": "2025-09-02T17:41:23.017316",
+    "instance_id": 85688590
+  },
+  "105271": {
+    "card_id": 105271,
+    "name": "Нежный латте",
+    "rank": "E",
+    "wanters_count": 44,
+    "timestamp": 1756824083.4051452,
+    "cached_at": "2025-09-02T17:41:23.405147",
+    "instance_id": 194171591
+  },
+  "147710": {
+    "card_id": 147710,
+    "name": "Руки",
+    "rank": "E",
+    "wanters_count": 20,
+    "timestamp": 1756824083.772141,
+    "cached_at": "2025-09-02T17:41:23.772142",
+    "instance_id": 182012033
+  },
+  "103114": {
+    "card_id": 103114,
+    "name": "Капсула времени",
+    "rank": "E",
+    "wanters_count": 38,
+    "timestamp": 1756824089.0722637,
+    "cached_at": "2025-09-02T17:41:29.072265",
+    "instance_id": 107739009
+  },
+  "51939": {
+    "card_id": 51939,
+    "name": "Святая вода",
+    "rank": "E",
+    "wanters_count": 101,
+    "timestamp": 1756824089.7168145,
+    "cached_at": "2025-09-02T17:41:29.716815",
+    "instance_id": 49465974
+  },
+  "119622": {
+    "card_id": 119622,
+    "name": "Букет",
+    "rank": "E",
+    "wanters_count": 36,
+    "timestamp": 1756824090.1097465,
+    "cached_at": "2025-09-02T17:41:30.109747",
+    "instance_id": 203753990
+  },
+  "148018": {
+    "card_id": 148018,
+    "name": "Бабочки",
+    "rank": "E",
+    "wanters_count": 209,
+    "timestamp": 1756824090.7491255,
+    "cached_at": "2025-09-02T17:41:30.749127",
+    "instance_id": 223282966
+  },
+  "123272": {
+    "card_id": 123272,
+    "name": "Подарки",
+    "rank": "E",
+    "wanters_count": 6,
+    "timestamp": 1756824091.129645,
+    "cached_at": "2025-09-02T17:41:31.129646",
+    "instance_id": 75655801
+  },
+  "104599": {
+    "card_id": 104599,
+    "name": "Сяо Юй",
+    "rank": "E",
+    "wanters_count": 6,
+    "timestamp": 1756824100.1390533,
+    "cached_at": "2025-09-02T17:41:40.139054",
+    "instance_id": 150430832
+  },
+  "153592": {
+    "card_id": 153592,
+    "name": "Конфеты",
+    "rank": "E",
+    "wanters_count": 14,
+    "timestamp": 1756824100.5132768,
+    "cached_at": "2025-09-02T17:41:40.513278",
+    "instance_id": 111891805
+  },
+  "95094": {
+    "card_id": 95094,
+    "name": "Гаэлион",
+    "rank": "E",
+    "wanters_count": 78,
+    "timestamp": 1756824101.1861877,
+    "cached_at": "2025-09-02T17:41:41.186189",
+    "instance_id": 163596629
+  },
+  "149740": {
+    "card_id": 149740,
+    "name": "Поле цветов",
+    "rank": "E",
+    "wanters_count": 22,
+    "timestamp": 1756824101.5798862,
+    "cached_at": "2025-09-02T17:41:41.579887",
+    "instance_id": 132585454
+  },
+  "49952": {
+    "card_id": 49952,
+    "name": "Суиса",
+    "rank": "E",
+    "wanters_count": 13,
+    "timestamp": 1756824101.9457185,
+    "cached_at": "2025-09-02T17:41:41.945719",
+    "instance_id": 33119155
+  },
+  "126857": {
+    "card_id": 126857,
+    "name": "Избушка",
+    "rank": "E",
+    "wanters_count": 16,
+    "timestamp": 1756824102.3127482,
+    "cached_at": "2025-09-02T17:41:42.312749",
+    "instance_id": 129317944
+  },
+  "60582": {
+    "card_id": 60582,
+    "name": "Ли Хо",
+    "rank": "E",
+    "wanters_count": 9,
+    "timestamp": 1756824102.694303,
+    "cached_at": "2025-09-02T17:41:42.694304",
+    "instance_id": 224977437
+  },
+  "111736": {
+    "card_id": 111736,
+    "name": "Гримм",
+    "rank": "E",
+    "wanters_count": 8,
+    "timestamp": 1756824103.0738413,
+    "cached_at": "2025-09-02T17:41:43.073842",
+    "instance_id": 166096094
+  },
+  "60650": {
+    "card_id": 60650,
+    "name": "Лена Мариер",
+    "rank": "E",
+    "wanters_count": 7,
+    "timestamp": 1756824110.756093,
+    "cached_at": "2025-09-02T17:41:50.756094",
+    "instance_id": 4948072
+  },
+  "83902": {
+    "card_id": 83902,
+    "name": "Улица",
+    "rank": "E",
+    "wanters_count": 8,
+    "timestamp": 1756824135.370577,
+    "cached_at": "2025-09-02T17:42:15.370578",
+    "instance_id": 62404685
+  },
+  "154845": {
+    "card_id": 154845,
+    "name": "Призраки",
+    "rank": "E",
+    "wanters_count": 187,
+    "timestamp": 1756824135.991505,
+    "cached_at": "2025-09-02T17:42:15.991506",
+    "instance_id": 132585539
+  },
+  "200339": {
+    "card_id": 200339,
+    "name": "Проклятие",
+    "rank": "E",
+    "wanters_count": 15,
+    "timestamp": 1756824136.3860004,
+    "cached_at": "2025-09-02T17:42:16.386001",
+    "instance_id": 204973252
+  },
+  "103349": {
+    "card_id": 103349,
+    "name": "Город",
+    "rank": "E",
+    "wanters_count": 37,
+    "timestamp": 1756824136.7608533,
+    "cached_at": "2025-09-02T17:42:16.760854",
+    "instance_id": 54648221
+  },
+  "110629": {
+    "card_id": 110629,
+    "name": "Руки",
+    "rank": "E",
+    "wanters_count": 9,
+    "timestamp": 1756824137.1320715,
+    "cached_at": "2025-09-02T17:42:17.132072",
+    "instance_id": 164075491
+  },
+  "87973": {
+    "card_id": 87973,
+    "name": "Фердинанд Извар",
+    "rank": "E",
+    "wanters_count": 5,
+    "timestamp": 1756824137.494487,
+    "cached_at": "2025-09-02T17:42:17.494488",
+    "instance_id": 121451176
+  },
+  "34706": {
+    "card_id": 34706,
+    "name": "Королевство Боссе",
+    "rank": "E",
+    "wanters_count": 23,
+    "timestamp": 1756824137.8765223,
+    "cached_at": "2025-09-02T17:42:17.876523",
+    "instance_id": 36539437
+  },
+  "188203": {
+    "card_id": 188203,
+    "name": "Ивонн",
+    "rank": "E",
+    "wanters_count": 9,
+    "timestamp": 1756824138.2561908,
+    "cached_at": "2025-09-02T17:42:18.256191",
+    "instance_id": 221320443
+  }
+}
