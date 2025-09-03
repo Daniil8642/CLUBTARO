@@ -12,9 +12,6 @@ from mangabuff.http.http_utils import build_session_from_profile
 
 # Константы
 CACHE_LIFETIME_HOURS = 24
-WANTERS_TOLERANCE_UPPER = 0.10  # +10%
-WANTERS_TOLERANCE_LOWER = 0.30  # -30%
-MAX_SELECTION_ATTEMPTS = 10  # Максимум попыток выбора подходящей карты
 
 
 class CardWantersCache:
@@ -137,28 +134,6 @@ def get_card_wanters_count(profile_data: Dict, card_id: int, cache: CardWantersC
     return wanters_count
 
 
-def is_wanters_count_acceptable(target_wanters: int, card_wanters: int) -> bool:
-    """
-    Проверяет, подходит ли количество желающих для карты.
-    
-    Args:
-        target_wanters: Количество желающих на целевую карту (из вкладов)
-        card_wanters: Количество желающих на карту из инвентаря
-    
-    Returns:
-        True если количество желающих в допустимом диапазоне
-    """
-    if target_wanters == 0:
-        # Если на целевую карту нет желающих, принимаем карты с 0-3 желающими
-        return card_wanters <= 3
-    
-    # Вычисляем допустимый диапазон
-    min_wanters = int(target_wanters * (1 - WANTERS_TOLERANCE_LOWER))
-    max_wanters = int(target_wanters * (1 + WANTERS_TOLERANCE_UPPER))
-    
-    return min_wanters <= card_wanters <= max_wanters
-
-
 def select_suitable_card_for_trade(
     profile_data: Dict,
     my_cards: List[Dict[str, Any]],
@@ -168,6 +143,7 @@ def select_suitable_card_for_trade(
 ) -> Optional[Tuple[int, Dict[str, Any]]]:
     """
     Выбирает подходящую карту для обмена из инвентаря пользователя.
+    Новая упрощенная логика: выбирает карты с количеством желающих ≤ целевой карте.
     
     Args:
         profile_data: Данные профиля
@@ -232,66 +208,52 @@ def select_suitable_card_for_trade(
     if debug:
         print(f"[SELECTOR] Found {len(suitable_cards)} cards with rank {target_rank}")
     
-    # Перемешиваем список для случайного выбора
+    # Перемешиваем список для случайного выбора среди подходящих
     random.shuffle(suitable_cards)
     
-    # Пробуем найти подходящую карту
-    rejected_cards = []
+    # Список всех проверенных карт с их количеством желающих
+    checked_cards = []
     
-    for attempt in range(min(MAX_SELECTION_ATTEMPTS, len(suitable_cards))):
-        candidate = suitable_cards[attempt]
+    # Проверяем все карты нужного ранга
+    for candidate in suitable_cards:
         card_id = candidate["card_id"]
         card_info = candidate["card_info"]
         
         # Получаем количество желающих (из кэша или запросом)
         card_wanters = get_card_wanters_count(profile_data, card_id, cache, debug=debug)
         
-        # Проверяем, подходит ли карта
-        if is_wanters_count_acceptable(target_wanters, card_wanters):
+        # Сохраняем информацию о проверенной карте
+        checked_cards.append({
+            "candidate": candidate,
+            "wanters": card_wanters
+        })
+        
+        # Сохраняем в кэш для будущего использования
+        cache.set_card_info(card_id, card_wanters, card_info)
+        
+        # Проверяем, подходит ли карта (количество желающих ≤ целевой)
+        if card_wanters <= target_wanters:
             if debug:
-                print(f"[SELECTOR] Selected card {card_id} with {card_wanters} wanters (acceptable)")
+                print(f"[SELECTOR] Selected card {card_id} with {card_wanters} wanters (≤ {target_wanters})")
             return candidate["instance_id"], card_info
         else:
             if debug:
-                print(f"[SELECTOR] Rejected card {card_id} with {card_wanters} wanters (not acceptable)")
-            
-            # Сохраняем неподходящую карту в кэш
-            cache.set_card_info(card_id, card_wanters, card_info)
-            rejected_cards.append((card_id, card_wanters))
+                print(f"[SELECTOR] Rejected card {card_id} with {card_wanters} wanters (> {target_wanters})")
     
-    # Если не нашли идеально подходящую карту, выбираем наименее плохую из проверенных
-    if rejected_cards and debug:
-        print(f"[SELECTOR] No perfect match found. Falling back to random selection from checked cards.")
-    
-    # Fallback: выбираем случайную карту из оставшихся (если все проверенные не подошли)
-    if len(suitable_cards) > MAX_SELECTION_ATTEMPTS:
-        # Есть непроверенные карты, выбираем из них
-        remaining = suitable_cards[MAX_SELECTION_ATTEMPTS:]
-        selected = random.choice(remaining)
+    # Если не нашли карту с количеством желающих ≤ целевой,
+    # выбираем карту с наиболее близким количеством желающих
+    if checked_cards:
         if debug:
-            print(f"[SELECTOR] Selected random unchecked card {selected['card_id']}")
-        return selected["instance_id"], selected["card_info"]
-    elif suitable_cards:
-        # Все карты проверены и не подошли, выбираем наименее плохую
-        # Выбираем карту с количеством желающих, наиболее близким к целевому
-        best_card = None
-        best_diff = float('inf')
+            print(f"[SELECTOR] No card with wanters ≤ {target_wanters} found. Selecting closest match.")
         
-        for card in suitable_cards[:len(rejected_cards)]:
-            card_id = card["card_id"]
-            # Находим количество желающих из rejected_cards
-            for rej_id, rej_wanters in rejected_cards:
-                if rej_id == card_id:
-                    diff = abs(rej_wanters - target_wanters)
-                    if diff < best_diff:
-                        best_diff = diff
-                        best_card = card
-                    break
+        # Сортируем по разнице с целевым количеством желающих
+        best_match = min(checked_cards, key=lambda x: abs(x["wanters"] - target_wanters))
         
-        if best_card:
-            if debug:
-                print(f"[SELECTOR] Selected best available card {best_card['card_id']} (closest to target)")
-            return best_card["instance_id"], best_card["card_info"]
+        if debug:
+            print(f"[SELECTOR] Selected closest match: card {best_match['candidate']['card_id']} "
+                  f"with {best_match['wanters']} wanters (target: {target_wanters})")
+        
+        return best_match["candidate"]["instance_id"], best_match["candidate"]["card_info"]
     
     # Не должны сюда попасть, но на всякий случай
     return None
