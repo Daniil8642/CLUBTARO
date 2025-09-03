@@ -89,8 +89,19 @@ def load_target_card_from_file(profiles_dir: pathlib.Path, card_file: Optional[s
 
     name = chosen.get("name") or (card_block and card_block.get("name")) or chosen.get("title") or ""
     rank = (chosen.get("rank") or (card_block and card_block.get("rank")) or "").strip()
+    
+    # ИСПРАВЛЕНИЕ: Добавляем передачу wanters_count и owners_count из файла
+    wanters_count = chosen.get("wanters_count", 0)
+    owners_count = chosen.get("owners_count", 0)
 
-    return {"card_id": int(card_id), "name": name or "", "rank": rank or "", "file": str(path)}
+    return {
+        "card_id": int(card_id), 
+        "name": name or "", 
+        "rank": rank or "", 
+        "wanters_count": wanters_count,  # Добавлено
+        "owners_count": owners_count,     # Добавлено
+        "file": str(path)
+    }
 
 def main():
     parser = argparse.ArgumentParser(description="MangaBuff helper (modular)")
