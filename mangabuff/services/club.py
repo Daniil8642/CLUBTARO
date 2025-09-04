@@ -11,7 +11,13 @@ from mangabuff.http.http_utils import build_session_from_profile, get
 from mangabuff.services.inventory import fetch_all_cards_by_id
 from mangabuff.services.counters import count_by_last_page
 
-def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_boost_url: str, debug: bool=False) -> Optional[Tuple[int, pathlib.Path]]:
+def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_boost_url: str, debug: bool=False, force_refresh: bool=True) -> Optional[Tuple[int, pathlib.Path]]:
+    """
+    Находит информацию о карте для вклада в клуб и сохраняет её.
+    
+    Args:
+        force_refresh: Если True, всегда обновляет данные (по умолчанию True)
+    """
     session = build_session_from_profile(profile_data)
     club_boost_url = club_boost_url if club_boost_url.startswith("http") else f"{BASE_URL}{club_boost_url}"
     try:
@@ -75,7 +81,15 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
 
     last_user_link = user_links[-1]
     user_id = last_user_link["href"].rstrip("/").split("/")[-1]
-    cards_path, got_cards = fetch_all_cards_by_id(profile_data, profiles_dir, user_id, debug=debug)
+    
+    # Получаем карты с force_refresh
+    cards_path, got_cards = fetch_all_cards_by_id(
+        profile_data, 
+        profiles_dir, 
+        user_id, 
+        debug=debug,
+        force_refresh=force_refresh  # Принудительное обновление
+    )
     if not got_cards:
         return None
 
@@ -109,7 +123,8 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
                 "rank": rank.strip() if rank else "",
                 "wanters_count": wanters_count,  # количество желающих
                 "owners_count": owners_count,  # количество владельцев
-                "card_url": f"{BASE_URL}/cards/{card_id}/users"  # прямая ссылка на карту
+                "card_url": f"{BASE_URL}/cards/{card_id}/users",  # прямая ссылка на карту
+                "updated_at": pathlib.Path(cards_path).stat().st_mtime  # время обновления
             }
             
             # Сохраняем в файл с красивым форматированием
@@ -130,6 +145,7 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
     return None
 
 def owners_and_wanters_counts(profile_data: Dict, card_id: int, debug: bool=False) -> Tuple[int, int]:
+    """Получает количество владельцев и желающих для карты."""
     owners_selectors = [
         "a.card-show__owner",
         'a[class*="card-show__owner"]',

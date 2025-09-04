@@ -1,0 +1,19 @@
+{
+    "cookie": {
+        "theme": "light",
+        "__ddg9_": "212.5.158.100",
+        "XSRF-TOKEN": "eyJpdiI6IkIwRDF2S3VNVndLandDTWNmV0JQY1E9PSIsInZhbHVlIjoiT050VFVNMjdpaEJubHNMbWpBV1ZDbzhjNDBIb2xnbUlXV0FJMStjWDNMRG83TEJTK29IbFgrZzkzRHhDdHZnOTNrTjdCMDJMTllhL2xkcFp3Qytrak1TYlcrWVBWUmNvenhybmRXWUNHYjVSV2EwYkZtZzlVSWdodzgzeElqYU8iLCJtYWMiOiI5MzY2YmU1ZGM2ZDI3NDcxYjcyMDc1NzE4N2FjZGIyMmU1MTVlZTdiMzI1NTYyYjM1ZjJhY2JjMjhiZTE4MjU2IiwidGFnIjoiIn0%3D",
+        "mangabuff_session": "eyJpdiI6IkZneFpsVUJUVE1acU1hOGtpazBTZUE9PSIsInZhbHVlIjoiUVlyYmR2WEdHWW5heTBodnhUSUlaQjNjMjUxdzVEQ2x1bFRrdzBYSVRRc0llVTB5c2NCNzZkdEdKd2Zmclk5OGRMNkowc0VTaHd0eGVDWXdEL1RrUVdjZUR2K0ZvYmJYaVBMVlAzMnRDSWFPYkR4bkRkeXVmalhVdVRTVEhYTlkiLCJtYWMiOiI1ODIyOWM2OWY2MDdmM2RjNzZhNDQ1ZWFmMTkwYTg1ZTg5Y2JjZDlkNjhmYTcxZTM1MzdmMTgzOWUxNjk4MjQwIiwidGFnIjoiIn0%3D",
+        "remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d": "eyJpdiI6IlpXSUNlczMzU0pqbGNWdVJmQXpHc3c9PSIsInZhbHVlIjoiVjJ3ZXlvRWdZQ1RjQ0lVUW1weERQYno4bW5iYUpMM0lMMVBaRFhWOEdJbDR5YmMzclhOaExQenNydmNUOWNSTXptczQ1T1VSVk82d2R2UVY2SzAvKzVqZXZLRHFYTUc5eHAyLysrMHNrWWdEOGF1T3BSM25pYjF6YkFzS3ZtSk9KOFFYSVltbWdhZUVJNXB0NTZMa1l3bGMwVE94S2YwaHY4STQ1T2Vua1hvTllscTlwVncrckxXblZmcTExVUt0TzJ6b2hzQkY3UGtJRTI5YmY4eWh5Zit4Wm5WN0I4em5kZEVHWWNhOXp2Zz0iLCJtYWMiOiI5MGJlMDg1ODEzYzJlMjZmYjRjZDUzOGQxOTkwYWJlZTYzNTBiMzUwMWM1OTAyYzdiZWRjYzdiYzY5MTJiYjA0IiwidGFnIjoiIn0%3D"
+    },
+    "client_headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "ru,en;q=0.8",
+        "Accept-Encoding": "gzip, deflate",
+        "x-csrf-token": "YMYm9hb9M3elOCe4NZh0vUtA8nRJuvDOEFl9iJev",
+        "x-requested-with": "XMLHttpRequest"
+    },
+    "id": "826513",
+    "club_name": "klub-taro-2"
+}
