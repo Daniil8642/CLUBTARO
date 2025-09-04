@@ -1,0 +1,19 @@
+{
+    "cookie": {
+        "theme": "light",
+        "__ddg9_": "212.5.158.124",
+        "XSRF-TOKEN": "eyJpdiI6IkJzMmJ3ZmY2OTlmT2tkd1BkYkExNkE9PSIsInZhbHVlIjoicExod2crVm44aGNCN2QxTmc0QXRCd2ZUeFhkbzBrd0JsTFpoMDZkd1Nrc2s0U3dLMEhIYzl3bnlRVzM2TzNOckZFZTJpN1RscG5seU5GT0ordnRvSXU2aTlXMXZ3Uzl0MlVFL0hHRmNXNXg1Z29SL0czVWhZSXZxNkNjUWhyaFUiLCJtYWMiOiJkZGVmODMzZWY5ODM0ZmI5MmY0NmVkMGZiY2FiYmYzNDA3Nzg4MDEwYTk5ODczYmVmYWJjYmJiMzM2MThjODJlIiwidGFnIjoiIn0%3D",
+        "mangabuff_session": "eyJpdiI6InFhd2JGZkc4Y09BVU5kNEJpS0xXemc9PSIsInZhbHVlIjoiWkxUdU42Mkl2dE1SeXB4a0Q0WGJoZEdtMDNwU096Y0VaMGVjUlJ4UWt0dWJGQ1RtU0NTTWpDMUxsZEJ6OVY3SEFnR1RhaWY2Q1JYV0Q2MTZBWWZrZjVza1Nad2QwWmV4by9uRmxzV3dRM0ZYdi9YRUUrV25xcXRFWVVsR21haDYiLCJtYWMiOiIyZjc1MTk0N2QyMGEzZThiYmViY2VjY2ZhZGU5YmEwYTk0YjAyNTVhNGI1YmI2N2JhY2YxNWRhYzUxMTdiYzM4IiwidGFnIjoiIn0%3D",
+        "remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d": "eyJpdiI6IlpXSUNlczMzU0pqbGNWdVJmQXpHc3c9PSIsInZhbHVlIjoiVjJ3ZXlvRWdZQ1RjQ0lVUW1weERQYno4bW5iYUpMM0lMMVBaRFhWOEdJbDR5YmMzclhOaExQenNydmNUOWNSTXptczQ1T1VSVk82d2R2UVY2SzAvKzVqZXZLRHFYTUc5eHAyLysrMHNrWWdEOGF1T3BSM25pYjF6YkFzS3ZtSk9KOFFYSVltbWdhZUVJNXB0NTZMa1l3bGMwVE94S2YwaHY4STQ1T2Vua1hvTllscTlwVncrckxXblZmcTExVUt0TzJ6b2hzQkY3UGtJRTI5YmY4eWh5Zit4Wm5WN0I4em5kZEVHWWNhOXp2Zz0iLCJtYWMiOiI5MGJlMDg1ODEzYzJlMjZmYjRjZDUzOGQxOTkwYWJlZTYzNTBiMzUwMWM1OTAyYzdiZWRjYzdiYzY5MTJiYjA0IiwidGFnIjoiIn0%3D"
+    },
+    "client_headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "ru,en;q=0.8",
+        "Accept-Encoding": "gzip, deflate",
+        "x-csrf-token": "YMYm9hb9M3elOCe4NZh0vUtA8nRJuvDOEFl9iJev",
+        "x-requested-with": "XMLHttpRequest"
+    },
+    "id": "826513",
+    "club_name": "klub-taro-2"
+}

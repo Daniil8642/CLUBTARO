@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 from mangabuff.config import BASE_URL
 from mangabuff.http.http_utils import build_session_from_profile, get, post
 from mangabuff.services.club import find_boost_card_info
+from mangabuff.services.card_storage import get_card_storage
 
 
 class BoostMonitor:
@@ -35,19 +36,29 @@ class BoostMonitor:
         self._monitor_thread: Optional[threading.Thread] = None
         self._stop_event = threading.Event()
         
+        # Единое хранилище карт
+        self.card_storage = get_card_storage(profiles_dir)
+        
         # Загружаем начальную карту если есть
         self._load_current_card()
     
     def _load_current_card(self) -> None:
-        """Загружает текущую карту из файла если есть"""
+        """Загружает текущую карту из единого хранилища"""
+        current_boost_card = self.card_storage.get_current_boost_card()
+        if current_boost_card:
+            self.current_card_id = current_boost_card.get("card_id")
+            if self.debug:
+                print(f"[MONITOR] Loaded current card ID from storage: {self.current_card_id}")
+        
+        # Fallback на старый файл для совместимости
         card_file = self.profiles_dir / "card_for_boost.json"
-        if card_file.exists():
+        if not self.current_card_id and card_file.exists():
             try:
                 with card_file.open("r", encoding="utf-8") as f:
                     data = json.load(f)
                 self.current_card_id = data.get("card_id")
                 if self.debug:
-                    print(f"[MONITOR] Loaded current card ID: {self.current_card_id}")
+                    print(f"[MONITOR] Loaded current card ID from legacy file: {self.current_card_id}")
             except Exception as e:
                 if self.debug:
                     print(f"[MONITOR] Failed to load current card: {e}")
@@ -65,6 +76,8 @@ class BoostMonitor:
         try:
             resp = get(session, self.boost_url)
             if resp.status_code != 200:
+                if self.debug:
+                    print(f"[MONITOR] Failed to get boost page: HTTP {resp.status_code}")
                 return 0, None, False, False
         except requests.RequestException as e:
             if self.debug:
@@ -73,60 +86,134 @@ class BoostMonitor:
         
         soup = BeautifulSoup(resp.text, "html.parser")
         
-        # 1. Количество замен - ищем текст вида "0 / 10" в club-boost__change
+        # 1. Количество замен - ищем текст вида "0 / 10" или "1 / 10"
         changes = 0
-        change_el = soup.select_one('.club-boost__change div, .club-boost__change span')
-        if change_el:
-            text = change_el.get_text(strip=True)
-            # Парсим формат "X / Y"
-            import re
-            match = re.search(r'(\d+)\s*/\s*\d+', text)
-            if match:
-                changes = int(match.group(1))
+        change_selectors = [
+            '.club-boost__change div',
+            '.club-boost__change span', 
+            '.club-boost__change',
+            '[class*="boost"] [class*="change"]',
+            '.boost-changes'
+        ]
+        
+        for selector in change_selectors:
+            change_el = soup.select_one(selector)
+            if change_el:
+                text = change_el.get_text(strip=True)
+                # Парсим формат "X / Y"
+                import re
+                match = re.search(r'(\d+)\s*/\s*(\d+)', text)
+                if match:
+                    changes = int(match.group(1))
+                    total_changes = int(match.group(2))
+                    if self.debug:
+                        print(f"[MONITOR] Found changes text: '{text}' -> {changes}/{total_changes}")
+                    break
         
         # 2. ID текущей карты для вклада
         card_id = None
-        card_link = soup.select_one('a.button.button--block[href*="/cards/"]')
-        if card_link:
-            href = card_link.get("href", "")
-            import re
-            match = re.search(r'/cards/(\d+)', href)
-            if match:
-                card_id = int(match.group(1))
-        
-        # 3. Кнопка пожертвовать карту
-        # Ищем кнопку с текстом "Пожертвовать карту" или подобным
-        can_donate = False
-        donate_button = None
-        
-        # Проверяем различные селекторы для кнопки донейта
-        button_selectors = [
-            'button.club-boost__btn',
-            'button[class*="donate"]',
-            'button[class*="boost"]',
-            '.club-boost__action button',
-            'button'  # Fallback на все кнопки
+        card_link_selectors = [
+            'a.button.button--block[href*="/cards/"]',
+            'a[href*="/cards/"][class*="button"]',
+            'a[href*="/cards/"]'
         ]
         
-        for selector in button_selectors:
-            buttons = soup.select(selector)
-            for btn in buttons:
-                btn_text = btn.get_text(strip=True).lower()
-                if any(word in btn_text for word in ['пожертв', 'отдать', 'внести', 'добав']):
-                    donate_button = btn
-                    can_donate = True
+        for selector in card_link_selectors:
+            card_link = soup.select_one(selector)
+            if card_link:
+                href = card_link.get("href", "")
+                import re
+                match = re.search(r'/cards/(\d+)', href)
+                if match:
+                    card_id = int(match.group(1))
+                    if self.debug:
+                        print(f"[MONITOR] Found card link: {href} -> ID {card_id}")
                     break
-            if donate_button:
-                break
         
-        # Альтернативный способ - проверить есть ли у нас карта в инвентаре
-        # по тексту "У вас есть эта карта"
-        has_card_text = soup.find(text=lambda t: t and 'у вас есть' in t.lower())
-        if has_card_text and not can_donate:
-            can_donate = True
+        # 3. Кнопка пожертвовать карту - более точная проверка
+        can_donate = False
+        
+        # Ищем кнопку "Пожертвовать карту" по тексту
+        donate_buttons = soup.find_all(['button', 'a', 'input'])
+        for btn in donate_buttons:
+            btn_text = btn.get_text(strip=True).lower()
+            btn_value = (btn.get('value') or '').lower()
+            btn_title = (btn.get('title') or '').lower()
+            
+            all_text = f"{btn_text} {btn_value} {btn_title}"
+            
+            # Более точные ключевые слова для пожертвования
+            donate_keywords = [
+                'пожертвовать карту',
+                'внести вклад', 
+                'отдать карту',
+                'добавить карту',
+                'donate card',
+                'submit card'
+            ]
+            
+            if any(keyword in all_text for keyword in donate_keywords):
+                # Проверяем, что кнопка не заблокирована
+                is_disabled = (
+                    btn.get('disabled') or 
+                    'disabled' in btn.get('class', []) or
+                    btn.get('aria-disabled') == 'true'
+                )
+                
+                if not is_disabled:
+                    can_donate = True
+                    if self.debug:
+                        print(f"[MONITOR] Found donate button: '{btn_text}' (enabled)")
+                    break
+                else:
+                    if self.debug:
+                        print(f"[MONITOR] Found donate button but disabled: '{btn_text}'")
+        
+        # Альтернативная проверка - ищем текст "Могут внести:"
+        if not can_donate:
+            page_text = soup.get_text()
+            
+            # Проверяем наличие указателей на возможность внести карту
+            donation_indicators = [
+                'могут внести:',
+                'могу внести',
+                'у вас есть эта карта',
+                'в вашем инвентаре',
+                'можете пожертвовать',
+                'можно внести'
+            ]
+            
+            for indicator in donation_indicators:
+                if indicator in page_text.lower():
+                    # Дополнительная проверка - есть ли список с нашим именем
+                    if 'могут внести:' in page_text.lower():
+                        # Ищем раздел с пользователями которые могут внести
+                        can_donate_section = soup.find(text=re.compile(r'могут внести', re.I))
+                        if can_donate_section:
+                            # Ищем аватары или имена пользователей в этом разделе
+                            parent = can_donate_section.parent
+                            if parent:
+                                avatars = parent.find_all(['img', 'div'], class_=re.compile(r'avatar|user|profile'))
+                                if avatars:
+                                    can_donate = True
+                                    if self.debug:
+                                        print(f"[MONITOR] Found donation possibility in 'Могут внести' section")
+                                    break
+                    else:
+                        can_donate = True
+                        if self.debug:
+                            print(f"[MONITOR] Found donation indicator: '{indicator}'")
+                        break
         
         # 4. Кнопка "Найти карту" 
-        has_find_button = bool(card_link and 'найти' in card_link.get_text(strip=True).lower())
+        has_find_button = False
+        find_buttons = soup.find_all(['button', 'a'])
+        for btn in find_buttons:
+            btn_text = btn.get_text(strip=True).lower()
+            find_keywords = ['найти карту', 'найти', 'find card', 'search card']
+            if any(keyword in btn_text for keyword in find_keywords):
+                has_find_button = True
+                break
         
         if self.debug:
             print(f"[MONITOR] Parse result: changes={changes}, card_id={card_id}, can_donate={can_donate}, has_find={has_find_button}")
@@ -169,16 +256,21 @@ class BoostMonitor:
                     
                     # Проверяем успешность по сообщению
                     message = result.get("message", "").lower()
-                    if "внесли вклад" in message or "успеш" in message or "принят" in message:
-                        print(f"✅ Карта успешно пожертвована в клуб!")
+                    success_keywords = ['внесли вклад', 'успеш', 'принят', 'пожертвован', 'добавлен']
+                    if any(word in message for word in success_keywords):
+                        print(f"✅ Карта успешно пожертвована в клуб! ({result.get('message', 'OK')})")
                         return True
                 except Exception:
                     # Если не JSON, проверяем текст
-                    if "успеш" in resp.text.lower():
+                    text = resp.text.lower()
+                    success_keywords = ['успеш', 'внесли', 'пожертвован', 'добавлен']
+                    if any(word in text for word in success_keywords):
                         print(f"✅ Карта успешно пожертвована в клуб!")
                         return True
                 
                 print(f"❌ Не удалось пожертвовать карту: {resp.status_code}")
+                if self.debug:
+                    print(f"[MONITOR] Response text: {resp.text[:500]}")
                 return False
             else:
                 print(f"❌ Ошибка при жертвовании карты: HTTP {resp.status_code}")
@@ -213,7 +305,7 @@ class BoostMonitor:
             # Выполняем донейт
             if self.donate_card():
                 # После успешного донейта обновляем карту
-                time.sleep(2)  # Даем время серверу обновиться
+                time.sleep(3)  # Даем время серверу обновиться
                 
                 # Парсим новую карту для вклада
                 print(f"🔍 Получаем новую карту для вклада...")
@@ -223,16 +315,20 @@ class BoostMonitor:
                     new_card_id, out_path = res
                     self.current_card_id = new_card_id
                     
-                    # Читаем данные новой карты
+                    # Читаем данные новой карты и сохраняем в единое хранилище
                     try:
                         with out_path.open("r", encoding="utf-8") as f:
                             card_data = json.load(f)
+                        
+                        # Сохраняем в единое хранилище
+                        self.card_storage.save_boost_card(card_data)
+                        
                         print(f"✅ Новая карта для вклада:")
                         print(f"   Название: {card_data.get('name', '')}")
                         print(f"   ID: {card_data.get('card_id')} | Ранг: {card_data.get('rank')}")
                         print(f"   Владельцев: {card_data.get('owners_count')} | Желающих: {card_data.get('wanters_count')}")
-                    except Exception:
-                        print(f"✅ Новая карта {new_card_id} загружена")
+                    except Exception as e:
+                        print(f"✅ Новая карта {new_card_id} загружена (ошибка чтения деталей: {e})")
                     
                     card_changed = True
                     self.should_stop_trades = False  # Можно продолжать обмены
@@ -249,7 +345,7 @@ class BoostMonitor:
         
         return card_changed
     
-    def start_monitoring(self, check_interval: float = 5.0):
+    def start_monitoring(self, check_interval: float = 4.0):  # Изменили на 4 секунды
         """Запускает мониторинг в отдельном потоке"""
         if self.monitoring:
             return
@@ -271,6 +367,8 @@ class BoostMonitor:
                 except Exception as e:
                     if self.debug:
                         print(f"[MONITOR] Error in monitoring loop: {e}")
+                    else:
+                        print(f"⚠️ Ошибка мониторинга: {e}")
                 
                 # Ждем перед следующей проверкой
                 self._stop_event.wait(check_interval)
@@ -303,7 +401,7 @@ def monitor_boost_with_trades(
     boost_url: str,
     trade_function,  # Функция для отправки обменов
     trade_kwargs: Dict[str, Any],  # Аргументы для функции обменов
-    check_interval: float = 5.0,
+    check_interval: float = 4.0,  # Изменили на 4 секунды
     debug: bool = False
 ) -> None:
     """
@@ -315,10 +413,11 @@ def monitor_boost_with_trades(
         boost_url: URL страницы буста
         trade_function: Функция для отправки обменов (send_trades_to_online_owners)
         trade_kwargs: Словарь с аргументами для trade_function
-        check_interval: Интервал проверки в секундах
+        check_interval: Интервал проверки в секундах (по умолчанию 4 секунды)
         debug: Режим отладки
     """
     monitor = BoostMonitor(profile_data, profiles_dir, boost_url, debug=debug)
+    card_storage = get_card_storage(profiles_dir)
     
     # Запускаем мониторинг
     monitor.start_monitoring(check_interval)
@@ -331,26 +430,32 @@ def monitor_boost_with_trades(
                 time.sleep(5)
                 continue
             
-            # Загружаем актуальную карту для обменов
-            card_file = profiles_dir / "card_for_boost.json"
-            if not card_file.exists():
-                print("❌ Файл с картой для вклада не найден")
-                time.sleep(10)
-                continue
-            
-            try:
-                with card_file.open("r", encoding="utf-8") as f:
-                    target_card = json.load(f)
-            except Exception as e:
-                print(f"❌ Ошибка чтения карты: {e}")
-                time.sleep(10)
-                continue
+            # Загружаем актуальную карту для обменов из единого хранилища
+            current_boost_card = card_storage.get_current_boost_card()
+            if not current_boost_card:
+                # Fallback на старый файл для совместимости
+                card_file = profiles_dir / "card_for_boost.json"
+                if card_file.exists():
+                    try:
+                        with card_file.open("r", encoding="utf-8") as f:
+                            current_boost_card = json.load(f)
+                        # Сохраняем в новое хранилище
+                        card_storage.save_boost_card(current_boost_card)
+                    except Exception as e:
+                        print(f"❌ Ошибка чтения файла карты: {e}")
+                        time.sleep(10)
+                        continue
+                else:
+                    print("❌ Карта для вклада не найдена")
+                    time.sleep(10)
+                    continue
             
             # Обновляем target_card в аргументах
-            trade_kwargs["target_card"] = target_card
+            trade_kwargs["target_card"] = current_boost_card
             
             # Запускаем обмены
-            print(f"🚀 Запуск обменов для карты ID={target_card.get('card_id')}")
+            card_id = current_boost_card.get('card_id', 'Unknown')
+            print(f"🚀 Запуск обменов для карты ID={card_id}")
             try:
                 stats = trade_function(**trade_kwargs)
                 
@@ -364,6 +469,9 @@ def monitor_boost_with_trades(
                     
             except Exception as e:
                 print(f"❌ Ошибка при отправке обменов: {e}")
+                if debug:
+                    import traceback
+                    traceback.print_exc()
                 time.sleep(30)
     
     except KeyboardInterrupt:
