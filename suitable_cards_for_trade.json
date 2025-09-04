@@ -1,0 +1,7212 @@
+{
+  "target_card": {
+    "card_id": 32632,
+    "name": "Король Кулаков",
+    "rank": "C",
+    "wanters_count": 6
+  },
+  "suitable_cards": [
+    {
+      "instance_id": 200655057,
+      "card_id": 60764,
+      "name": "Эстель",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 199991078,
+      "card_id": 198922,
+      "name": "Астель",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 200866947,
+      "card_id": 88560,
+      "name": "Эрин",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 163335438,
+      "card_id": 67657,
+      "name": "Кайен",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 201816340,
+      "card_id": 17105,
+      "name": "Ги Сын Джу",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 54804432,
+      "card_id": 85085,
+      "name": "Дарджилинг Пикадилли",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 168352472,
+      "card_id": 103346,
+      "name": "Теодор и друзья",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 169012178,
+      "card_id": 66027,
+      "name": "Чжу Юньвэнь",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 168537765,
+      "card_id": 14215,
+      "name": "Аделия Дарк",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 168823636,
+      "card_id": 51033,
+      "name": "Дзин и Акира",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 168644872,
+      "card_id": 34663,
+      "name": "Илз",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 166806600,
+      "card_id": 75062,
+      "name": "Гайас",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 54069403,
+      "card_id": 116195,
+      "name": "Джейн Доу",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 166948371,
+      "card_id": 58369,
+      "name": "Джовинетта",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 150943153,
+      "card_id": 25386,
+      "name": "Люциус",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 152889831,
+      "card_id": 107429,
+      "name": "Эдина",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 211036156,
+      "card_id": 28975,
+      "name": "Гвидон Хайдеггер",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 150606435,
+      "card_id": 33968,
+      "name": "Мартин",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 213054560,
+      "card_id": 215598,
+      "name": "Роза",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 149259046,
+      "card_id": 38858,
+      "name": "Касугаи Рин",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 212135129,
+      "card_id": 174028,
+      "name": "Минори",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 205422668,
+      "card_id": 128476,
+      "name": "Харан",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 159339857,
+      "card_id": 94942,
+      "name": "Чинами Канан",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 161488255,
+      "card_id": 157587,
+      "name": "Навиа",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 158163489,
+      "card_id": 58481,
+      "name": "Шаман",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 155114664,
+      "card_id": 78728,
+      "name": "Камилла",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 155221572,
+      "card_id": 52588,
+      "name": "Изабелла",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 208754121,
+      "card_id": 44001,
+      "name": "Джесика",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 57462605,
+      "card_id": 49315,
+      "name": "Ляпис и Рорен",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 177589910,
+      "card_id": 139487,
+      "name": "Лили",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 185753359,
+      "card_id": 174050,
+      "name": "Рин",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 185418569,
+      "card_id": 122500,
+      "name": "Ха Доюн",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 175838674,
+      "card_id": 124544,
+      "name": "Анастасия",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 41784739,
+      "card_id": 22017,
+      "name": "Мин Ю",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 182377229,
+      "card_id": 38163,
+      "name": "Ферри",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 180972917,
+      "card_id": 68162,
+      "name": "Си Вэйцюй",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 181874725,
+      "card_id": 40649,
+      "name": "Лифа",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 182191652,
+      "card_id": 174624,
+      "name": "Эзен",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 179571275,
+      "card_id": 103420,
+      "name": "Руфос Карадок",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 179895142,
+      "card_id": 59428,
+      "name": "Пэк Сун Ву",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 180314412,
+      "card_id": 53387,
+      "name": "Чон Су",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 182932264,
+      "card_id": 48695,
+      "name": "Сезар",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 182744985,
+      "card_id": 83887,
+      "name": "Юань Чу",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 169354955,
+      "card_id": 185883,
+      "name": "Чон Сона",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 192211231,
+      "card_id": 40542,
+      "name": "Сюэ Ян",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 171578301,
+      "card_id": 114991,
+      "name": "Ким Джисоп",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 39422798,
+      "card_id": 85415,
+      "name": "Цэн Юнь",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 172554067,
+      "card_id": 92529,
+      "name": "Пак Чжэ Ха",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 50745184,
+      "card_id": 34791,
+      "name": "Иона",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 171473468,
+      "card_id": 44353,
+      "name": "Эрсио Герман",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 169627998,
+      "card_id": 49414,
+      "name": "Су Ин и Ын Хо",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 169908631,
+      "card_id": 22231,
+      "name": "Гин Франча",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 145963914,
+      "card_id": 113558,
+      "name": "Элантия",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 196163652,
+      "card_id": 22391,
+      "name": "Кэмден",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 195626054,
+      "card_id": 84502,
+      "name": "Янь Чен",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 186207554,
+      "card_id": 55637,
+      "name": "Люберия",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 189664707,
+      "card_id": 49096,
+      "name": "Цуёши|Юкико",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 49993024,
+      "card_id": 51571,
+      "name": "Дианта",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 173648078,
+      "card_id": 37041,
+      "name": "Лахор Чан",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 188158059,
+      "card_id": 205913,
+      "name": "Алисия",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 145982127,
+      "card_id": 51834,
+      "name": "Асилия и Эсперад",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 86754758,
+      "card_id": 77841,
+      "name": "Роберт",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 125713379,
+      "card_id": 155996,
+      "name": "Солюм",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 126288111,
+      "card_id": 154078,
+      "name": "Раэль",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 87735638,
+      "card_id": 61796,
+      "name": "Нуритас",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 252204000,
+      "card_id": 88503,
+      "name": "Пак Соннё",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 223103291,
+      "card_id": 78389,
+      "name": "Шиногами Аи",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 64208797,
+      "card_id": 26074,
+      "name": "Астин",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 222564310,
+      "card_id": 151756,
+      "name": "Ремальдо Жансель",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 132762921,
+      "card_id": 76721,
+      "name": "Терос",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 68087815,
+      "card_id": 52561,
+      "name": "Исфир Улук",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 129431957,
+      "card_id": 124246,
+      "name": "Шейли",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 129432090,
+      "card_id": 160738,
+      "name": "Ю Соль Ëн",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 240385854,
+      "card_id": 131174,
+      "name": "Ла Ми и Соль Джун",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 107124423,
+      "card_id": 76899,
+      "name": "Лемон",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 237009752,
+      "card_id": 212163,
+      "name": "Сена",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 66426994,
+      "card_id": 33948,
+      "name": "Гарроу",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 100660464,
+      "card_id": 48359,
+      "name": "Ким Юна",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 100939073,
+      "card_id": 26107,
+      "name": "Марк",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 240927426,
+      "card_id": 166694,
+      "name": "Джи Ил",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 213549997,
+      "card_id": 188965,
+      "name": "Ли Юнсу",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 25771115,
+      "card_id": 38396,
+      "name": "Ён Усок",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 231875010,
+      "card_id": 84737,
+      "name": "Сумама",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 235523858,
+      "card_id": 71460,
+      "name": "Джэ Гён",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 112373715,
+      "card_id": 100281,
+      "name": "Наньгун Вэньятянь",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 234097409,
+      "card_id": 88067,
+      "name": "Лидия и Керт",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 91503638,
+      "card_id": 72441,
+      "name": "Эсгард фон Валентий",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 60257101,
+      "card_id": 50167,
+      "name": "Миллер и Альто",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 61665985,
+      "card_id": 3499,
+      "name": "Хо Доги",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 216390190,
+      "card_id": 187694,
+      "name": "Янь Цин",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 62755860,
+      "card_id": 50524,
+      "name": "Анабэль",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 260518512,
+      "card_id": 20484,
+      "name": "Джейд",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 137937012,
+      "card_id": 82927,
+      "name": "Сис-тян",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 201818279,
+      "card_id": 175749,
+      "name": "Сириус и Елена",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 141753680,
+      "card_id": 81038,
+      "name": "Лю Тяньяо",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 71008553,
+      "card_id": 17290,
+      "name": "Кайен и Шираби",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 132940054,
+      "card_id": 54872,
+      "name": "Арио",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 63843297,
+      "card_id": 88459,
+      "name": "Силина и Карзан",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 213589376,
+      "card_id": 204200,
+      "name": "Жуань Чжэфэн",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 63784624,
+      "card_id": 31876,
+      "name": "Лукас Север",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 221537351,
+      "card_id": 116234,
+      "name": "Роуз",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 133828937,
+      "card_id": 29858,
+      "name": "Сяо Сюй",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 136026340,
+      "card_id": 110060,
+      "name": "Тудэу Родуя",
+      "rank": "C",
+      "wanters_count": 0,
+      "suitable": true
+    },
+    {
+      "instance_id": 164479275,
+      "card_id": 110627,
+      "name": "Иос",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 165782622,
+      "card_id": 25499,
+      "name": "Элла Лейн",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 164961787,
+      "card_id": 51838,
+      "name": "Лу Мяо",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 162376764,
+      "card_id": 50507,
+      "name": "Цзян Чен",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 202957999,
+      "card_id": 58285,
+      "name": "Малдер",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 202222100,
+      "card_id": 164816,
+      "name": "Сюй Чанген",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 168358793,
+      "card_id": 100106,
+      "name": "Даигоро и Огами Итто",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 169018903,
+      "card_id": 7443,
+      "name": "Татьяна",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 199886201,
+      "card_id": 22402,
+      "name": "Лу",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 166656046,
+      "card_id": 183104,
+      "name": "Чжэнь Ян",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 199886272,
+      "card_id": 40687,
+      "name": "Иона",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 167901274,
+      "card_id": 89511,
+      "name": "Бенделин и Элиза",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 199486092,
+      "card_id": 131718,
+      "name": "Иовет Окбоцид",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 167439908,
+      "card_id": 18918,
+      "name": "Хелис",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 166919124,
+      "card_id": 70461,
+      "name": "Ан Ци",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 210266508,
+      "card_id": 88192,
+      "name": "Нут",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 152612496,
+      "card_id": 81240,
+      "name": "Лу Юй Чэнь",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 209750717,
+      "card_id": 35039,
+      "name": "Парвезе",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 213116607,
+      "card_id": 130614,
+      "name": "Селена и Амид",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 147110500,
+      "card_id": 119909,
+      "name": "До Джуа",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 147233524,
+      "card_id": 59452,
+      "name": "Ласкаби|Риэлла",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 150356585,
+      "card_id": 114965,
+      "name": "Шихо",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 160055373,
+      "card_id": 16896,
+      "name": "Пак Чхоль Су",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 205012172,
+      "card_id": 84360,
+      "name": "Орен",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 158908683,
+      "card_id": 93225,
+      "name": "Аарон Клэвер",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 159168740,
+      "card_id": 61033,
+      "name": "Сон Чан Ук",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 204635934,
+      "card_id": 64421,
+      "name": "Фон Эрасиль",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 160236630,
+      "card_id": 115754,
+      "name": "Хайден",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 160569324,
+      "card_id": 15670,
+      "name": "Джей",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 156773342,
+      "card_id": 38093,
+      "name": "Аргус",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 208395832,
+      "card_id": 107412,
+      "name": "Мэри",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 156595908,
+      "card_id": 77087,
+      "name": "Джун Бьюн",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 156838286,
+      "card_id": 38434,
+      "name": "Каликс",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 157862891,
+      "card_id": 47097,
+      "name": "Йоханнес",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 176880798,
+      "card_id": 32983,
+      "name": "Алиса Такашиго",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 177359229,
+      "card_id": 91776,
+      "name": "Лю Джинон",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 184413786,
+      "card_id": 40088,
+      "name": "Хьюго Маккензи",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 178390408,
+      "card_id": 181772,
+      "name": "Юань Сян Вэй",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 185514908,
+      "card_id": 91372,
+      "name": "Джу Нана",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 185321082,
+      "card_id": 133545,
+      "name": "Джи Су",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 185095315,
+      "card_id": 182508,
+      "name": "Психея",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 175408382,
+      "card_id": 43273,
+      "name": "Джери",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 181260029,
+      "card_id": 44966,
+      "name": "Розали",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 182440904,
+      "card_id": 20414,
+      "name": "Лана",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 182191622,
+      "card_id": 115960,
+      "name": "Чжао Янь",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 181037244,
+      "card_id": 157715,
+      "name": "Мэгги",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 43100304,
+      "card_id": 81276,
+      "name": "Цзи Цин Вань и Шен Юй",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 182646295,
+      "card_id": 109327,
+      "name": "Ча Доён",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 180431854,
+      "card_id": 41195,
+      "name": "Дерик и Арвин",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 180970689,
+      "card_id": 39101,
+      "name": "Калинне",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 172005177,
+      "card_id": 126483,
+      "name": "Оэда",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 191250173,
+      "card_id": 187222,
+      "name": "Лин Цзян Чен",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 172540879,
+      "card_id": 160078,
+      "name": "Каллисто и Хелена",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 172588584,
+      "card_id": 71299,
+      "name": "Ури",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 169386917,
+      "card_id": 31506,
+      "name": "Чон Гван",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 186940489,
+      "card_id": 88632,
+      "name": "Хлоя",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 187990322,
+      "card_id": 16565,
+      "name": "Рейна и Истира",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 39765785,
+      "card_id": 32983,
+      "name": "Алиса Такашиго",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 40451328,
+      "card_id": 50473,
+      "name": "Е",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 173643342,
+      "card_id": 159466,
+      "name": "Леон и Джихун",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 229585457,
+      "card_id": 62913,
+      "name": "Кан Оксын",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 86371257,
+      "card_id": 140955,
+      "name": "Богиня",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 14570162,
+      "card_id": 36402,
+      "name": "Халсон",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 85954797,
+      "card_id": 35176,
+      "name": "Инь Ли",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 121055172,
+      "card_id": 90984,
+      "name": "Нам Чжиин",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 64791430,
+      "card_id": 4289,
+      "name": "Берил",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 256125094,
+      "card_id": 172372,
+      "name": "Цзян Цин Эр",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 256703396,
+      "card_id": 8120,
+      "name": "Су Цин и Су Е",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 128853126,
+      "card_id": 54146,
+      "name": "Хайл Маккензи",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 128867669,
+      "card_id": 6955,
+      "name": "Самюэль Хантингтон",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 223831129,
+      "card_id": 72606,
+      "name": "Эльгина",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 13667844,
+      "card_id": 64067,
+      "name": "Джером",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 84445138,
+      "card_id": 29998,
+      "name": "Рюноске Онидзима",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 109172062,
+      "card_id": 29153,
+      "name": "Вейци Чэн",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 66793498,
+      "card_id": 1883,
+      "name": "Мелоди",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 99806377,
+      "card_id": 128294,
+      "name": "Ринтаро, Коко и Роро",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 101218652,
+      "card_id": 94801,
+      "name": "Шин Суэль",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 66256553,
+      "card_id": 110834,
+      "name": "Гу Харин",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 116084493,
+      "card_id": 145100,
+      "name": "Сиенна и Кун",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 117706523,
+      "card_id": 74717,
+      "name": "Бан Ю Хён",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 118288339,
+      "card_id": 126483,
+      "name": "Оэда",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 236360766,
+      "card_id": 215181,
+      "name": "Эоно Хео",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 112335241,
+      "card_id": 86899,
+      "name": "Миин",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 91371663,
+      "card_id": 39498,
+      "name": "Арканджело Фон Этейла",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 30081305,
+      "card_id": 73758,
+      "name": "Ситер",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 138295250,
+      "card_id": 68778,
+      "name": "Рюи Ван",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 74322700,
+      "card_id": 18051,
+      "name": "Е Юнь",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 78094861,
+      "card_id": 40890,
+      "name": "Дэмиан",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 215502341,
+      "card_id": 72619,
+      "name": "Карэн",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 215471320,
+      "card_id": 160504,
+      "name": "Элоиза Ваянна",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 70730095,
+      "card_id": 115270,
+      "name": "Ранна",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 70763528,
+      "card_id": 18051,
+      "name": "Е Юнь",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 214285248,
+      "card_id": 27096,
+      "name": "Кир Ребейн",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 136569170,
+      "card_id": 20330,
+      "name": "Мирабель",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 144770580,
+      "card_id": 68909,
+      "name": "Ким Чон Хун",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 136891631,
+      "card_id": 138181,
+      "name": "Карен",
+      "rank": "C",
+      "wanters_count": 1,
+      "suitable": true
+    },
+    {
+      "instance_id": 165798493,
+      "card_id": 124490,
+      "name": "Ли Ю Рам",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 164842064,
+      "card_id": 112927,
+      "name": "Чзян Чэнь и Му Сисиюэ",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 203659216,
+      "card_id": 88534,
+      "name": "Алисия",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 163390705,
+      "card_id": 59424,
+      "name": "Му Чэньфен",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 163838775,
+      "card_id": 99166,
+      "name": "Астер",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 162513132,
+      "card_id": 98519,
+      "name": "Изабелла",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 168394323,
+      "card_id": 61540,
+      "name": "Игрит",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 168353371,
+      "card_id": 16970,
+      "name": "Мун Чжи А",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 168462486,
+      "card_id": 151633,
+      "name": "Намгун Чхвэ",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 169086688,
+      "card_id": 112568,
+      "name": "Касанэ",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 36248266,
+      "card_id": 71248,
+      "name": "Вицерос",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 203701678,
+      "card_id": 64477,
+      "name": "Максим Даль",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 153485602,
+      "card_id": 66829,
+      "name": "Лиан | Эрил",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 149323875,
+      "card_id": 35655,
+      "name": "Мередит Шварц",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 211616719,
+      "card_id": 173080,
+      "name": "Нурельмир",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 211609881,
+      "card_id": 176902,
+      "name": "Ча Саран",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 158106400,
+      "card_id": 22036,
+      "name": "Чарльз",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 161202996,
+      "card_id": 100012,
+      "name": "Ноа",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 204187667,
+      "card_id": 65965,
+      "name": "Эрис и Теодор",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 158087594,
+      "card_id": 77862,
+      "name": "Брюс",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 57847671,
+      "card_id": 46409,
+      "name": "Окита Соджу",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 157281271,
+      "card_id": 61446,
+      "name": "Властелин",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 42367969,
+      "card_id": 8695,
+      "name": "Ли Хань",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 177433548,
+      "card_id": 193965,
+      "name": "Хасти",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 177635365,
+      "card_id": 136984,
+      "name": "Луна и Лиан",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 177782743,
+      "card_id": 96534,
+      "name": "Хан Хевич",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 178202031,
+      "card_id": 82633,
+      "name": "Аден Ремес",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 178293402,
+      "card_id": 48280,
+      "name": "Кан Тэ Ук",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 184727340,
+      "card_id": 2794,
+      "name": "Лемброри",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 176263642,
+      "card_id": 112842,
+      "name": "Шень Байлянь",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 181908383,
+      "card_id": 46069,
+      "name": "Джаред",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 179331688,
+      "card_id": 100634,
+      "name": "Танака",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 43554542,
+      "card_id": 79921,
+      "name": "Амон Дрейк",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 183588545,
+      "card_id": 26918,
+      "name": "Эдвин Саттон",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 192191912,
+      "card_id": 14955,
+      "name": "Игнис",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 171933956,
+      "card_id": 3477,
+      "name": "Масатора Акуцу",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 612319,
+      "card_id": 3593,
+      "name": "Брэндон Рассел",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 48883992,
+      "card_id": 40263,
+      "name": "Чу Ингон",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 186821489,
+      "card_id": 63121,
+      "name": "Сун Шухан",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 188461581,
+      "card_id": 83125,
+      "name": "Шарлотта",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 86522869,
+      "card_id": 22200,
+      "name": "Каллена",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 28116249,
+      "card_id": 26941,
+      "name": "Ванесса Роуз",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 121561157,
+      "card_id": 50847,
+      "name": "Фрей",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 27339502,
+      "card_id": 59234,
+      "name": "Аве Тан",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 89511323,
+      "card_id": 79743,
+      "name": "Ёнджи",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 225309116,
+      "card_id": 191771,
+      "name": "Со Йе",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 231588864,
+      "card_id": 49447,
+      "name": "Чи",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 96085544,
+      "card_id": 22143,
+      "name": "София",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 248742281,
+      "card_id": 51013,
+      "name": "Люлия",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 98421342,
+      "card_id": 139939,
+      "name": "Ватанабэ Суми",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 101769257,
+      "card_id": 50275,
+      "name": "Джена Романова",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 115212855,
+      "card_id": 48516,
+      "name": "Клэр",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 92589128,
+      "card_id": 76487,
+      "name": "Мао и Хиро",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 91368942,
+      "card_id": 66753,
+      "name": "Клайд и Эдит",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 91641029,
+      "card_id": 34797,
+      "name": "Вонгу и Дахе",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 275862738,
+      "card_id": 90577,
+      "name": "Цезарь",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 262256379,
+      "card_id": 201574,
+      "name": "Закат",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 261809129,
+      "card_id": 150262,
+      "name": "Инес",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 143683381,
+      "card_id": 94917,
+      "name": "Патриция Филонт",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 215728815,
+      "card_id": 17613,
+      "name": "Королева Эльфов",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 29821480,
+      "card_id": 62585,
+      "name": "Король большеухих кроликов",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 81202537,
+      "card_id": 76099,
+      "name": "Лон Лао Тянь",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 70832232,
+      "card_id": 20771,
+      "name": "Сенир Охрид",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 145727602,
+      "card_id": 115955,
+      "name": "Сава Митома",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 281265502,
+      "card_id": 88373,
+      "name": "Ганс",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 70046568,
+      "card_id": 100634,
+      "name": "Танака",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 213968001,
+      "card_id": 130235,
+      "name": "Азраил I Сесил",
+      "rank": "C",
+      "wanters_count": 2,
+      "suitable": true
+    },
+    {
+      "instance_id": 165331753,
+      "card_id": 41882,
+      "name": "Энди",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 202999386,
+      "card_id": 198425,
+      "name": "Чжан Сюань",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 165735276,
+      "card_id": 46364,
+      "name": "Мацукадзэ и Кохибари",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 168277139,
+      "card_id": 88977,
+      "name": "Оливия Фон Иштарика",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 168148470,
+      "card_id": 4400,
+      "name": "Ким Мин Сок",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 196851795,
+      "card_id": 30804,
+      "name": "Шастель",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 196852253,
+      "card_id": 182014,
+      "name": "Лерунда",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 161948968,
+      "card_id": 136590,
+      "name": "Абель",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 149778447,
+      "card_id": 183977,
+      "name": "Клерия Старвин и Алан Коринс",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 204412973,
+      "card_id": 182169,
+      "name": "Сальвадор Рене",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 155831913,
+      "card_id": 75335,
+      "name": "Грейхан Ишавет Фон Рагнар",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 169113399,
+      "card_id": 39241,
+      "name": "Ллойд и Флора",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 177979308,
+      "card_id": 113521,
+      "name": "Танатос",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 181680119,
+      "card_id": 28049,
+      "name": "Хуа Цзинлэй",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 182191613,
+      "card_id": 57552,
+      "name": "Процион",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 182191543,
+      "card_id": 109980,
+      "name": "Джошуа",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 180314337,
+      "card_id": 32467,
+      "name": "Си Вэй",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 180970677,
+      "card_id": 60935,
+      "name": "Локх",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 51107802,
+      "card_id": 57127,
+      "name": "Ася",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 172351302,
+      "card_id": 26713,
+      "name": "Сэйзел и Рэя",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 169878775,
+      "card_id": 169414,
+      "name": "Инес",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 187777558,
+      "card_id": 183712,
+      "name": "Фири",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 69232258,
+      "card_id": 92571,
+      "name": "Ха Тэхван",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 185830449,
+      "card_id": 32412,
+      "name": "Калтея",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 173537248,
+      "card_id": 91114,
+      "name": "Пак Ханыль",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 188322806,
+      "card_id": 82531,
+      "name": "Хан Ён и Ый Сон",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 173590578,
+      "card_id": 50690,
+      "name": "Шион",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 124661358,
+      "card_id": 117351,
+      "name": "Си Сяотянь",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 86367372,
+      "card_id": 55001,
+      "name": "Лилит",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 222800165,
+      "card_id": 44867,
+      "name": "Эстер",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 128285092,
+      "card_id": 63293,
+      "name": "Зина Бойд",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 19721065,
+      "card_id": 11321,
+      "name": "Инес",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 97518589,
+      "card_id": 54460,
+      "name": "Каллум и братья",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 101637902,
+      "card_id": 124961,
+      "name": "Со Ихан и Юн Хэджун",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 115573352,
+      "card_id": 35838,
+      "name": "Мередис Шварц",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 250765170,
+      "card_id": 135865,
+      "name": "Оказаки",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 250816044,
+      "card_id": 45579,
+      "name": "Ройам Атирос",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 216569631,
+      "card_id": 15450,
+      "name": "Рафина|друзья",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 144172751,
+      "card_id": 81438,
+      "name": "Саеки",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 272613370,
+      "card_id": 94576,
+      "name": "Юн Хэджун",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 217643522,
+      "card_id": 216977,
+      "name": "Император",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 72663268,
+      "card_id": 103919,
+      "name": "Айрис Ипеллета",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 74456255,
+      "card_id": 14055,
+      "name": "Картан и Надя",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 30161560,
+      "card_id": 3965,
+      "name": "Чезаре и Кэтрин",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 220903321,
+      "card_id": 148098,
+      "name": "Гун Ха и Джун Ву",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 145527239,
+      "card_id": 126068,
+      "name": "Седрик и Лионель",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 221932116,
+      "card_id": 4400,
+      "name": "Ким Мин Сок",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 221303078,
+      "card_id": 156511,
+      "name": "Грейс",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 136487944,
+      "card_id": 31956,
+      "name": "Ния",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 275863162,
+      "card_id": 48626,
+      "name": "Джокер",
+      "rank": "C",
+      "wanters_count": 3,
+      "suitable": true
+    },
+    {
+      "instance_id": 164583202,
+      "card_id": 68994,
+      "name": "Дерек Эстер",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 201415158,
+      "card_id": 72841,
+      "name": "Айн Брайс",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 167439881,
+      "card_id": 54921,
+      "name": "Аой Нишимори",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 167583194,
+      "card_id": 27448,
+      "name": "Хо Чжа Пун",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 150933521,
+      "card_id": 146217,
+      "name": "Ми Хиян",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 151688026,
+      "card_id": 37682,
+      "name": "Ван Цзюнь",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 182191542,
+      "card_id": 28383,
+      "name": "Леандро",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 152977920,
+      "card_id": 26553,
+      "name": "Кайра и Пэйлон",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 153960408,
+      "card_id": 64472,
+      "name": "Дермисель",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 59718938,
+      "card_id": 77303,
+      "name": "Айша и Леви",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 147872406,
+      "card_id": 13135,
+      "name": "Ингрид",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 203755282,
+      "card_id": 107143,
+      "name": "Мира Сетис",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 41863053,
+      "card_id": 89960,
+      "name": "Джио",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 176880787,
+      "card_id": 105180,
+      "name": "Элизабет",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 176712941,
+      "card_id": 140080,
+      "name": "Гоннё",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 180919194,
+      "card_id": 128938,
+      "name": "Ли Сэ Мин",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 182171717,
+      "card_id": 39192,
+      "name": "Йена",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 170313931,
+      "card_id": 87979,
+      "name": "Данте",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 187449089,
+      "card_id": 162988,
+      "name": "Пени и Мисфит",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 186598091,
+      "card_id": 118292,
+      "name": "Лидия",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 175407584,
+      "card_id": 78140,
+      "name": "Берси",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 190214275,
+      "card_id": 9703,
+      "name": "Айрин",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 229424379,
+      "card_id": 121327,
+      "name": "Бан Ю Вон",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 231178734,
+      "card_id": 216588,
+      "name": "Амид",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 121730101,
+      "card_id": 63256,
+      "name": "Ян",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 123854423,
+      "card_id": 72024,
+      "name": "Дождик и Ли Чжун",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 222065148,
+      "card_id": 149497,
+      "name": "Солин",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 242495157,
+      "card_id": 90152,
+      "name": "Мисаки Сёкухо",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 101369339,
+      "card_id": 108628,
+      "name": "Рости Науман",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 92355874,
+      "card_id": 140067,
+      "name": "Ной",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 61505764,
+      "card_id": 29615,
+      "name": "Лена",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 139532648,
+      "card_id": 15708,
+      "name": "Дженкинс",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 74548442,
+      "card_id": 87624,
+      "name": "Левертиша",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 60898804,
+      "card_id": 100487,
+      "name": "Ма Хуа",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 142501802,
+      "card_id": 146362,
+      "name": "Линь Хао",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 61505274,
+      "card_id": 54595,
+      "name": "Валерия",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 80651289,
+      "card_id": 118292,
+      "name": "Лидия",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 81435689,
+      "card_id": 4926,
+      "name": "Лисиан Эустома",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 136524217,
+      "card_id": 44851,
+      "name": "Дора",
+      "rank": "C",
+      "wanters_count": 4,
+      "suitable": true
+    },
+    {
+      "instance_id": 165114357,
+      "card_id": 76295,
+      "name": "Со Рён",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 53304604,
+      "card_id": 38528,
+      "name": "Кайз",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 205672800,
+      "card_id": 80239,
+      "name": "Эллен",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 184571379,
+      "card_id": 102092,
+      "name": "Чжоу Дань",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 176324675,
+      "card_id": 43655,
+      "name": "Сезар и Инес",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 184858276,
+      "card_id": 141911,
+      "name": "Хайден|Лустика",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 181874845,
+      "card_id": 109525,
+      "name": "Джек",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 184070694,
+      "card_id": 6735,
+      "name": "Грация Люцифало",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 179314618,
+      "card_id": 64058,
+      "name": "Глория и Граян",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 180314441,
+      "card_id": 30901,
+      "name": "Бенедикт и Эйден",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 180327408,
+      "card_id": 5598,
+      "name": "Чхве Се Хва и Шин А Ён",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 46916561,
+      "card_id": 74894,
+      "name": "О Тэ Гён",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 190842197,
+      "card_id": 162892,
+      "name": "Си Фуцин",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 86958250,
+      "card_id": 17144,
+      "name": "Тофу",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 120750401,
+      "card_id": 161677,
+      "name": "Эурения",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 123705208,
+      "card_id": 17938,
+      "name": "Эбен Флойд",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 129489127,
+      "card_id": 170318,
+      "name": "Ви Сончжун",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 107957413,
+      "card_id": 122834,
+      "name": "Ли Хан и Делл",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 241844280,
+      "card_id": 211027,
+      "name": "Демонический лекарь",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 90706971,
+      "card_id": 55982,
+      "name": "Пия",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 94249635,
+      "card_id": 104309,
+      "name": "Мартин Перселл",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 91836642,
+      "card_id": 20265,
+      "name": "Верона",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 137645594,
+      "card_id": 32734,
+      "name": "Терун Бирштен",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 217545158,
+      "card_id": 47743,
+      "name": "Харин",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 145292063,
+      "card_id": 30504,
+      "name": "Сикар",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 144770688,
+      "card_id": 51135,
+      "name": "Раймара",
+      "rank": "C",
+      "wanters_count": 5,
+      "suitable": true
+    },
+    {
+      "instance_id": 201816353,
+      "card_id": 23110,
+      "name": "Бен и Серсиния",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 163744068,
+      "card_id": 100302,
+      "name": "Юрий и Лулу",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 165814476,
+      "card_id": 128169,
+      "name": "Брам",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 52538380,
+      "card_id": 78977,
+      "name": "Нереис",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 152246155,
+      "card_id": 32524,
+      "name": "Со Чжон Ук",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 210333012,
+      "card_id": 198908,
+      "name": "Велотта",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 154036822,
+      "card_id": 136739,
+      "name": "Лили",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 59269762,
+      "card_id": 75224,
+      "name": "Кэвелл и Хари",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 150003529,
+      "card_id": 91764,
+      "name": "Айкава",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 209384489,
+      "card_id": 181789,
+      "name": "Лорис и Линда",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 203754073,
+      "card_id": 60869,
+      "name": "Лония",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 56699451,
+      "card_id": 6384,
+      "name": "Грейв",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 205643398,
+      "card_id": 48282,
+      "name": "Одетта Роуз",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 184183057,
+      "card_id": 127544,
+      "name": "Дипке",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 181955883,
+      "card_id": 42925,
+      "name": "Дион",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 180314234,
+      "card_id": 5344,
+      "name": "Елена",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 175407837,
+      "card_id": 60833,
+      "name": "Пуччи",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 172113736,
+      "card_id": 104522,
+      "name": "Миеко",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 172534580,
+      "card_id": 72203,
+      "name": "Моргана и Леон",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 170113905,
+      "card_id": 99637,
+      "name": "Хартнайт",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 170972024,
+      "card_id": 15306,
+      "name": "Перион",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 193832461,
+      "card_id": 167880,
+      "name": "Лейкос",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 173943054,
+      "card_id": 53537,
+      "name": "Елена",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 185827235,
+      "card_id": 193545,
+      "name": "Хром",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 172944584,
+      "card_id": 145225,
+      "name": "Норман и Антуанетта",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 173462848,
+      "card_id": 146390,
+      "name": "Габриэль",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 123125331,
+      "card_id": 98119,
+      "name": "Акари",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 127343862,
+      "card_id": 57088,
+      "name": "Лили Вольт",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 253790297,
+      "card_id": 232266,
+      "name": "Пак Кю",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 127819839,
+      "card_id": 131848,
+      "name": "Бритни",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 98741980,
+      "card_id": 86391,
+      "name": "Айви",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 66946982,
+      "card_id": 3247,
+      "name": "Лойна|Роксана",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 61466691,
+      "card_id": 25100,
+      "name": "Лилиана",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 215045478,
+      "card_id": 222961,
+      "name": "Белый дракон",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 214485093,
+      "card_id": 21213,
+      "name": "Юн Ын Чжэ",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 135019239,
+      "card_id": 152028,
+      "name": "Бай Мэн Мэн",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 135502529,
+      "card_id": 30885,
+      "name": "Платина Старс",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 137087479,
+      "card_id": 54495,
+      "name": "Каллум и Мехлейль",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 133396686,
+      "card_id": 115289,
+      "name": "Бон Тэ Ён",
+      "rank": "C",
+      "wanters_count": 6,
+      "suitable": true
+    },
+    {
+      "instance_id": 164985722,
+      "card_id": 188246,
+      "name": "Сиву Ха",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 168646891,
+      "card_id": 147515,
+      "name": "Юрина и Рей",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 152487477,
+      "card_id": 63205,
+      "name": "Астрея",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 212520517,
+      "card_id": 169166,
+      "name": "Анастасия",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 59316807,
+      "card_id": 51930,
+      "name": "Джейден",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 161831990,
+      "card_id": 101196,
+      "name": "Джулиана",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 175600985,
+      "card_id": 176309,
+      "name": "Лин Мо",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 176362415,
+      "card_id": 680,
+      "name": "Кальмия Флокс",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 182381450,
+      "card_id": 60849,
+      "name": "Грейс",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 170055175,
+      "card_id": 193900,
+      "name": "Джулия",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 126723126,
+      "card_id": 1000,
+      "name": "Икарус",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 127575658,
+      "card_id": 96678,
+      "name": "Влад и Александр",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 108435064,
+      "card_id": 52346,
+      "name": "Рере и Ян",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 103239335,
+      "card_id": 103188,
+      "name": "Лиана Оуэнзаус",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 130666559,
+      "card_id": 42235,
+      "name": "Лин Сяо",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 144482628,
+      "card_id": 41774,
+      "name": "Джун Рок",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 79055427,
+      "card_id": 22388,
+      "name": "Перси",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 216578111,
+      "card_id": 35327,
+      "name": "Генриетта",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 217112778,
+      "card_id": 82062,
+      "name": "Кан Хё Мин",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 145354431,
+      "card_id": 151763,
+      "name": "Диди и Мариэтта",
+      "rank": "C",
+      "wanters_count": 7,
+      "suitable": false
+    },
+    {
+      "instance_id": 150945625,
+      "card_id": 46047,
+      "name": "Эвелон Рун",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 212727903,
+      "card_id": 171851,
+      "name": "Адель|Кристен",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 158259202,
+      "card_id": 43937,
+      "name": "Анри",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 169114013,
+      "card_id": 131350,
+      "name": "Линь Сю",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 176413919,
+      "card_id": 53949,
+      "name": "Касуэлла Тэ Свиф Лион",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 44373172,
+      "card_id": 73516,
+      "name": "Вестник Чумы и Тьмы",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 172455703,
+      "card_id": 118949,
+      "name": "Лерунда|грифоны",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 169581142,
+      "card_id": 126171,
+      "name": "Енаги",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 67794136,
+      "card_id": 74473,
+      "name": "Владыка пламени",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 26177133,
+      "card_id": 87995,
+      "name": "Кристофер",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 83436388,
+      "card_id": 72831,
+      "name": "Энтони",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 130862041,
+      "card_id": 171851,
+      "name": "Адель|Кристен",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 105709807,
+      "card_id": 74895,
+      "name": "Цзинь Ю",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 94367704,
+      "card_id": 54225,
+      "name": "Рини",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 138641821,
+      "card_id": 74895,
+      "name": "Цзинь Ю",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 61505232,
+      "card_id": 67515,
+      "name": "Мойл Атукан",
+      "rank": "C",
+      "wanters_count": 8,
+      "suitable": false
+    },
+    {
+      "instance_id": 201103204,
+      "card_id": 153685,
+      "name": "Даллант Дейбрик",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 201902633,
+      "card_id": 40520,
+      "name": "Ким До Чжун",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 166806601,
+      "card_id": 40520,
+      "name": "Ким До Чжун",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 199601668,
+      "card_id": 105343,
+      "name": "Эрнест",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 161496165,
+      "card_id": 107263,
+      "name": "Микаэль Кардриго",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 58495050,
+      "card_id": 11019,
+      "name": "Арсия Кляйн",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 47734788,
+      "card_id": 77695,
+      "name": "Ди и Юмэко",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 48442437,
+      "card_id": 62449,
+      "name": "Синъя Киритани",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 174757165,
+      "card_id": 119201,
+      "name": "Мама и Папа",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 186552173,
+      "card_id": 146356,
+      "name": "Семья Хесона",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 173302076,
+      "card_id": 15354,
+      "name": "Алисия и Тиер",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 173769053,
+      "card_id": 193969,
+      "name": "Адира",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 124991586,
+      "card_id": 88019,
+      "name": "Ледро",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 229748794,
+      "card_id": 105343,
+      "name": "Эрнест",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 86413533,
+      "card_id": 4250,
+      "name": "Дождик",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 251860149,
+      "card_id": 191141,
+      "name": "Лин Ан",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 132267415,
+      "card_id": 47030,
+      "name": "Ком Чонхо",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 110558431,
+      "card_id": 83311,
+      "name": "Хао Цзы и Ван Цзы",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 111885105,
+      "card_id": 101048,
+      "name": "Синтия",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 112624668,
+      "card_id": 35475,
+      "name": "Арурару",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 99251471,
+      "card_id": 25109,
+      "name": "Ким Ён Ду",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 80673226,
+      "card_id": 123399,
+      "name": "Ширли",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 71008810,
+      "card_id": 37745,
+      "name": "Леон и Бенджамин",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 221325393,
+      "card_id": 197600,
+      "name": "Клайлус",
+      "rank": "C",
+      "wanters_count": 9,
+      "suitable": false
+    },
+    {
+      "instance_id": 165011249,
+      "card_id": 193274,
+      "name": "Дюран Солсмия",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 164284093,
+      "card_id": 77485,
+      "name": "Чхве Кан Хун",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 169111486,
+      "card_id": 9718,
+      "name": "Чхэ Гван Хëн",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 167594379,
+      "card_id": 61771,
+      "name": "Пьета",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 213126797,
+      "card_id": 130524,
+      "name": "Кляйн Капелла",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 148434972,
+      "card_id": 27678,
+      "name": "Командир отделения",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 160234322,
+      "card_id": 18712,
+      "name": "Вильгельм",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 206241307,
+      "card_id": 47935,
+      "name": "Желтый Лист и Красный Лист",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 182191653,
+      "card_id": 189935,
+      "name": "Лучник",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 190361072,
+      "card_id": 43101,
+      "name": "Юн",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 49684476,
+      "card_id": 81301,
+      "name": "Михаэль",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 96534144,
+      "card_id": 144901,
+      "name": "Су Чанцин",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 137728220,
+      "card_id": 31532,
+      "name": "Джейк",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 61505431,
+      "card_id": 81188,
+      "name": "Михаил",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 257807737,
+      "card_id": 221566,
+      "name": "Рене",
+      "rank": "C",
+      "wanters_count": 10,
+      "suitable": false
+    },
+    {
+      "instance_id": 168028496,
+      "card_id": 58155,
+      "name": "Ирэн и Луиза",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 166244943,
+      "card_id": 144035,
+      "name": "Джин До",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 153850952,
+      "card_id": 58344,
+      "name": "Ирен",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 179597850,
+      "card_id": 57846,
+      "name": "Маршал",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 180921253,
+      "card_id": 127779,
+      "name": "Ариаделина",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 172422613,
+      "card_id": 51701,
+      "name": "Ребекка и Ария",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 171084548,
+      "card_id": 14349,
+      "name": "Долли Лопес",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 194277846,
+      "card_id": 34293,
+      "name": "Сата Кёя",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 92899321,
+      "card_id": 42934,
+      "name": "Сон Кан Ен",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 72883090,
+      "card_id": 57846,
+      "name": "Маршал",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 61209135,
+      "card_id": 108503,
+      "name": "Игрид",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 30083442,
+      "card_id": 16955,
+      "name": "Лия и Натан",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 62793678,
+      "card_id": 104657,
+      "name": "Оливия и Рише",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 69848832,
+      "card_id": 36902,
+      "name": "Халид",
+      "rank": "C",
+      "wanters_count": 11,
+      "suitable": false
+    },
+    {
+      "instance_id": 201570878,
+      "card_id": 182144,
+      "name": "Тереза",
+      "rank": "C",
+      "wanters_count": 12,
+      "suitable": false
+    },
+    {
+      "instance_id": 176880662,
+      "card_id": 142282,
+      "name": "Жуань Янь",
+      "rank": "C",
+      "wanters_count": 12,
+      "suitable": false
+    },
+    {
+      "instance_id": 179610138,
+      "card_id": 121230,
+      "name": "У Яояо",
+      "rank": "C",
+      "wanters_count": 12,
+      "suitable": false
+    },
+    {
+      "instance_id": 174352293,
+      "card_id": 149927,
+      "name": "Готаро и друзья",
+      "rank": "C",
+      "wanters_count": 12,
+      "suitable": false
+    },
+    {
+      "instance_id": 96266677,
+      "card_id": 50424,
+      "name": "Амели",
+      "rank": "C",
+      "wanters_count": 12,
+      "suitable": false
+    },
+    {
+      "instance_id": 73578175,
+      "card_id": 75924,
+      "name": "Бард",
+      "rank": "C",
+      "wanters_count": 12,
+      "suitable": false
+    },
+    {
+      "instance_id": 199115580,
+      "card_id": 115984,
+      "name": "Лукреция",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 209739943,
+      "card_id": 201912,
+      "name": "Пэк И Ган",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 157776695,
+      "card_id": 164461,
+      "name": "Линси",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 177635366,
+      "card_id": 47124,
+      "name": "Николай и Алексей",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 181874494,
+      "card_id": 39004,
+      "name": "Люй Бу Вэй",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 49281550,
+      "card_id": 94992,
+      "name": "Дораэмон",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 27168184,
+      "card_id": 57097,
+      "name": "Хилинг, Боджи и Дайда",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 240386306,
+      "card_id": 66662,
+      "name": "Ванг Линь",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 232306346,
+      "card_id": 225261,
+      "name": "Семья Кассиус",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 250841028,
+      "card_id": 212237,
+      "name": "Ария",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 138643854,
+      "card_id": 43922,
+      "name": "Райан",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 81407653,
+      "card_id": 14103,
+      "name": "Элрик Мелвингер",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 221379682,
+      "card_id": 126979,
+      "name": "Розмари",
+      "rank": "C",
+      "wanters_count": 13,
+      "suitable": false
+    },
+    {
+      "instance_id": 164107588,
+      "card_id": 179193,
+      "name": "Атлас и Саки",
+      "rank": "C",
+      "wanters_count": 14,
+      "suitable": false
+    },
+    {
+      "instance_id": 198903702,
+      "card_id": 99707,
+      "name": "Аи Миэ",
+      "rank": "C",
+      "wanters_count": 14,
+      "suitable": false
+    },
+    {
+      "instance_id": 199886265,
+      "card_id": 108846,
+      "name": "Сильвия",
+      "rank": "C",
+      "wanters_count": 14,
+      "suitable": false
+    },
+    {
+      "instance_id": 160236660,
+      "card_id": 175522,
+      "name": "Медака",
+      "rank": "C",
+      "wanters_count": 14,
+      "suitable": false
+    },
+    {
+      "instance_id": 155076837,
+      "card_id": 38321,
+      "name": "Силла и Ючес",
+      "rank": "C",
+      "wanters_count": 14,
+      "suitable": false
+    },
+    {
+      "instance_id": 173323287,
+      "card_id": 136953,
+      "name": "Лили Леонард",
+      "rank": "C",
+      "wanters_count": 14,
+      "suitable": false
+    },
+    {
+      "instance_id": 130064842,
+      "card_id": 82519,
+      "name": "Ким Ёнман",
+      "rank": "C",
+      "wanters_count": 14,
+      "suitable": false
+    },
+    {
+      "instance_id": 250374101,
+      "card_id": 6437,
+      "name": "Надиа и Ноа",
+      "rank": "C",
+      "wanters_count": 14,
+      "suitable": false
+    },
+    {
+      "instance_id": 215705446,
+      "card_id": 193532,
+      "name": "Юрина|Рей",
+      "rank": "C",
+      "wanters_count": 14,
+      "suitable": false
+    },
+    {
+      "instance_id": 221289706,
+      "card_id": 162240,
+      "name": "Ави",
+      "rank": "C",
+      "wanters_count": 14,
+      "suitable": false
+    },
+    {
+      "instance_id": 276829526,
+      "card_id": 73860,
+      "name": "Ю Арым",
+      "rank": "C",
+      "wanters_count": 14,
+      "suitable": false
+    },
+    {
+      "instance_id": 198397409,
+      "card_id": 182279,
+      "name": "Рената",
+      "rank": "C",
+      "wanters_count": 15,
+      "suitable": false
+    },
+    {
+      "instance_id": 197898590,
+      "card_id": 198418,
+      "name": "Пэк Нок Ха",
+      "rank": "C",
+      "wanters_count": 15,
+      "suitable": false
+    },
+    {
+      "instance_id": 210620469,
+      "card_id": 144765,
+      "name": "Теренеза",
+      "rank": "C",
+      "wanters_count": 15,
+      "suitable": false
+    },
+    {
+      "instance_id": 212410944,
+      "card_id": 200848,
+      "name": "Хелена",
+      "rank": "C",
+      "wanters_count": 15,
+      "suitable": false
+    },
+    {
+      "instance_id": 205708572,
+      "card_id": 190504,
+      "name": "Луна",
+      "rank": "C",
+      "wanters_count": 15,
+      "suitable": false
+    },
+    {
+      "instance_id": 39301152,
+      "card_id": 37274,
+      "name": "Айнц",
+      "rank": "C",
+      "wanters_count": 15,
+      "suitable": false
+    },
+    {
+      "instance_id": 128852184,
+      "card_id": 27916,
+      "name": "Мария",
+      "rank": "C",
+      "wanters_count": 15,
+      "suitable": false
+    },
+    {
+      "instance_id": 239742714,
+      "card_id": 98417,
+      "name": "Урш и Изабелла",
+      "rank": "C",
+      "wanters_count": 15,
+      "suitable": false
+    },
+    {
+      "instance_id": 74808206,
+      "card_id": 27916,
+      "name": "Мария",
+      "rank": "C",
+      "wanters_count": 15,
+      "suitable": false
+    },
+    {
+      "instance_id": 217953545,
+      "card_id": 39830,
+      "name": "Тан Рён Гён",
+      "rank": "C",
+      "wanters_count": 15,
+      "suitable": false
+    },
+    {
+      "instance_id": 210003187,
+      "card_id": 23690,
+      "name": "Эдмунд и Розария",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 205032542,
+      "card_id": 100705,
+      "name": "Алексей Руслан",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 58667670,
+      "card_id": 53219,
+      "name": "Кракен",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 155964491,
+      "card_id": 2413,
+      "name": "Ким Хён Сон",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 156890817,
+      "card_id": 124390,
+      "name": "Вэнь Чжоу",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 174194771,
+      "card_id": 82791,
+      "name": "Кио",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 188243596,
+      "card_id": 13533,
+      "name": "Джи А",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 256688085,
+      "card_id": 243539,
+      "name": "Сота | Токо",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 225309060,
+      "card_id": 8022,
+      "name": "Чон Ма и Ли Хва",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 144445284,
+      "card_id": 155684,
+      "name": "Ион",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 61612087,
+      "card_id": 78536,
+      "name": "Ман Нё",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 135519948,
+      "card_id": 10235,
+      "name": "Чжан Ван Ву",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 71513483,
+      "card_id": 76189,
+      "name": "Брилланд Кремер",
+      "rank": "C",
+      "wanters_count": 16,
+      "suitable": false
+    },
+    {
+      "instance_id": 167439866,
+      "card_id": 189683,
+      "name": "Атлас",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 34683744,
+      "card_id": 67733,
+      "name": "Юи Касии",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 185059634,
+      "card_id": 165023,
+      "name": "Ариаделина",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 180971147,
+      "card_id": 75817,
+      "name": "Ларк Ван Рашмах Декард",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 170956998,
+      "card_id": 144689,
+      "name": "Надиа",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 175396837,
+      "card_id": 135716,
+      "name": "Ланьлю",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 188053164,
+      "card_id": 68494,
+      "name": "Вивиан Джонас",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 40701982,
+      "card_id": 61860,
+      "name": "Роксант и Лиа",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 244823464,
+      "card_id": 1175,
+      "name": "Чхве Хомин",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 66560371,
+      "card_id": 125095,
+      "name": "Грания Розенкарт Карлтон",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 250237743,
+      "card_id": 42437,
+      "name": "Коллин",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 273703290,
+      "card_id": 107700,
+      "name": "Ника Лемерсье",
+      "rank": "C",
+      "wanters_count": 17,
+      "suitable": false
+    },
+    {
+      "instance_id": 199405898,
+      "card_id": 98946,
+      "name": "Джин Чон",
+      "rank": "C",
+      "wanters_count": 18,
+      "suitable": false
+    },
+    {
+      "instance_id": 206241394,
+      "card_id": 17859,
+      "name": "Таня Каниче",
+      "rank": "C",
+      "wanters_count": 18,
+      "suitable": false
+    },
+    {
+      "instance_id": 196832083,
+      "card_id": 183998,
+      "name": "Сабина",
+      "rank": "C",
+      "wanters_count": 18,
+      "suitable": false
+    },
+    {
+      "instance_id": 184190634,
+      "card_id": 124380,
+      "name": "Ван Лин",
+      "rank": "C",
+      "wanters_count": 18,
+      "suitable": false
+    },
+    {
+      "instance_id": 176585902,
+      "card_id": 124380,
+      "name": "Ван Лин",
+      "rank": "C",
+      "wanters_count": 18,
+      "suitable": false
+    },
+    {
+      "instance_id": 193318514,
+      "card_id": 68788,
+      "name": "Иллия и Мию",
+      "rank": "C",
+      "wanters_count": 18,
+      "suitable": false
+    },
+    {
+      "instance_id": 132826699,
+      "card_id": 69637,
+      "name": "Ин Лю Вэй",
+      "rank": "C",
+      "wanters_count": 18,
+      "suitable": false
+    },
+    {
+      "instance_id": 248743794,
+      "card_id": 131339,
+      "name": "Михаэль Розенкарт",
+      "rank": "C",
+      "wanters_count": 18,
+      "suitable": false
+    },
+    {
+      "instance_id": 144770577,
+      "card_id": 13663,
+      "name": "Золотая Цикада",
+      "rank": "C",
+      "wanters_count": 18,
+      "suitable": false
+    },
+    {
+      "instance_id": 142239366,
+      "card_id": 20096,
+      "name": "Лидон и Эверия",
+      "rank": "C",
+      "wanters_count": 18,
+      "suitable": false
+    },
+    {
+      "instance_id": 158722238,
+      "card_id": 8096,
+      "name": "Повелитель зла",
+      "rank": "C",
+      "wanters_count": 19,
+      "suitable": false
+    },
+    {
+      "instance_id": 175536528,
+      "card_id": 98936,
+      "name": "Михаил",
+      "rank": "C",
+      "wanters_count": 19,
+      "suitable": false
+    },
+    {
+      "instance_id": 181635185,
+      "card_id": 193389,
+      "name": "Ифия",
+      "rank": "C",
+      "wanters_count": 19,
+      "suitable": false
+    },
+    {
+      "instance_id": 194699710,
+      "card_id": 98936,
+      "name": "Михаил",
+      "rank": "C",
+      "wanters_count": 19,
+      "suitable": false
+    },
+    {
+      "instance_id": 125936494,
+      "card_id": 141719,
+      "name": "Рикардо и Вероника",
+      "rank": "C",
+      "wanters_count": 19,
+      "suitable": false
+    },
+    {
+      "instance_id": 126028200,
+      "card_id": 124898,
+      "name": "Роман",
+      "rank": "C",
+      "wanters_count": 19,
+      "suitable": false
+    },
+    {
+      "instance_id": 66610555,
+      "card_id": 103121,
+      "name": "Виэнна",
+      "rank": "C",
+      "wanters_count": 19,
+      "suitable": false
+    },
+    {
+      "instance_id": 249535825,
+      "card_id": 18765,
+      "name": "Квон Аён",
+      "rank": "C",
+      "wanters_count": 19,
+      "suitable": false
+    },
+    {
+      "instance_id": 137062637,
+      "card_id": 171646,
+      "name": "Риноа",
+      "rank": "C",
+      "wanters_count": 19,
+      "suitable": false
+    },
+    {
+      "instance_id": 197765771,
+      "card_id": 155864,
+      "name": "Сиен",
+      "rank": "C",
+      "wanters_count": 20,
+      "suitable": false
+    },
+    {
+      "instance_id": 199886040,
+      "card_id": 47610,
+      "name": "Анна Ямада",
+      "rank": "C",
+      "wanters_count": 20,
+      "suitable": false
+    },
+    {
+      "instance_id": 182620153,
+      "card_id": 76025,
+      "name": "Роб",
+      "rank": "C",
+      "wanters_count": 20,
+      "suitable": false
+    },
+    {
+      "instance_id": 180970736,
+      "card_id": 170890,
+      "name": "Ши Ха",
+      "rank": "C",
+      "wanters_count": 20,
+      "suitable": false
+    },
+    {
+      "instance_id": 171065604,
+      "card_id": 101206,
+      "name": "Цинь Цинь",
+      "rank": "C",
+      "wanters_count": 20,
+      "suitable": false
+    },
+    {
+      "instance_id": 11098189,
+      "card_id": 11328,
+      "name": "Трия",
+      "rank": "C",
+      "wanters_count": 20,
+      "suitable": false
+    },
+    {
+      "instance_id": 131928213,
+      "card_id": 67148,
+      "name": "Сейко Котобуки",
+      "rank": "C",
+      "wanters_count": 20,
+      "suitable": false
+    },
+    {
+      "instance_id": 93839271,
+      "card_id": 78455,
+      "name": "Донхо",
+      "rank": "C",
+      "wanters_count": 20,
+      "suitable": false
+    },
+    {
+      "instance_id": 248847003,
+      "card_id": 127882,
+      "name": "Джулия",
+      "rank": "C",
+      "wanters_count": 20,
+      "suitable": false
+    },
+    {
+      "instance_id": 72329119,
+      "card_id": 10305,
+      "name": "Рейчел",
+      "rank": "C",
+      "wanters_count": 20,
+      "suitable": false
+    },
+    {
+      "instance_id": 64071795,
+      "card_id": 106861,
+      "name": "Пипими|Попуко",
+      "rank": "C",
+      "wanters_count": 20,
+      "suitable": false
+    },
+    {
+      "instance_id": 198791427,
+      "card_id": 63540,
+      "name": "Мока Акашия",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 152464591,
+      "card_id": 35365,
+      "name": "Хао Хао и Вей Нань",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 209762589,
+      "card_id": 200192,
+      "name": "Ёске Шибасаки|Такафуми",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 182191655,
+      "card_id": 53039,
+      "name": "Энрид",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 190876966,
+      "card_id": 36031,
+      "name": "Ким Хён Сон",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 170284604,
+      "card_id": 152975,
+      "name": "Аэрин",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 40856358,
+      "card_id": 85532,
+      "name": "Карасье",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 86770861,
+      "card_id": 112530,
+      "name": "Ли Ха Ён",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 266523577,
+      "card_id": 69645,
+      "name": "Ю Чжиён",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 140546252,
+      "card_id": 71814,
+      "name": "Яэка Сакураги",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 215526780,
+      "card_id": 136547,
+      "name": "Сюй Цин и Цзян Хэ",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 145446968,
+      "card_id": 130609,
+      "name": "Пустыня",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 221576924,
+      "card_id": 216992,
+      "name": "Лейла",
+      "rank": "C",
+      "wanters_count": 21,
+      "suitable": false
+    },
+    {
+      "instance_id": 173268029,
+      "card_id": 34801,
+      "name": "Ресилиан",
+      "rank": "C",
+      "wanters_count": 22,
+      "suitable": false
+    },
+    {
+      "instance_id": 252684231,
+      "card_id": 54215,
+      "name": "Кендис Свит",
+      "rank": "C",
+      "wanters_count": 22,
+      "suitable": false
+    },
+    {
+      "instance_id": 62736887,
+      "card_id": 12045,
+      "name": "Сапфир и Руби",
+      "rank": "C",
+      "wanters_count": 22,
+      "suitable": false
+    },
+    {
+      "instance_id": 2228138,
+      "card_id": 38458,
+      "name": "Аннабель Крем",
+      "rank": "C",
+      "wanters_count": 22,
+      "suitable": false
+    },
+    {
+      "instance_id": 136872940,
+      "card_id": 82623,
+      "name": "Дилан и Линали",
+      "rank": "C",
+      "wanters_count": 22,
+      "suitable": false
+    },
+    {
+      "instance_id": 154115540,
+      "card_id": 71054,
+      "name": "Моана",
+      "rank": "C",
+      "wanters_count": 23,
+      "suitable": false
+    },
+    {
+      "instance_id": 35261907,
+      "card_id": 75163,
+      "name": "Со Джиун",
+      "rank": "C",
+      "wanters_count": 23,
+      "suitable": false
+    },
+    {
+      "instance_id": 175408447,
+      "card_id": 169930,
+      "name": "Алиса",
+      "rank": "C",
+      "wanters_count": 23,
+      "suitable": false
+    },
+    {
+      "instance_id": 83039165,
+      "card_id": 33774,
+      "name": "Ко Дже Ун",
+      "rank": "C",
+      "wanters_count": 23,
+      "suitable": false
+    },
+    {
+      "instance_id": 239621535,
+      "card_id": 134516,
+      "name": "Мериэль",
+      "rank": "C",
+      "wanters_count": 23,
+      "suitable": false
+    },
+    {
+      "instance_id": 232105800,
+      "card_id": 207336,
+      "name": "Ли Сынхо",
+      "rank": "C",
+      "wanters_count": 23,
+      "suitable": false
+    },
+    {
+      "instance_id": 167484335,
+      "card_id": 167059,
+      "name": "Стаз Блад",
+      "rank": "C",
+      "wanters_count": 24,
+      "suitable": false
+    },
+    {
+      "instance_id": 154486540,
+      "card_id": 84976,
+      "name": "Он Мирэ и Йер Йере",
+      "rank": "C",
+      "wanters_count": 24,
+      "suitable": false
+    },
+    {
+      "instance_id": 172523770,
+      "card_id": 164259,
+      "name": "Джин Хёк и Су Чжон",
+      "rank": "C",
+      "wanters_count": 24,
+      "suitable": false
+    },
+    {
+      "instance_id": 172940118,
+      "card_id": 140371,
+      "name": "Ганта | Мидо",
+      "rank": "C",
+      "wanters_count": 24,
+      "suitable": false
+    },
+    {
+      "instance_id": 217605919,
+      "card_id": 83067,
+      "name": "Сурадель",
+      "rank": "C",
+      "wanters_count": 24,
+      "suitable": false
+    },
+    {
+      "instance_id": 54041821,
+      "card_id": 34074,
+      "name": "Кери",
+      "rank": "C",
+      "wanters_count": 25,
+      "suitable": false
+    },
+    {
+      "instance_id": 210166228,
+      "card_id": 216126,
+      "name": "Нао Мисуми",
+      "rank": "C",
+      "wanters_count": 25,
+      "suitable": false
+    },
+    {
+      "instance_id": 173465521,
+      "card_id": 67519,
+      "name": "Фелм",
+      "rank": "C",
+      "wanters_count": 25,
+      "suitable": false
+    },
+    {
+      "instance_id": 135129049,
+      "card_id": 78860,
+      "name": "Юнгём",
+      "rank": "C",
+      "wanters_count": 25,
+      "suitable": false
+    },
+    {
+      "instance_id": 28909656,
+      "card_id": 23304,
+      "name": "Кирон",
+      "rank": "C",
+      "wanters_count": 25,
+      "suitable": false
+    },
+    {
+      "instance_id": 218031404,
+      "card_id": 17920,
+      "name": "Брут и Цезарь",
+      "rank": "C",
+      "wanters_count": 25,
+      "suitable": false
+    },
+    {
+      "instance_id": 205260795,
+      "card_id": 55131,
+      "name": "Фрэя",
+      "rank": "C",
+      "wanters_count": 26,
+      "suitable": false
+    },
+    {
+      "instance_id": 176360638,
+      "card_id": 35981,
+      "name": "Агиэль",
+      "rank": "C",
+      "wanters_count": 26,
+      "suitable": false
+    },
+    {
+      "instance_id": 173020666,
+      "card_id": 181385,
+      "name": "Поле цветов",
+      "rank": "C",
+      "wanters_count": 26,
+      "suitable": false
+    },
+    {
+      "instance_id": 126291305,
+      "card_id": 166135,
+      "name": "Статис",
+      "rank": "C",
+      "wanters_count": 26,
+      "suitable": false
+    },
+    {
+      "instance_id": 203008393,
+      "card_id": 23666,
+      "name": "Блурин",
+      "rank": "C",
+      "wanters_count": 27,
+      "suitable": false
+    },
+    {
+      "instance_id": 64142945,
+      "card_id": 53519,
+      "name": "Кофеллус",
+      "rank": "C",
+      "wanters_count": 27,
+      "suitable": false
+    },
+    {
+      "instance_id": 114537724,
+      "card_id": 134742,
+      "name": "Шарлотта",
+      "rank": "C",
+      "wanters_count": 27,
+      "suitable": false
+    },
+    {
+      "instance_id": 81471024,
+      "card_id": 28211,
+      "name": "Мёнхи",
+      "rank": "C",
+      "wanters_count": 27,
+      "suitable": false
+    },
+    {
+      "instance_id": 165305463,
+      "card_id": 149206,
+      "name": "Аркана",
+      "rank": "C",
+      "wanters_count": 28,
+      "suitable": false
+    },
+    {
+      "instance_id": 177574798,
+      "card_id": 145542,
+      "name": "Катерина",
+      "rank": "C",
+      "wanters_count": 28,
+      "suitable": false
+    },
+    {
+      "instance_id": 181874574,
+      "card_id": 41817,
+      "name": "Юллис",
+      "rank": "C",
+      "wanters_count": 28,
+      "suitable": false
+    },
+    {
+      "instance_id": 180020755,
+      "card_id": 139119,
+      "name": "Родриг",
+      "rank": "C",
+      "wanters_count": 28,
+      "suitable": false
+    },
+    {
+      "instance_id": 50630920,
+      "card_id": 98713,
+      "name": "Мия",
+      "rank": "C",
+      "wanters_count": 28,
+      "suitable": false
+    },
+    {
+      "instance_id": 95972276,
+      "card_id": 136096,
+      "name": "Нора Валькери",
+      "rank": "C",
+      "wanters_count": 28,
+      "suitable": false
+    },
+    {
+      "instance_id": 262944340,
+      "card_id": 47372,
+      "name": "Честер и Веразель",
+      "rank": "C",
+      "wanters_count": 28,
+      "suitable": false
+    },
+    {
+      "instance_id": 134222762,
+      "card_id": 41817,
+      "name": "Юллис",
+      "rank": "C",
+      "wanters_count": 28,
+      "suitable": false
+    },
+    {
+      "instance_id": 166808838,
+      "card_id": 135191,
+      "name": "До Харим",
+      "rank": "C",
+      "wanters_count": 29,
+      "suitable": false
+    },
+    {
+      "instance_id": 146120000,
+      "card_id": 5386,
+      "name": "Император",
+      "rank": "C",
+      "wanters_count": 29,
+      "suitable": false
+    },
+    {
+      "instance_id": 185533629,
+      "card_id": 51783,
+      "name": "Пэк Чонхун",
+      "rank": "C",
+      "wanters_count": 29,
+      "suitable": false
+    },
+    {
+      "instance_id": 184776215,
+      "card_id": 110007,
+      "name": "Лю Ичень",
+      "rank": "C",
+      "wanters_count": 29,
+      "suitable": false
+    },
+    {
+      "instance_id": 191917600,
+      "card_id": 116831,
+      "name": "Бунтаро Мори",
+      "rank": "C",
+      "wanters_count": 29,
+      "suitable": false
+    },
+    {
+      "instance_id": 170425728,
+      "card_id": 84898,
+      "name": "Ловелла",
+      "rank": "C",
+      "wanters_count": 29,
+      "suitable": false
+    },
+    {
+      "instance_id": 186822529,
+      "card_id": 200691,
+      "name": "Кристиан",
+      "rank": "C",
+      "wanters_count": 29,
+      "suitable": false
+    },
+    {
+      "instance_id": 126771050,
+      "card_id": 116876,
+      "name": "Королева Пауков",
+      "rank": "C",
+      "wanters_count": 29,
+      "suitable": false
+    },
+    {
+      "instance_id": 165824569,
+      "card_id": 67749,
+      "name": "Се Янь",
+      "rank": "C",
+      "wanters_count": 30,
+      "suitable": false
+    },
+    {
+      "instance_id": 166124607,
+      "card_id": 62519,
+      "name": "Маг-Стрелок",
+      "rank": "C",
+      "wanters_count": 30,
+      "suitable": false
+    },
+    {
+      "instance_id": 14179786,
+      "card_id": 17423,
+      "name": "Кеум Ран Хва",
+      "rank": "C",
+      "wanters_count": 30,
+      "suitable": false
+    },
+    {
+      "instance_id": 118858124,
+      "card_id": 103665,
+      "name": "Ангел",
+      "rank": "C",
+      "wanters_count": 31,
+      "suitable": false
+    },
+    {
+      "instance_id": 66349003,
+      "card_id": 50697,
+      "name": "Ганон и Маянтрея",
+      "rank": "C",
+      "wanters_count": 31,
+      "suitable": false
+    },
+    {
+      "instance_id": 251669239,
+      "card_id": 171771,
+      "name": "Райзалин",
+      "rank": "C",
+      "wanters_count": 32,
+      "suitable": false
+    },
+    {
+      "instance_id": 164419219,
+      "card_id": 34,
+      "name": "Император",
+      "rank": "C",
+      "wanters_count": 33,
+      "suitable": false
+    },
+    {
+      "instance_id": 177984017,
+      "card_id": 34,
+      "name": "Император",
+      "rank": "C",
+      "wanters_count": 33,
+      "suitable": false
+    },
+    {
+      "instance_id": 191370662,
+      "card_id": 57901,
+      "name": "Изабель",
+      "rank": "C",
+      "wanters_count": 33,
+      "suitable": false
+    },
+    {
+      "instance_id": 174194577,
+      "card_id": 157181,
+      "name": "Му Шэн и Лин Мяомяо",
+      "rank": "C",
+      "wanters_count": 33,
+      "suitable": false
+    },
+    {
+      "instance_id": 263126438,
+      "card_id": 266939,
+      "name": "Рика",
+      "rank": "C",
+      "wanters_count": 33,
+      "suitable": false
+    },
+    {
+      "instance_id": 135800462,
+      "card_id": 99200,
+      "name": "Сюй Суй",
+      "rank": "C",
+      "wanters_count": 33,
+      "suitable": false
+    },
+    {
+      "instance_id": 46984563,
+      "card_id": 84341,
+      "name": "Цуруги и Микуни",
+      "rank": "C",
+      "wanters_count": 34,
+      "suitable": false
+    },
+    {
+      "instance_id": 173716712,
+      "card_id": 94636,
+      "name": "Шифару",
+      "rank": "C",
+      "wanters_count": 34,
+      "suitable": false
+    },
+    {
+      "instance_id": 229701682,
+      "card_id": 127020,
+      "name": "Отоя Иттоки",
+      "rank": "C",
+      "wanters_count": 34,
+      "suitable": false
+    },
+    {
+      "instance_id": 27134919,
+      "card_id": 8940,
+      "name": "Ниллия",
+      "rank": "C",
+      "wanters_count": 34,
+      "suitable": false
+    },
+    {
+      "instance_id": 28328521,
+      "card_id": 38616,
+      "name": "Иссушитель",
+      "rank": "C",
+      "wanters_count": 34,
+      "suitable": false
+    },
+    {
+      "instance_id": 72530512,
+      "card_id": 5047,
+      "name": "Алан Сюарт",
+      "rank": "C",
+      "wanters_count": 34,
+      "suitable": false
+    },
+    {
+      "instance_id": 201581142,
+      "card_id": 98071,
+      "name": "Анастасий и Эглантина",
+      "rank": "C",
+      "wanters_count": 35,
+      "suitable": false
+    },
+    {
+      "instance_id": 35794158,
+      "card_id": 46498,
+      "name": "Сатоши Фукубэ",
+      "rank": "C",
+      "wanters_count": 35,
+      "suitable": false
+    },
+    {
+      "instance_id": 42142260,
+      "card_id": 20459,
+      "name": "Лифелия",
+      "rank": "C",
+      "wanters_count": 35,
+      "suitable": false
+    },
+    {
+      "instance_id": 179167069,
+      "card_id": 73724,
+      "name": "Тириэль",
+      "rank": "C",
+      "wanters_count": 35,
+      "suitable": false
+    },
+    {
+      "instance_id": 186326498,
+      "card_id": 155450,
+      "name": "Супруги Нокс",
+      "rank": "C",
+      "wanters_count": 35,
+      "suitable": false
+    },
+    {
+      "instance_id": 148908116,
+      "card_id": 157364,
+      "name": "Токийские кошечки",
+      "rank": "C",
+      "wanters_count": 36,
+      "suitable": false
+    },
+    {
+      "instance_id": 176950356,
+      "card_id": 49745,
+      "name": "Команда Ивон",
+      "rank": "C",
+      "wanters_count": 36,
+      "suitable": false
+    },
+    {
+      "instance_id": 177805733,
+      "card_id": 78624,
+      "name": "Минхён",
+      "rank": "C",
+      "wanters_count": 36,
+      "suitable": false
+    },
+    {
+      "instance_id": 176809003,
+      "card_id": 113989,
+      "name": "Розетта",
+      "rank": "C",
+      "wanters_count": 36,
+      "suitable": false
+    },
+    {
+      "instance_id": 174154058,
+      "card_id": 49512,
+      "name": "Джошуа Нохайз",
+      "rank": "C",
+      "wanters_count": 36,
+      "suitable": false
+    },
+    {
+      "instance_id": 41423985,
+      "card_id": 102364,
+      "name": "Шрек и Друзья",
+      "rank": "C",
+      "wanters_count": 36,
+      "suitable": false
+    },
+    {
+      "instance_id": 141026052,
+      "card_id": 14193,
+      "name": "Кирию Моэка",
+      "rank": "C",
+      "wanters_count": 36,
+      "suitable": false
+    },
+    {
+      "instance_id": 136248846,
+      "card_id": 974,
+      "name": "Кун",
+      "rank": "C",
+      "wanters_count": 36,
+      "suitable": false
+    },
+    {
+      "instance_id": 36133662,
+      "card_id": 82752,
+      "name": "Дайя и Джошу",
+      "rank": "C",
+      "wanters_count": 37,
+      "suitable": false
+    },
+    {
+      "instance_id": 171998880,
+      "card_id": 186330,
+      "name": "Ли Хан Кёнг",
+      "rank": "C",
+      "wanters_count": 37,
+      "suitable": false
+    },
+    {
+      "instance_id": 191923120,
+      "card_id": 21510,
+      "name": "Бай Лин",
+      "rank": "C",
+      "wanters_count": 37,
+      "suitable": false
+    },
+    {
+      "instance_id": 38524250,
+      "card_id": 5094,
+      "name": "Крид",
+      "rank": "C",
+      "wanters_count": 37,
+      "suitable": false
+    },
+    {
+      "instance_id": 173274907,
+      "card_id": 43888,
+      "name": "Гарнет Ройгар",
+      "rank": "C",
+      "wanters_count": 37,
+      "suitable": false
+    },
+    {
+      "instance_id": 83720146,
+      "card_id": 45750,
+      "name": "Луиза",
+      "rank": "C",
+      "wanters_count": 37,
+      "suitable": false
+    },
+    {
+      "instance_id": 176880602,
+      "card_id": 39789,
+      "name": "Шкатулка алхимии",
+      "rank": "C",
+      "wanters_count": 38,
+      "suitable": false
+    },
+    {
+      "instance_id": 201623007,
+      "card_id": 22129,
+      "name": "Джин Су",
+      "rank": "C",
+      "wanters_count": 39,
+      "suitable": false
+    },
+    {
+      "instance_id": 129517249,
+      "card_id": 142984,
+      "name": "Ворона и Шизуо",
+      "rank": "C",
+      "wanters_count": 39,
+      "suitable": false
+    },
+    {
+      "instance_id": 248286779,
+      "card_id": 141703,
+      "name": "Ю Чонг",
+      "rank": "C",
+      "wanters_count": 39,
+      "suitable": false
+    },
+    {
+      "instance_id": 147523274,
+      "card_id": 16566,
+      "name": "Бай Цзин и Пак",
+      "rank": "C",
+      "wanters_count": 40,
+      "suitable": false
+    },
+    {
+      "instance_id": 175925879,
+      "card_id": 60177,
+      "name": "Дирод Артиан",
+      "rank": "C",
+      "wanters_count": 40,
+      "suitable": false
+    },
+    {
+      "instance_id": 173537038,
+      "card_id": 58216,
+      "name": "Хо Йо Сон",
+      "rank": "C",
+      "wanters_count": 40,
+      "suitable": false
+    },
+    {
+      "instance_id": 225309156,
+      "card_id": 205130,
+      "name": "Уольм и Дракон",
+      "rank": "C",
+      "wanters_count": 40,
+      "suitable": false
+    },
+    {
+      "instance_id": 232752043,
+      "card_id": 55787,
+      "name": "Изабель",
+      "rank": "C",
+      "wanters_count": 40,
+      "suitable": false
+    },
+    {
+      "instance_id": 61686902,
+      "card_id": 49230,
+      "name": "Арману",
+      "rank": "C",
+      "wanters_count": 40,
+      "suitable": false
+    },
+    {
+      "instance_id": 163711977,
+      "card_id": 144133,
+      "name": "Оттоя Иттоки",
+      "rank": "C",
+      "wanters_count": 41,
+      "suitable": false
+    },
+    {
+      "instance_id": 8380551,
+      "card_id": 36282,
+      "name": "Саэдзима",
+      "rank": "C",
+      "wanters_count": 41,
+      "suitable": false
+    },
+    {
+      "instance_id": 198474608,
+      "card_id": 78172,
+      "name": "Кёмото",
+      "rank": "C",
+      "wanters_count": 42,
+      "suitable": false
+    },
+    {
+      "instance_id": 44961183,
+      "card_id": 79584,
+      "name": "Ворона",
+      "rank": "C",
+      "wanters_count": 42,
+      "suitable": false
+    },
+    {
+      "instance_id": 191525152,
+      "card_id": 127628,
+      "name": "Лу Шу|Лу Сяо Ю",
+      "rank": "C",
+      "wanters_count": 42,
+      "suitable": false
+    },
+    {
+      "instance_id": 190666240,
+      "card_id": 79584,
+      "name": "Ворона",
+      "rank": "C",
+      "wanters_count": 42,
+      "suitable": false
+    },
+    {
+      "instance_id": 129435062,
+      "card_id": 63742,
+      "name": "Сиринкс",
+      "rank": "C",
+      "wanters_count": 42,
+      "suitable": false
+    },
+    {
+      "instance_id": 159339692,
+      "card_id": 189650,
+      "name": "Томо",
+      "rank": "C",
+      "wanters_count": 43,
+      "suitable": false
+    },
+    {
+      "instance_id": 170045413,
+      "card_id": 19035,
+      "name": "Седрик и Лео",
+      "rank": "C",
+      "wanters_count": 43,
+      "suitable": false
+    },
+    {
+      "instance_id": 175425829,
+      "card_id": 138497,
+      "name": "Ся Хань",
+      "rank": "C",
+      "wanters_count": 43,
+      "suitable": false
+    },
+    {
+      "instance_id": 184776751,
+      "card_id": 19035,
+      "name": "Седрик и Лео",
+      "rank": "C",
+      "wanters_count": 43,
+      "suitable": false
+    },
+    {
+      "instance_id": 89798602,
+      "card_id": 90674,
+      "name": "Юн Гар Рам",
+      "rank": "C",
+      "wanters_count": 46,
+      "suitable": false
+    },
+    {
+      "instance_id": 157966604,
+      "card_id": 116543,
+      "name": "Жаклин",
+      "rank": "C",
+      "wanters_count": 47,
+      "suitable": false
+    },
+    {
+      "instance_id": 181680006,
+      "card_id": 76191,
+      "name": "Рафиан",
+      "rank": "C",
+      "wanters_count": 47,
+      "suitable": false
+    },
+    {
+      "instance_id": 123092801,
+      "card_id": 55016,
+      "name": "Каривиан Уиллард",
+      "rank": "C",
+      "wanters_count": 47,
+      "suitable": false
+    },
+    {
+      "instance_id": 214919738,
+      "card_id": 204457,
+      "name": "Ниним",
+      "rank": "C",
+      "wanters_count": 47,
+      "suitable": false
+    },
+    {
+      "instance_id": 56631541,
+      "card_id": 115192,
+      "name": "Дафнис и Хлоя",
+      "rank": "C",
+      "wanters_count": 48,
+      "suitable": false
+    },
+    {
+      "instance_id": 172297225,
+      "card_id": 2957,
+      "name": "Ассела Даррингтон",
+      "rank": "C",
+      "wanters_count": 48,
+      "suitable": false
+    },
+    {
+      "instance_id": 51626103,
+      "card_id": 91850,
+      "name": "Зак и Клауд",
+      "rank": "C",
+      "wanters_count": 49,
+      "suitable": false
+    },
+    {
+      "instance_id": 209429034,
+      "card_id": 53118,
+      "name": "Лукас",
+      "rank": "C",
+      "wanters_count": 50,
+      "suitable": false
+    },
+    {
+      "instance_id": 187794616,
+      "card_id": 184606,
+      "name": "Леон",
+      "rank": "C",
+      "wanters_count": 50,
+      "suitable": false
+    },
+    {
+      "instance_id": 214966756,
+      "card_id": 91533,
+      "name": "Сон Джина",
+      "rank": "C",
+      "wanters_count": 50,
+      "suitable": false
+    },
+    {
+      "instance_id": 151224873,
+      "card_id": 76925,
+      "name": "Хана",
+      "rank": "C",
+      "wanters_count": 51,
+      "suitable": false
+    },
+    {
+      "instance_id": 185761774,
+      "card_id": 153607,
+      "name": "Эми",
+      "rank": "C",
+      "wanters_count": 51,
+      "suitable": false
+    },
+    {
+      "instance_id": 232268607,
+      "card_id": 45375,
+      "name": "Адельхайд",
+      "rank": "C",
+      "wanters_count": 51,
+      "suitable": false
+    },
+    {
+      "instance_id": 141958445,
+      "card_id": 165523,
+      "name": "Ян Джи Хё и Ха Рэ Джун",
+      "rank": "C",
+      "wanters_count": 51,
+      "suitable": false
+    },
+    {
+      "instance_id": 154187045,
+      "card_id": 76324,
+      "name": "Гу Доюн",
+      "rank": "C",
+      "wanters_count": 52,
+      "suitable": false
+    },
+    {
+      "instance_id": 163974493,
+      "card_id": 116455,
+      "name": "Хотаро и Эру",
+      "rank": "C",
+      "wanters_count": 53,
+      "suitable": false
+    },
+    {
+      "instance_id": 150865808,
+      "card_id": 4270,
+      "name": "Карим",
+      "rank": "C",
+      "wanters_count": 54,
+      "suitable": false
+    },
+    {
+      "instance_id": 170614861,
+      "card_id": 162849,
+      "name": "Беа",
+      "rank": "C",
+      "wanters_count": 54,
+      "suitable": false
+    },
+    {
+      "instance_id": 166806636,
+      "card_id": 192614,
+      "name": "ЧП",
+      "rank": "C",
+      "wanters_count": 55,
+      "suitable": false
+    },
+    {
+      "instance_id": 213133987,
+      "card_id": 151333,
+      "name": "Хельга",
+      "rank": "C",
+      "wanters_count": 55,
+      "suitable": false
+    },
+    {
+      "instance_id": 52718705,
+      "card_id": 21020,
+      "name": "Кан Со Ын",
+      "rank": "C",
+      "wanters_count": 56,
+      "suitable": false
+    },
+    {
+      "instance_id": 166702935,
+      "card_id": 111464,
+      "name": "Арделия Чейс",
+      "rank": "C",
+      "wanters_count": 56,
+      "suitable": false
+    },
+    {
+      "instance_id": 240188026,
+      "card_id": 238197,
+      "name": "Эстебан Вон Аркхейм",
+      "rank": "C",
+      "wanters_count": 57,
+      "suitable": false
+    },
+    {
+      "instance_id": 97418366,
+      "card_id": 102474,
+      "name": "Кот в сапогах",
+      "rank": "C",
+      "wanters_count": 57,
+      "suitable": false
+    },
+    {
+      "instance_id": 168283108,
+      "card_id": 190364,
+      "name": "Ален",
+      "rank": "C",
+      "wanters_count": 58,
+      "suitable": false
+    },
+    {
+      "instance_id": 161933012,
+      "card_id": 190364,
+      "name": "Ален",
+      "rank": "C",
+      "wanters_count": 58,
+      "suitable": false
+    },
+    {
+      "instance_id": 159532954,
+      "card_id": 56331,
+      "name": "Рам",
+      "rank": "C",
+      "wanters_count": 58,
+      "suitable": false
+    },
+    {
+      "instance_id": 97146235,
+      "card_id": 133526,
+      "name": "Блейк Белладонна",
+      "rank": "C",
+      "wanters_count": 59,
+      "suitable": false
+    },
+    {
+      "instance_id": 166677987,
+      "card_id": 90763,
+      "name": "Фумино Тояма",
+      "rank": "C",
+      "wanters_count": 60,
+      "suitable": false
+    },
+    {
+      "instance_id": 59073881,
+      "card_id": 9716,
+      "name": "Рангаро",
+      "rank": "C",
+      "wanters_count": 60,
+      "suitable": false
+    },
+    {
+      "instance_id": 171620001,
+      "card_id": 10353,
+      "name": "Шинюль",
+      "rank": "C",
+      "wanters_count": 60,
+      "suitable": false
+    },
+    {
+      "instance_id": 104371671,
+      "card_id": 68830,
+      "name": "Меграйан",
+      "rank": "C",
+      "wanters_count": 60,
+      "suitable": false
+    },
+    {
+      "instance_id": 217557270,
+      "card_id": 177670,
+      "name": "Лакана Криспин",
+      "rank": "C",
+      "wanters_count": 60,
+      "suitable": false
+    },
+    {
+      "instance_id": 143772135,
+      "card_id": 174255,
+      "name": "Нэрис и Дайан",
+      "rank": "C",
+      "wanters_count": 60,
+      "suitable": false
+    },
+    {
+      "instance_id": 168351852,
+      "card_id": 22379,
+      "name": "Джет Блэк",
+      "rank": "C",
+      "wanters_count": 61,
+      "suitable": false
+    },
+    {
+      "instance_id": 178294003,
+      "card_id": 118312,
+      "name": "Дуэйн Венеди",
+      "rank": "C",
+      "wanters_count": 61,
+      "suitable": false
+    },
+    {
+      "instance_id": 27461516,
+      "card_id": 13921,
+      "name": "Юкако",
+      "rank": "C",
+      "wanters_count": 61,
+      "suitable": false
+    },
+    {
+      "instance_id": 137017933,
+      "card_id": 5007,
+      "name": "Руби",
+      "rank": "C",
+      "wanters_count": 61,
+      "suitable": false
+    },
+    {
+      "instance_id": 179296824,
+      "card_id": 45179,
+      "name": "Чжок Чон Ган",
+      "rank": "C",
+      "wanters_count": 62,
+      "suitable": false
+    },
+    {
+      "instance_id": 129376683,
+      "card_id": 26229,
+      "name": "Начальник",
+      "rank": "C",
+      "wanters_count": 62,
+      "suitable": false
+    },
+    {
+      "instance_id": 198682760,
+      "card_id": 155141,
+      "name": "Сион",
+      "rank": "C",
+      "wanters_count": 65,
+      "suitable": false
+    },
+    {
+      "instance_id": 99332762,
+      "card_id": 61475,
+      "name": "Джонатан Дмитрий",
+      "rank": "C",
+      "wanters_count": 65,
+      "suitable": false
+    },
+    {
+      "instance_id": 39232105,
+      "card_id": 85165,
+      "name": "Джонатан",
+      "rank": "C",
+      "wanters_count": 66,
+      "suitable": false
+    },
+    {
+      "instance_id": 16036526,
+      "card_id": 80046,
+      "name": "Ромейн Ру Рун Кайрис",
+      "rank": "C",
+      "wanters_count": 66,
+      "suitable": false
+    },
+    {
+      "instance_id": 117020554,
+      "card_id": 120099,
+      "name": "Карл",
+      "rank": "C",
+      "wanters_count": 66,
+      "suitable": false
+    },
+    {
+      "instance_id": 174215737,
+      "card_id": 88979,
+      "name": "Джулиус и Летисия",
+      "rank": "C",
+      "wanters_count": 67,
+      "suitable": false
+    },
+    {
+      "instance_id": 251499379,
+      "card_id": 189415,
+      "name": "Лия",
+      "rank": "C",
+      "wanters_count": 67,
+      "suitable": false
+    },
+    {
+      "instance_id": 63071663,
+      "card_id": 104449,
+      "name": "Джозеф",
+      "rank": "C",
+      "wanters_count": 67,
+      "suitable": false
+    },
+    {
+      "instance_id": 208803146,
+      "card_id": 167622,
+      "name": "Аджин",
+      "rank": "C",
+      "wanters_count": 68,
+      "suitable": false
+    },
+    {
+      "instance_id": 188014642,
+      "card_id": 30883,
+      "name": "Уильям",
+      "rank": "C",
+      "wanters_count": 68,
+      "suitable": false
+    },
+    {
+      "instance_id": 109736133,
+      "card_id": 110726,
+      "name": "Хун Мэйлин",
+      "rank": "C",
+      "wanters_count": 69,
+      "suitable": false
+    },
+    {
+      "instance_id": 78953654,
+      "card_id": 62976,
+      "name": "Белла и Минт",
+      "rank": "C",
+      "wanters_count": 69,
+      "suitable": false
+    },
+    {
+      "instance_id": 214976870,
+      "card_id": 71262,
+      "name": "Грейс и Иан",
+      "rank": "C",
+      "wanters_count": 70,
+      "suitable": false
+    },
+    {
+      "instance_id": 33626644,
+      "card_id": 75980,
+      "name": "Митсуми и Шима",
+      "rank": "C",
+      "wanters_count": 71,
+      "suitable": false
+    },
+    {
+      "instance_id": 35714966,
+      "card_id": 2248,
+      "name": "Гу Сэ Ра",
+      "rank": "C",
+      "wanters_count": 73,
+      "suitable": false
+    },
+    {
+      "instance_id": 17726951,
+      "card_id": 77016,
+      "name": "Спидвагон",
+      "rank": "C",
+      "wanters_count": 73,
+      "suitable": false
+    },
+    {
+      "instance_id": 46984938,
+      "card_id": 91072,
+      "name": "Джокер",
+      "rank": "C",
+      "wanters_count": 74,
+      "suitable": false
+    },
+    {
+      "instance_id": 181537780,
+      "card_id": 138408,
+      "name": "Роман Дмитрий",
+      "rank": "C",
+      "wanters_count": 76,
+      "suitable": false
+    },
+    {
+      "instance_id": 65611567,
+      "card_id": 91194,
+      "name": "Хакурю",
+      "rank": "C",
+      "wanters_count": 76,
+      "suitable": false
+    },
+    {
+      "instance_id": 243999995,
+      "card_id": 19791,
+      "name": "Мусаши",
+      "rank": "C",
+      "wanters_count": 76,
+      "suitable": false
+    },
+    {
+      "instance_id": 217149529,
+      "card_id": 196692,
+      "name": "Серафина",
+      "rank": "C",
+      "wanters_count": 77,
+      "suitable": false
+    },
+    {
+      "instance_id": 199886516,
+      "card_id": 39333,
+      "name": "Маго",
+      "rank": "C",
+      "wanters_count": 78,
+      "suitable": false
+    },
+    {
+      "instance_id": 182191547,
+      "card_id": 63397,
+      "name": "Делис и Белла",
+      "rank": "C",
+      "wanters_count": 78,
+      "suitable": false
+    },
+    {
+      "instance_id": 195329172,
+      "card_id": 65767,
+      "name": "Амила",
+      "rank": "C",
+      "wanters_count": 79,
+      "suitable": false
+    },
+    {
+      "instance_id": 212520718,
+      "card_id": 29785,
+      "name": "Джудиэль",
+      "rank": "C",
+      "wanters_count": 80,
+      "suitable": false
+    },
+    {
+      "instance_id": 177726466,
+      "card_id": 186028,
+      "name": "Руцифелла",
+      "rank": "C",
+      "wanters_count": 80,
+      "suitable": false
+    },
+    {
+      "instance_id": 172903530,
+      "card_id": 91400,
+      "name": "Шарркан",
+      "rank": "C",
+      "wanters_count": 83,
+      "suitable": false
+    },
+    {
+      "instance_id": 131683417,
+      "card_id": 5956,
+      "name": "Мукхали",
+      "rank": "C",
+      "wanters_count": 83,
+      "suitable": false
+    },
+    {
+      "instance_id": 263506252,
+      "card_id": 212744,
+      "name": "Фань Цзян Хао",
+      "rank": "C",
+      "wanters_count": 83,
+      "suitable": false
+    },
+    {
+      "instance_id": 177017171,
+      "card_id": 37280,
+      "name": "Нестабильное воплощение",
+      "rank": "C",
+      "wanters_count": 84,
+      "suitable": false
+    },
+    {
+      "instance_id": 175407377,
+      "card_id": 132749,
+      "name": "Гуми",
+      "rank": "C",
+      "wanters_count": 85,
+      "suitable": false
+    },
+    {
+      "instance_id": 158086533,
+      "card_id": 107492,
+      "name": "Лиен",
+      "rank": "C",
+      "wanters_count": 86,
+      "suitable": false
+    },
+    {
+      "instance_id": 178448459,
+      "card_id": 178569,
+      "name": "Ан",
+      "rank": "C",
+      "wanters_count": 86,
+      "suitable": false
+    },
+    {
+      "instance_id": 231546654,
+      "card_id": 131863,
+      "name": "Осень",
+      "rank": "C",
+      "wanters_count": 86,
+      "suitable": false
+    },
+    {
+      "instance_id": 155059982,
+      "card_id": 75341,
+      "name": "Хён Даниэл",
+      "rank": "C",
+      "wanters_count": 87,
+      "suitable": false
+    },
+    {
+      "instance_id": 171715909,
+      "card_id": 36215,
+      "name": "Кейл",
+      "rank": "C",
+      "wanters_count": 87,
+      "suitable": false
+    },
+    {
+      "instance_id": 68950194,
+      "card_id": 94202,
+      "name": "Ким Чхоль",
+      "rank": "C",
+      "wanters_count": 87,
+      "suitable": false
+    },
+    {
+      "instance_id": 204193958,
+      "card_id": 51112,
+      "name": "Архангел",
+      "rank": "C",
+      "wanters_count": 90,
+      "suitable": false
+    },
+    {
+      "instance_id": 196515096,
+      "card_id": 192175,
+      "name": "Алисия",
+      "rank": "C",
+      "wanters_count": 90,
+      "suitable": false
+    },
+    {
+      "instance_id": 144470415,
+      "card_id": 94699,
+      "name": "Кан Джомма",
+      "rank": "C",
+      "wanters_count": 91,
+      "suitable": false
+    },
+    {
+      "instance_id": 217838062,
+      "card_id": 201561,
+      "name": "Сы Си Вань",
+      "rank": "C",
+      "wanters_count": 91,
+      "suitable": false
+    },
+    {
+      "instance_id": 37933147,
+      "card_id": 4169,
+      "name": "Ю Сан Хён",
+      "rank": "C",
+      "wanters_count": 92,
+      "suitable": false
+    },
+    {
+      "instance_id": 132785054,
+      "card_id": 139247,
+      "name": "Ки Джанё",
+      "rank": "C",
+      "wanters_count": 92,
+      "suitable": false
+    },
+    {
+      "instance_id": 166034569,
+      "card_id": 127572,
+      "name": "Риндо",
+      "rank": "C",
+      "wanters_count": 93,
+      "suitable": false
+    },
+    {
+      "instance_id": 136267329,
+      "card_id": 89005,
+      "name": "Ли Хо Ёль",
+      "rank": "C",
+      "wanters_count": 93,
+      "suitable": false
+    },
+    {
+      "instance_id": 175545233,
+      "card_id": 163,
+      "name": "Кархан Эвантеон",
+      "rank": "C",
+      "wanters_count": 95,
+      "suitable": false
+    },
+    {
+      "instance_id": 199886092,
+      "card_id": 104139,
+      "name": "Тамаки",
+      "rank": "C",
+      "wanters_count": 96,
+      "suitable": false
+    },
+    {
+      "instance_id": 114042396,
+      "card_id": 121558,
+      "name": "Хагакурэ",
+      "rank": "C",
+      "wanters_count": 96,
+      "suitable": false
+    },
+    {
+      "instance_id": 273560262,
+      "card_id": 170871,
+      "name": "Карлитус",
+      "rank": "C",
+      "wanters_count": 97,
+      "suitable": false
+    },
+    {
+      "instance_id": 172903360,
+      "card_id": 17100,
+      "name": "Головолом",
+      "rank": "C",
+      "wanters_count": 98,
+      "suitable": false
+    },
+    {
+      "instance_id": 150183403,
+      "card_id": 39023,
+      "name": "Звёзддный Бог Васаго",
+      "rank": "C",
+      "wanters_count": 99,
+      "suitable": false
+    },
+    {
+      "instance_id": 180760662,
+      "card_id": 153215,
+      "name": "О Кан У",
+      "rank": "C",
+      "wanters_count": 100,
+      "suitable": false
+    },
+    {
+      "instance_id": 132183308,
+      "card_id": 61634,
+      "name": "Сан Янь",
+      "rank": "C",
+      "wanters_count": 102,
+      "suitable": false
+    },
+    {
+      "instance_id": 175702749,
+      "card_id": 36117,
+      "name": "Дафна",
+      "rank": "C",
+      "wanters_count": 104,
+      "suitable": false
+    },
+    {
+      "instance_id": 14820325,
+      "card_id": 20381,
+      "name": "Майки",
+      "rank": "C",
+      "wanters_count": 104,
+      "suitable": false
+    },
+    {
+      "instance_id": 213514072,
+      "card_id": 205425,
+      "name": "Герой",
+      "rank": "C",
+      "wanters_count": 107,
+      "suitable": false
+    },
+    {
+      "instance_id": 82321358,
+      "card_id": 75315,
+      "name": "Ча Джун Со",
+      "rank": "C",
+      "wanters_count": 109,
+      "suitable": false
+    },
+    {
+      "instance_id": 35261397,
+      "card_id": 51041,
+      "name": "Ивенроуз и Михаэлис",
+      "rank": "C",
+      "wanters_count": 110,
+      "suitable": false
+    },
+    {
+      "instance_id": 180970665,
+      "card_id": 40049,
+      "name": "Кайл",
+      "rank": "C",
+      "wanters_count": 110,
+      "suitable": false
+    },
+    {
+      "instance_id": 103247736,
+      "card_id": 129746,
+      "name": "Чон Юнгё",
+      "rank": "C",
+      "wanters_count": 111,
+      "suitable": false
+    },
+    {
+      "instance_id": 150982704,
+      "card_id": 109098,
+      "name": "Ю Джин Хо",
+      "rank": "C",
+      "wanters_count": 112,
+      "suitable": false
+    },
+    {
+      "instance_id": 130648043,
+      "card_id": 114301,
+      "name": "Разло",
+      "rank": "C",
+      "wanters_count": 113,
+      "suitable": false
+    },
+    {
+      "instance_id": 158736045,
+      "card_id": 132324,
+      "name": "Лю Янь",
+      "rank": "C",
+      "wanters_count": 117,
+      "suitable": false
+    },
+    {
+      "instance_id": 194245706,
+      "card_id": 180387,
+      "name": "Шарлиз Ронан",
+      "rank": "C",
+      "wanters_count": 119,
+      "suitable": false
+    },
+    {
+      "instance_id": 131168179,
+      "card_id": 14559,
+      "name": "Бьерн Днестр",
+      "rank": "C",
+      "wanters_count": 120,
+      "suitable": false
+    },
+    {
+      "instance_id": 181156500,
+      "card_id": 152604,
+      "name": "Арон",
+      "rank": "C",
+      "wanters_count": 125,
+      "suitable": false
+    },
+    {
+      "instance_id": 34656836,
+      "card_id": 1184,
+      "name": "Иллия Блоден",
+      "rank": "C",
+      "wanters_count": 128,
+      "suitable": false
+    },
+    {
+      "instance_id": 182191579,
+      "card_id": 2930,
+      "name": "Сон Тэхун",
+      "rank": "C",
+      "wanters_count": 128,
+      "suitable": false
+    },
+    {
+      "instance_id": 158247333,
+      "card_id": 114429,
+      "name": "Корин и Мариетта",
+      "rank": "C",
+      "wanters_count": 129,
+      "suitable": false
+    },
+    {
+      "instance_id": 199886390,
+      "card_id": 41341,
+      "name": "Леон Кромвель",
+      "rank": "C",
+      "wanters_count": 130,
+      "suitable": false
+    },
+    {
+      "instance_id": 201903457,
+      "card_id": 160191,
+      "name": "Давина и родители",
+      "rank": "C",
+      "wanters_count": 133,
+      "suitable": false
+    },
+    {
+      "instance_id": 166532919,
+      "card_id": 160191,
+      "name": "Давина и родители",
+      "rank": "C",
+      "wanters_count": 133,
+      "suitable": false
+    },
+    {
+      "instance_id": 151038524,
+      "card_id": 43458,
+      "name": "Соломон",
+      "rank": "C",
+      "wanters_count": 133,
+      "suitable": false
+    },
+    {
+      "instance_id": 199886080,
+      "card_id": 130628,
+      "name": "Шираюки",
+      "rank": "C",
+      "wanters_count": 135,
+      "suitable": false
+    },
+    {
+      "instance_id": 251149187,
+      "card_id": 180978,
+      "name": "Геракл",
+      "rank": "C",
+      "wanters_count": 137,
+      "suitable": false
+    },
+    {
+      "instance_id": 181679713,
+      "card_id": 184062,
+      "name": "Люмин",
+      "rank": "C",
+      "wanters_count": 138,
+      "suitable": false
+    },
+    {
+      "instance_id": 205643286,
+      "card_id": 174364,
+      "name": "Альберт Вескер",
+      "rank": "C",
+      "wanters_count": 140,
+      "suitable": false
+    },
+    {
+      "instance_id": 199886250,
+      "card_id": 179398,
+      "name": "Гу Ши Е|Героиня",
+      "rank": "C",
+      "wanters_count": 141,
+      "suitable": false
+    },
+    {
+      "instance_id": 82093669,
+      "card_id": 95442,
+      "name": "Кёка и Юки",
+      "rank": "C",
+      "wanters_count": 142,
+      "suitable": false
+    },
+    {
+      "instance_id": 263505258,
+      "card_id": 195826,
+      "name": "Минт Чоко",
+      "rank": "C",
+      "wanters_count": 147,
+      "suitable": false
+    },
+    {
+      "instance_id": 137071122,
+      "card_id": 119391,
+      "name": "Тсунаёши",
+      "rank": "C",
+      "wanters_count": 148,
+      "suitable": false
+    },
+    {
+      "instance_id": 221941195,
+      "card_id": 72907,
+      "name": "Вудуисты",
+      "rank": "C",
+      "wanters_count": 149,
+      "suitable": false
+    },
+    {
+      "instance_id": 82208372,
+      "card_id": 93881,
+      "name": "Сюсю Суруга",
+      "rank": "C",
+      "wanters_count": 150,
+      "suitable": false
+    },
+    {
+      "instance_id": 137750738,
+      "card_id": 91806,
+      "name": "Таня",
+      "rank": "C",
+      "wanters_count": 150,
+      "suitable": false
+    },
+    {
+      "instance_id": 55287678,
+      "card_id": 16458,
+      "name": "Маленький Пани",
+      "rank": "C",
+      "wanters_count": 153,
+      "suitable": false
+    },
+    {
+      "instance_id": 47037771,
+      "card_id": 2307,
+      "name": "Бэк Ли Ён",
+      "rank": "C",
+      "wanters_count": 154,
+      "suitable": false
+    },
+    {
+      "instance_id": 126287631,
+      "card_id": 113363,
+      "name": "Минcиттар",
+      "rank": "C",
+      "wanters_count": 157,
+      "suitable": false
+    },
+    {
+      "instance_id": 95972263,
+      "card_id": 4791,
+      "name": "Рэки",
+      "rank": "C",
+      "wanters_count": 158,
+      "suitable": false
+    },
+    {
+      "instance_id": 181874708,
+      "card_id": 138138,
+      "name": "Скуало",
+      "rank": "C",
+      "wanters_count": 159,
+      "suitable": false
+    },
+    {
+      "instance_id": 174326250,
+      "card_id": 30950,
+      "name": "Дедушка",
+      "rank": "C",
+      "wanters_count": 159,
+      "suitable": false
+    },
+    {
+      "instance_id": 182250261,
+      "card_id": 183565,
+      "name": "Рей",
+      "rank": "C",
+      "wanters_count": 160,
+      "suitable": false
+    },
+    {
+      "instance_id": 236374656,
+      "card_id": 245504,
+      "name": "Оранждог",
+      "rank": "C",
+      "wanters_count": 161,
+      "suitable": false
+    },
+    {
+      "instance_id": 135838774,
+      "card_id": 95155,
+      "name": "Кономи Татара",
+      "rank": "C",
+      "wanters_count": 162,
+      "suitable": false
+    },
+    {
+      "instance_id": 6885011,
+      "card_id": 8900,
+      "name": "Рейнел",
+      "rank": "C",
+      "wanters_count": 164,
+      "suitable": false
+    },
+    {
+      "instance_id": 251500796,
+      "card_id": 140702,
+      "name": "Гита",
+      "rank": "C",
+      "wanters_count": 166,
+      "suitable": false
+    },
+    {
+      "instance_id": 169936156,
+      "card_id": 64126,
+      "name": "Хадзуки",
+      "rank": "C",
+      "wanters_count": 167,
+      "suitable": false
+    },
+    {
+      "instance_id": 236374567,
+      "card_id": 245177,
+      "name": "Пёс",
+      "rank": "C",
+      "wanters_count": 168,
+      "suitable": false
+    },
+    {
+      "instance_id": 149626002,
+      "card_id": 18316,
+      "name": "Сефия",
+      "rank": "C",
+      "wanters_count": 171,
+      "suitable": false
+    },
+    {
+      "instance_id": 185733939,
+      "card_id": 97928,
+      "name": "Химари",
+      "rank": "C",
+      "wanters_count": 172,
+      "suitable": false
+    },
+    {
+      "instance_id": 168632174,
+      "card_id": 147197,
+      "name": "Сирис|Муракан",
+      "rank": "C",
+      "wanters_count": 177,
+      "suitable": false
+    },
+    {
+      "instance_id": 65442390,
+      "card_id": 4232,
+      "name": "Киира",
+      "rank": "C",
+      "wanters_count": 177,
+      "suitable": false
+    },
+    {
+      "instance_id": 176405997,
+      "card_id": 48690,
+      "name": "Ин Миджоль",
+      "rank": "C",
+      "wanters_count": 182,
+      "suitable": false
+    },
+    {
+      "instance_id": 186794734,
+      "card_id": 71337,
+      "name": "Рианна и Исир",
+      "rank": "C",
+      "wanters_count": 184,
+      "suitable": false
+    },
+    {
+      "instance_id": 104237864,
+      "card_id": 126512,
+      "name": "Мисаки и Усуи",
+      "rank": "C",
+      "wanters_count": 185,
+      "suitable": false
+    },
+    {
+      "instance_id": 80133778,
+      "card_id": 93467,
+      "name": "Аоба",
+      "rank": "C",
+      "wanters_count": 186,
+      "suitable": false
+    },
+    {
+      "instance_id": 140012274,
+      "card_id": 68268,
+      "name": "М16А1",
+      "rank": "C",
+      "wanters_count": 187,
+      "suitable": false
+    },
+    {
+      "instance_id": 232267616,
+      "card_id": 90766,
+      "name": "Данте",
+      "rank": "C",
+      "wanters_count": 189,
+      "suitable": false
+    },
+    {
+      "instance_id": 214934220,
+      "card_id": 18303,
+      "name": "Кан",
+      "rank": "C",
+      "wanters_count": 196,
+      "suitable": false
+    },
+    {
+      "instance_id": 246785485,
+      "card_id": 90583,
+      "name": "Арвин | Лотти",
+      "rank": "C",
+      "wanters_count": 202,
+      "suitable": false
+    },
+    {
+      "instance_id": 212008804,
+      "card_id": 139887,
+      "name": "Ли Чже Хон и Чон Ын Гё",
+      "rank": "C",
+      "wanters_count": 203,
+      "suitable": false
+    },
+    {
+      "instance_id": 107493657,
+      "card_id": 2026,
+      "name": "Исир Фон Рамдиша",
+      "rank": "C",
+      "wanters_count": 207,
+      "suitable": false
+    },
+    {
+      "instance_id": 116265669,
+      "card_id": 138817,
+      "name": "Экко",
+      "rank": "C",
+      "wanters_count": 209,
+      "suitable": false
+    },
+    {
+      "instance_id": 114193443,
+      "card_id": 138269,
+      "name": "Хеймердингер",
+      "rank": "C",
+      "wanters_count": 212,
+      "suitable": false
+    },
+    {
+      "instance_id": 150282932,
+      "card_id": 139771,
+      "name": "Ли Чже Хон",
+      "rank": "C",
+      "wanters_count": 213,
+      "suitable": false
+    },
+    {
+      "instance_id": 127397628,
+      "card_id": 122601,
+      "name": "Винтовка Мосина",
+      "rank": "C",
+      "wanters_count": 213,
+      "suitable": false
+    },
+    {
+      "instance_id": 177224899,
+      "card_id": 14187,
+      "name": "Моракс Момоноки",
+      "rank": "C",
+      "wanters_count": 218,
+      "suitable": false
+    },
+    {
+      "instance_id": 35794387,
+      "card_id": 22549,
+      "name": "Лиза Хоукай",
+      "rank": "C",
+      "wanters_count": 221,
+      "suitable": false
+    },
+    {
+      "instance_id": 46950215,
+      "card_id": 71793,
+      "name": "Альфеас Мирхи",
+      "rank": "C",
+      "wanters_count": 224,
+      "suitable": false
+    },
+    {
+      "instance_id": 168480463,
+      "card_id": 130760,
+      "name": "Кон Ширу",
+      "rank": "C",
+      "wanters_count": 231,
+      "suitable": false
+    },
+    {
+      "instance_id": 51626588,
+      "card_id": 104685,
+      "name": "Момо и Турбо-бабка",
+      "rank": "C",
+      "wanters_count": 231,
+      "suitable": false
+    },
+    {
+      "instance_id": 246220555,
+      "card_id": 138802,
+      "name": "Мэл Медарда",
+      "rank": "C",
+      "wanters_count": 236,
+      "suitable": false
+    },
+    {
+      "instance_id": 162344248,
+      "card_id": 138540,
+      "name": "Джинкс",
+      "rank": "C",
+      "wanters_count": 243,
+      "suitable": false
+    },
+    {
+      "instance_id": 175407390,
+      "card_id": 100551,
+      "name": "Сэйко Аясе",
+      "rank": "C",
+      "wanters_count": 243,
+      "suitable": false
+    },
+    {
+      "instance_id": 170432406,
+      "card_id": 168388,
+      "name": "Анета Бедис",
+      "rank": "C",
+      "wanters_count": 244,
+      "suitable": false
+    },
+    {
+      "instance_id": 224765489,
+      "card_id": 13457,
+      "name": "Дестия",
+      "rank": "C",
+      "wanters_count": 247,
+      "suitable": false
+    },
+    {
+      "instance_id": 177722644,
+      "card_id": 118675,
+      "name": "Чо Чхон",
+      "rank": "C",
+      "wanters_count": 251,
+      "suitable": false
+    },
+    {
+      "instance_id": 171353902,
+      "card_id": 11920,
+      "name": "Сиба",
+      "rank": "C",
+      "wanters_count": 251,
+      "suitable": false
+    },
+    {
+      "instance_id": 84529005,
+      "card_id": 139142,
+      "name": "Паудер и Экко",
+      "rank": "C",
+      "wanters_count": 257,
+      "suitable": false
+    },
+    {
+      "instance_id": 181679952,
+      "card_id": 881,
+      "name": "Ацуши Накаджима",
+      "rank": "C",
+      "wanters_count": 287,
+      "suitable": false
+    },
+    {
+      "instance_id": 176880827,
+      "card_id": 17217,
+      "name": "Газеф, Клайм, Брейн",
+      "rank": "C",
+      "wanters_count": 298,
+      "suitable": false
+    },
+    {
+      "instance_id": 190709985,
+      "card_id": 156369,
+      "name": "Баам",
+      "rank": "C",
+      "wanters_count": 300,
+      "suitable": false
+    },
+    {
+      "instance_id": 139398405,
+      "card_id": 77983,
+      "name": "Марин|Нова",
+      "rank": "C",
+      "wanters_count": 344,
+      "suitable": false
+    },
+    {
+      "instance_id": 217400047,
+      "card_id": 127304,
+      "name": "Вайс",
+      "rank": "C",
+      "wanters_count": 355,
+      "suitable": false
+    },
+    {
+      "instance_id": 263595268,
+      "card_id": 128710,
+      "name": "Харумаса",
+      "rank": "C",
+      "wanters_count": 368,
+      "suitable": false
+    },
+    {
+      "instance_id": 175408409,
+      "card_id": 17427,
+      "name": "Мина",
+      "rank": "C",
+      "wanters_count": 406,
+      "suitable": false
+    },
+    {
+      "instance_id": 172963975,
+      "card_id": 84499,
+      "name": "Асахи Азумане",
+      "rank": "C",
+      "wanters_count": 435,
+      "suitable": false
+    },
+    {
+      "instance_id": 262752246,
+      "card_id": 28512,
+      "name": "Хэсу и Бом Джин",
+      "rank": "C",
+      "wanters_count": 437,
+      "suitable": false
+    },
+    {
+      "instance_id": 206413882,
+      "card_id": 189827,
+      "name": "Рави",
+      "rank": "C",
+      "wanters_count": 457,
+      "suitable": false
+    }
+  ],
+  "total": 900,
+  "updated_at": "2025-09-04 17:32:51"
+}

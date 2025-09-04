@@ -11,7 +11,7 @@ from mangabuff.config import BASE_URL
 from mangabuff.http.http_utils import build_session_from_profile
 
 # Константы
-CACHE_LIFETIME_HOURS = 24
+CACHE_LIFETIME_HOURS = 1  # Уменьшили время жизни кэша до 1 часа для более частого обновления
 
 
 class CardWantersCache:
@@ -22,6 +22,8 @@ class CardWantersCache:
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.cache_data = self._load_cache()
+        # Автоматически чистим старые записи при инициализации
+        self.cleanup_old_entries()
     
     def _load_cache(self) -> Dict[str, Any]:
         """Загружает кэш из файла"""
@@ -104,6 +106,11 @@ class CardWantersCache:
             for key in keys_to_delete:
                 del self.cache_data[key]
             self._save_cache()
+    
+    def clear_all(self) -> None:
+        """Полностью очищает кэш"""
+        self.cache_data = {}
+        self._save_cache()
 
 
 def get_card_wanters_count(profile_data: Dict, card_id: int, cache: CardWantersCache, debug: bool = False) -> int:
@@ -139,7 +146,8 @@ def select_suitable_card_for_trade(
     my_cards: List[Dict[str, Any]],
     target_card: Dict[str, Any],
     cache_dir: pathlib.Path,
-    debug: bool = False
+    debug: bool = False,
+    force_refresh_cache: bool = False  # Новый параметр
 ) -> Optional[Tuple[int, Dict[str, Any]]]:
     """
     Выбирает подходящую карту для обмена из инвентаря пользователя.
@@ -151,14 +159,21 @@ def select_suitable_card_for_trade(
         target_card: Целевая карта (из вкладов)
         cache_dir: Директория для кэша
         debug: Режим отладки
+        force_refresh_cache: Если True, очищает весь кэш перед работой
     
     Returns:
         Tuple из (instance_id, card_info) или None если подходящая карта не найдена
     """
     cache = CardWantersCache(cache_dir)
     
-    # Периодически чистим старые записи кэша
-    if random.random() < 0.1:  # В 10% случаев
+    # Если нужно принудительное обновление кэша
+    if force_refresh_cache:
+        cache.clear_all()
+        if debug:
+            print("[SELECTOR] Cache cleared for fresh data")
+    
+    # Периодически чистим старые записи кэша (чаще чем раньше)
+    if random.random() < 0.3:  # В 30% случаев (увеличили с 10%)
         cache.cleanup_old_entries()
     
     target_rank = (target_card.get("rank") or "").strip()
