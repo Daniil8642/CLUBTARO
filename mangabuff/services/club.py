@@ -12,9 +12,6 @@ from mangabuff.services.inventory import fetch_all_cards_by_id
 from mangabuff.services.counters import count_by_last_page
 from mangabuff.services.card_storage import get_card_storage
 
-<<<<<<< Updated upstream
-def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_boost_url: str, debug: bool=False) -> Optional[Tuple[int, pathlib.Path]]:
-=======
 def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_boost_url: str, debug: bool=False, force_refresh: bool=True) -> Optional[Tuple[int, pathlib.Path]]:
     """
     Находит информацию о карте для вклада в клуб и сохраняет её в единое хранилище.
@@ -22,7 +19,6 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
     Args:
         force_refresh: Если True, всегда обновляет данные (по умолчанию True)
     """
->>>>>>> Stashed changes
     session = build_session_from_profile(profile_data)
     club_boost_url = club_boost_url if club_boost_url.startswith("http") else f"{BASE_URL}{club_boost_url}"
     
@@ -113,9 +109,6 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
 
     last_user_link = user_links[-1]
     user_id = last_user_link["href"].rstrip("/").split("/")[-1]
-<<<<<<< Updated upstream
-    cards_path, got_cards = fetch_all_cards_by_id(profile_data, profiles_dir, user_id, debug=debug)
-=======
     
     # Получаем карты с force_refresh и сохранением в единое хранилище
     cards_path, got_cards = fetch_all_cards_by_id(
@@ -126,7 +119,6 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
         force_refresh=force_refresh,  # Принудительное обновление
         save_to_unified=True  # Сохраняем в единое хранилище
     )
->>>>>>> Stashed changes
     if not got_cards:
         return None
 
@@ -151,54 +143,6 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
             print(f"[CLUB] Card {card_id} not found in user {user_id} cards")
         return None
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    for card in all_cards:
-        if int(card.get("card_id") or 0) == card_id:
-            # Получаем количество владельцев и желающих
-            owners_count, wanters_count = owners_and_wanters_counts(profile_data, card_id, debug=debug)
-            
-            # Используем название и ранг со страницы карты, если они есть
-            name = card_name or card.get("title") or card.get("name") or ""
-            rank = card_rank or card.get("rank") or card.get("grade") or ""
-            
-            # Если название или ранг все еще пустые, пробуем получить из вложенной структуры
-            if isinstance(card.get("card"), dict):
-                if not name:
-                    name = card["card"].get("name") or card["card"].get("title") or ""
-                if not rank:
-                    rank = card["card"].get("rank") or card["card"].get("grade") or ""
-            
-            # Формируем расширенную структуру данных
-            boost_card_data = {
-                "name": name.strip() if name else "",
-                "id": card.get("id") or 0,  # instance_id для отправки обмена
-                "card_id": card_id,  # ID карты для ссылки
-                "rank": rank.strip() if rank else "",
-                "wanters_count": wanters_count,  # количество желающих
-                "owners_count": owners_count,  # количество владельцев
-                "card_url": f"{BASE_URL}/cards/{card_id}/users"  # прямая ссылка на карту
-            }
-            
-            # Сохраняем в файл с красивым форматированием
-            out_path = profiles_dir / "card_for_boost.json"
-            with out_path.open("w", encoding="utf-8") as f:
-                json.dump(boost_card_data, f, ensure_ascii=False, indent=4)
-            
-            # Удаляем файл с карточками профиля после извлечения карты
-            try:
-                cards_path.unlink()
-                if debug:
-                    print(f"[CLUB] Deleted cards file: {cards_path}")
-            except Exception as e:
-                if debug:
-                    print(f"[CLUB] Failed to delete cards file {cards_path}: {e}")
-            
-            return card_id, out_path
-    return None
-=======
-=======
->>>>>>> Stashed changes
     # Получаем количество владельцев и желающих
     owners_count, wanters_count = owners_and_wanters_counts(profile_data, card_id, debug=debug)
     
@@ -248,12 +192,9 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
             print(f"[CLUB] Failed to delete cards file {cards_path}: {e}")
     
     return card_id, out_path
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 def owners_and_wanters_counts(profile_data: Dict, card_id: int, debug: bool=False) -> Tuple[int, int]:
+    """Получает количество владельцев и желающих для карты."""
     owners_selectors = [
         "a.card-show__owner",
         'a[class*="card-show__owner"]',

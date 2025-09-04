@@ -2,6 +2,7 @@ import argparse
 import json
 import pathlib
 from typing import Optional, Dict, Any, List
+import time
 
 from mangabuff.config import BASE_URL
 from mangabuff.profiles.store import ProfileStore
@@ -11,15 +12,9 @@ from mangabuff.services.inventory import ensure_own_inventory, get_my_cards_from
 from mangabuff.services.owners import iter_online_owners_by_pages
 from mangabuff.services.trade import send_trades_to_online_owners
 from mangabuff.services.har import analyze_har
-<<<<<<< Updated upstream
-=======
 from mangabuff.services.boost_monitor import BoostMonitor
 from mangabuff.services.card_selector import select_suitable_card_for_trade
 from mangabuff.services.card_storage import get_card_storage
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 def load_target_card_from_file(profiles_dir: pathlib.Path, card_file: Optional[str] = None, debug: bool=False) -> Optional[Dict[str, Any]]:
     import random
@@ -43,12 +38,10 @@ def load_target_card_from_file(profiles_dir: pathlib.Path, card_file: Optional[s
             path = p
     
     if not path:
-        # Изменено: ищем файл card_for_boost.json вместо card_*_from_*.json
         card_for_boost = profiles_dir / "card_for_boost.json"
         if card_for_boost.exists():
             path = card_for_boost
         else:
-            # Fallback на старый паттерн если новый файл не найден
             files = sorted(
                 profiles_dir.glob("card_*_from_*.json"),
                 key=lambda p: p.stat().st_mtime,
@@ -109,8 +102,6 @@ def load_target_card_from_file(profiles_dir: pathlib.Path, card_file: Optional[s
 
     name = chosen.get("name") or (card_block and card_block.get("name")) or chosen.get("title") or ""
     rank = (chosen.get("rank") or (card_block and card_block.get("rank")) or "").strip()
-    
-    # ИСПРАВЛЕНИЕ: Добавляем передачу wanters_count и owners_count из файла
     wanters_count = chosen.get("wanters_count", 0)
     owners_count = chosen.get("owners_count", 0)
 
@@ -118,8 +109,8 @@ def load_target_card_from_file(profiles_dir: pathlib.Path, card_file: Optional[s
         "card_id": int(card_id), 
         "name": name or "", 
         "rank": rank or "", 
-        "wanters_count": wanters_count,  # Добавлено
-        "owners_count": owners_count,     # Добавлено
+        "wanters_count": wanters_count,
+        "owners_count": owners_count,
         "file": str(path)
     }
     
@@ -131,8 +122,6 @@ def load_target_card_from_file(profiles_dir: pathlib.Path, card_file: Optional[s
     
     return result
 
-<<<<<<< Updated upstream
-=======
 def save_suitable_cards(
     profile_data: Dict,
     my_cards: List[Dict[str, Any]], 
@@ -365,10 +354,6 @@ def print_storage_statistics(profiles_dir: pathlib.Path) -> None:
     print(f"   🕐 Последнее обновление: {stats.get('last_updated', 'Неизвестно')}")
     print(f"   📁 Файл хранилища: {stats['storage_file']}")
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 def main():
     parser = argparse.ArgumentParser(description="MangaBuff helper (modular)")
     parser.add_argument("--dir", type=str, default=".", help="Рабочая папка")
@@ -387,20 +372,14 @@ def main():
     parser.add_argument("--trade_send_online", action="store_true", help="Рассылка обменов онлайн владельцам карты")
     parser.add_argument("--trade_dry_run", type=int, default=1, help="1 = dry-run, 0 = реально отправлять")
     parser.add_argument("--trade_card_file", type=str, default="", help="Путь к файлу с карточкой (card_for_boost.json)")
-    parser.add_argument("--use_api", type=int, default=1, help="1 = использовать API /trades/create, 0 = форму (не используется в текущей версии)")
+    parser.add_argument("--use_api", type=int, default=1, help="1 = использовать API /trades/create, 0 = форму (не используется)")
     parser.add_argument("--analyze_har", type=str, default="", help="Путь к HAR-файлу для анализа")
-<<<<<<< Updated upstream
-=======
     parser.add_argument("--monitor_boost", action="store_true", help="Включить мониторинг буста с автодонейтом")
     parser.add_argument("--monitor_interval", type=float, default=4.0, help="Интервал проверки буста в секундах (по умолчанию 4)")
     parser.add_argument("--test_donate", action="store_true", help="Тестировать пожертвование карты")
     parser.add_argument("--force_donate", action="store_true", help="Принудительно попробовать пожертвовать карту")
     parser.add_argument("--show_stats", action="store_true", help="Показать статистику единого хранилища карт")
     parser.add_argument("--cleanup_old", type=int, default=0, help="Удалить старые данные (количество дней)")
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
     args = parser.parse_args()
 
@@ -415,7 +394,7 @@ def main():
     profile = store.read_by_path(profile_path) or store.default_profile(user_id=str(args.id or "" ), club_name=args.club_name or "")
     store.write_by_path(profile_path, profile)
 
-    # Авторизация/обновление cookies (убираем debug вывод)
+    # Авторизация/обновление cookies
     ok, info = update_profile_cookies(profile, args.email, args.password, debug=False, skip_check=args.skip_check)
     if not ok:
         msg = info.get("message", "auth error")
@@ -424,12 +403,6 @@ def main():
     store.write_by_path(profile_path, profile)
     print(f"✅ Авторизация успешна")
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    # Boost-карта (опционально) - расширенный вывод
-=======
-=======
->>>>>>> Stashed changes
     # Тестирование пожертвования
     if args.test_donate or args.force_donate:
         if not args.boost_url:
@@ -524,12 +497,10 @@ def main():
     # Обычный режим без мониторинга
     
     # Boost-карта (опционально)
->>>>>>> Stashed changes
     if args.boost_url:
         res = find_boost_card_info(profile, profile_path.parent, args.boost_url, debug=args.debug)
         if res:
             card_id, out_path = res
-            # Читаем сохраненные данные для вывода
             try:
                 with out_path.open("r", encoding="utf-8") as f:
                     card_data = json.load(f)
@@ -546,10 +517,9 @@ def main():
             except Exception:
                 print(f"✅ Клубная карта {card_id} сохранена в: {out_path}")
 
-    # HAR-аналитика (опционально) - убираем если не нужно
+    # HAR-аналитика (опционально)
     if args.analyze_har:
         top = analyze_har(args.analyze_har, debug=args.debug)
-        # Не выводим ничего для HAR
 
     # Определение целевой карты для рассылки обменов
     target_card: Optional[Dict[str, Any]] = None
@@ -562,11 +532,6 @@ def main():
         print("❌ Целевая карта для обмена не найдена")
         return
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
     # Получаем инвентарь из единого хранилища или загружаем
     card_storage = get_card_storage(profile_path.parent)
     my_cards = card_storage.get_my_cards()
@@ -588,33 +553,14 @@ def main():
     # Показываем статистику хранилища
     print_storage_statistics(profile_path.parent)
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     if args.trade_send_online:
-        # инвентарь текущего пользователя (теперь сохраняется в my_cards.json)
-        try:
-            inv_path = ensure_own_inventory(profile_path, profile, debug=args.debug)
-        except Exception as e:
-            print(f"❌ Ошибка получения инвентаря: {e}")
-            return
-        try:
-            with inv_path.open("r", encoding="utf-8") as f:
-                my_cards: List[Dict[str, Any]] = json.load(f)
-        except Exception:
-            print(f"❌ Ошибка чтения инвентаря")
-            return
-
-        # Запускаем рассылку с минимальным выводом
+        # Запускаем рассылку
         print(f"\n🎯 Целевая карта: ID={target_card['card_id']}, Ранг={target_card['rank']}, Имя={target_card.get('name', '')}")
         print(f"🔍 Поиск владельцев онлайн...\n")
         
-        from mangabuff.services.owners import iter_online_owners_by_pages
         card_id = int(target_card["card_id"])
         owners_iter = iter_online_owners_by_pages(profile, card_id, max_pages=args.trade_pages or 0, debug=args.debug)
         
-        # ИСПРАВЛЕНО: Убрали параметр use_api из вызова функции
         stats = send_trades_to_online_owners(
             profile_data=profile,
             target_card=target_card,
@@ -622,7 +568,7 @@ def main():
             my_cards=my_cards,
             dry_run=bool(args.trade_dry_run),
             debug=args.debug,
-            profiles_dir=profile_path.parent  # Добавляем директорию профилей для кэша
+            profiles_dir=profile_path.parent
         )
 
 if __name__ == "__main__":
