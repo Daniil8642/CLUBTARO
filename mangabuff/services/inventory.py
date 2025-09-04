@@ -183,6 +183,7 @@ def fetch_all_cards_by_id(
         time.sleep(0.25)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     # Определяем имя файла: my_cards.json для собственного инвентаря, иначе {user_id}.json
     if is_own_inventory:
         cards_path = profiles_dir / "my_cards.json"
@@ -190,6 +191,9 @@ def fetch_all_cards_by_id(
         cards_path = profiles_dir / f"{user_id}.json"
     
     # write atomically: write to .tmp then rename
+=======
+    # Записываем атомарно в старый файл для совместимости
+>>>>>>> Stashed changes
 =======
     # Записываем атомарно в старый файл для совместимости
 >>>>>>> Stashed changes
@@ -205,6 +209,7 @@ def fetch_all_cards_by_id(
             json.dump(all_cards, f, ensure_ascii=False, indent=4)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     return cards_path, bool(all_cards)
 
 
@@ -214,6 +219,8 @@ def ensure_own_inventory(profile_path: pathlib.Path, profile_data: Dict, debug: 
         raise RuntimeError("no user id in profile")
     # Передаем is_own_inventory=True для использования my_cards.json
 =======
+=======
+>>>>>>> Stashed changes
     # Сохраняем в единое хранилище
     if card_storage and all_cards:
         if is_own_inventory:
@@ -248,6 +255,9 @@ def ensure_own_inventory(
         raise RuntimeError("no user id in profile")
     
     # Передаем оба новых параметра
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     cards_path, got = fetch_all_cards_by_id(
         profile_data, 
@@ -261,6 +271,9 @@ def ensure_own_inventory(
         is_own_inventory=True,
         force_refresh=force_refresh,
         save_to_unified=save_to_unified
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     )
     if not got:
@@ -298,5 +311,9 @@ def get_user_cards_from_storage(profiles_dir: pathlib.Path, user_id: str) -> lis
         Список карт пользователя или пустой список если данных нет
     """
     card_storage = get_card_storage(profiles_dir)
+<<<<<<< Updated upstream
+    return card_storage.get_user_cards(user_id)
+>>>>>>> Stashed changes
+=======
     return card_storage.get_user_cards(user_id)
 >>>>>>> Stashed changes

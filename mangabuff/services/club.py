@@ -152,6 +152,7 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
         return None
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     for card in all_cards:
         if int(card.get("card_id") or 0) == card_id:
             # Получаем количество владельцев и желающих
@@ -196,6 +197,8 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
             return card_id, out_path
     return None
 =======
+=======
+>>>>>>> Stashed changes
     # Получаем количество владельцев и желающих
     owners_count, wanters_count = owners_and_wanters_counts(profile_data, card_id, debug=debug)
     
@@ -245,6 +248,9 @@ def find_boost_card_info(profile_data: Dict, profiles_dir: pathlib.Path, club_bo
             print(f"[CLUB] Failed to delete cards file {cards_path}: {e}")
     
     return card_id, out_path
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 def owners_and_wanters_counts(profile_data: Dict, card_id: int, debug: bool=False) -> Tuple[int, int]:

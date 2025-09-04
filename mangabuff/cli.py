@@ -16,6 +16,9 @@ from mangabuff.services.har import analyze_har
 from mangabuff.services.boost_monitor import BoostMonitor
 from mangabuff.services.card_selector import select_suitable_card_for_trade
 from mangabuff.services.card_storage import get_card_storage
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 def load_target_card_from_file(profiles_dir: pathlib.Path, card_file: Optional[str] = None, debug: bool=False) -> Optional[Dict[str, Any]]:
@@ -362,6 +365,9 @@ def print_storage_statistics(profiles_dir: pathlib.Path) -> None:
     print(f"   🕐 Последнее обновление: {stats.get('last_updated', 'Неизвестно')}")
     print(f"   📁 Файл хранилища: {stats['storage_file']}")
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 def main():
     parser = argparse.ArgumentParser(description="MangaBuff helper (modular)")
@@ -391,6 +397,9 @@ def main():
     parser.add_argument("--force_donate", action="store_true", help="Принудительно попробовать пожертвовать карту")
     parser.add_argument("--show_stats", action="store_true", help="Показать статистику единого хранилища карт")
     parser.add_argument("--cleanup_old", type=int, default=0, help="Удалить старые данные (количество дней)")
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     args = parser.parse_args()
@@ -416,8 +425,11 @@ def main():
     print(f"✅ Авторизация успешна")
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     # Boost-карта (опционально) - расширенный вывод
 =======
+=======
+>>>>>>> Stashed changes
     # Тестирование пожертвования
     if args.test_donate or args.force_donate:
         if not args.boost_url:
@@ -551,7 +563,10 @@ def main():
         return
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     # Получаем инвентарь из единого хранилища или загружаем
     card_storage = get_card_storage(profile_path.parent)
     my_cards = card_storage.get_my_cards()
@@ -573,6 +588,9 @@ def main():
     # Показываем статистику хранилища
     print_storage_statistics(profile_path.parent)
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     if args.trade_send_online:
         # инвентарь текущего пользователя (теперь сохраняется в my_cards.json)
